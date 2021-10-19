@@ -5,7 +5,7 @@
 [ext_resource path="res://Gameplay/Player.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 512.787, 74.1243 )
+extents = Vector2( 513.668, 76.5744 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 91.9948, 100.254 )
@@ -30,9 +30,6 @@ shape = SubResource( 1 )
 [node name="Player" type="KinematicBody2D" parent="."]
 position = Vector2( 87.5621, 354.705 )
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Sprite" type="Sprite" parent="Player"]
 position = Vector2( -0.0212708, 0.00866699 )
