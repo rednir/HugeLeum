@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 
 const weight = 5
-const jump_height = 20
+const jump_height = 400
 
 var y_velocity = 0
 var jumping = true
@@ -26,4 +26,5 @@ func _process(delta):
 		if collision_info:
 			print("collision")
 			jumping = false
+			y_velocity = 0
 

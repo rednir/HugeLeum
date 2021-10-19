@@ -13,10 +13,10 @@ __meta__ = {
 }
 
 [node name="PlayButton" type="Button" parent="."]
-margin_left = 374.0
-margin_top = 345.944
-margin_right = 506.0
-margin_bottom = 414.944
+margin_left = 440.746
+margin_top = 371.371
+margin_right = 572.746
+margin_bottom = 440.371
 theme = ExtResource( 2 )
 text = "Play"
 __meta__ = {
