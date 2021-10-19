@@ -9,6 +9,9 @@
    id="svg5"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
    sodipodi:docname="player.svg"
+   inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/player.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,9 +27,9 @@
      inkscape:document-units="mm"
      showgrid="false"
      units="px"
-     inkscape:zoom="1.4805976"
-     inkscape:cx="-47.615907"
-     inkscape:cy="-5.4032235"
+     inkscape:zoom="2.9611953"
+     inkscape:cx="86.620427"
+     inkscape:cy="90.503994"
      inkscape:window-width="1920"
      inkscape:window-height="1052"
      inkscape:window-x="0"
@@ -40,46 +43,46 @@
      inkscape:groupmode="layer"
      id="layer1">
     <ellipse
-       style="opacity:1;fill:#803300;stroke-width:2.94577;stroke-linejoin:round"
+       style="opacity:1;fill:#803300;stroke-width:3.6111;stroke-linejoin:round"
        id="path846"
-       cx="18.02187"
-       cy="14.072653"
-       rx="10.302138"
-       ry="10.230596" />
+       cx="16.517979"
+       cy="12.809319"
+       rx="12.628971"
+       ry="12.54127" />
     <ellipse
-       style="opacity:1;fill:#803300;stroke-width:1.45359;stroke-linejoin:round"
+       style="opacity:1;fill:#803300;stroke-width:1.7819;stroke-linejoin:round"
        id="path846-3"
-       cx="10.775131"
-       cy="25.822203"
-       rx="5.0835876"
-       ry="5.048285" />
+       cx="7.6344976"
+       cy="27.212614"
+       rx="6.2317629"
+       ry="6.1884866" />
     <ellipse
-       style="fill:#803300;stroke-width:1.45359;stroke-linejoin:round"
+       style="fill:#803300;stroke-width:1.7819;stroke-linejoin:round"
        id="path846-3-5"
-       cx="24.75"
-       cy="26.090254"
-       rx="5.0835876"
-       ry="5.048285" />
+       cx="24.76572"
+       cy="27.541208"
+       rx="6.2317629"
+       ry="6.1884866" />
     <ellipse
-       style="opacity:0.82392;fill:#ffffff;stroke-width:0.861863;stroke-linejoin:round"
+       style="opacity:0.82392;fill:#ffffff;stroke-width:1.05652;stroke-linejoin:round"
        id="path846-3-6"
-       cx="15.085809"
-       cy="9.6498203"
-       rx="3.0141625"
-       ry="2.9932308" />
+       cx="12.918782"
+       cy="7.3875504"
+       rx="3.6949389"
+       ry="3.6692796" />
     <ellipse
-       style="opacity:0.82392;fill:#ffffff;stroke-width:0.504183;stroke-linejoin:round"
+       style="opacity:0.82392;fill:#ffffff;stroke-width:0.618057;stroke-linejoin:round"
        id="path846-3-6-7"
-       cx="21.712095"
-       cy="11.088109"
-       rx="1.76326"
-       ry="1.7510152" />
+       cx="21.041676"
+       cy="9.1506891"
+       rx="2.1615086"
+       ry="2.1464982" />
     <ellipse
-       style="opacity:0.82392;fill:#ffffff;stroke-width:3.679;stroke-linejoin:round"
+       style="opacity:0.82392;fill:#ffffff;stroke-width:4.50994;stroke-linejoin:round"
        id="path1086"
-       cx="19.03159"
-       cy="17.601986"
-       rx="3.574007"
-       ry="0.89350176" />
+       cx="17.755753"
+       cy="17.135786"
+       rx="4.3812294"
+       ry="1.0953074" />
   </g>
 </svg>
