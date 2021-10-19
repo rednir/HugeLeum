@@ -1,12 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/player.png" type="Texture" id=1]
+[ext_resource path="res://Assets/plains-ground.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 93.5676, 99.3982 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 673.266, 63.7145 )
+extents = Vector2( 512.787, 74.1243 )
 
 [node name="Game" type="Node2D"]
 
@@ -23,15 +24,20 @@ texture = ExtResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 shape = SubResource( 1 )
 
-[node name="floor" type="StaticBody2D" parent="."]
-position = Vector2( 507.968, 539.716 )
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2( 794.5, 129.66 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="floor"]
-scale = Vector2( 7.35313, 0.640812 )
-texture = ExtResource( 1 )
+[node name="Sprite" type="Sprite" parent="Ground"]
+position = Vector2( -283.385, 171.121 )
+scale = Vector2( 0.642619, 0.637823 )
+texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2( -283.459, 396.116 )
 shape = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
