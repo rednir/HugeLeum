@@ -14,6 +14,11 @@ config/name="KajamGame"
 run/main_scene="res://UI/MainMenu.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
 [input]
 
 jump={
@@ -21,10 +26,6 @@ jump={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
  ]
 }
-[display]
-
-window/stretch/mode="2d"
-window/stretch/aspect="keep"
 
 [physics]
 
