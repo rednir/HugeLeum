@@ -8,7 +8,7 @@ extents = Vector2( 93.5676, 99.3982 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 673.266, 63.7145 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Game" type="Node2D"]
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2( 498.444, 103.181 )
