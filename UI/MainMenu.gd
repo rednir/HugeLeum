@@ -8,7 +8,6 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
 	$PlayButton.connect("pressed", self, "on_play_button_pressed")
 
 func on_play_button_pressed():
