@@ -44,17 +44,3 @@ func _process(delta):
 		if collision_info:
 			jumping = false
 			y_velocity = 0
-
-
-# func cut_jump_height(): # if the player releases jump early
-	# if jumping:
-	# 	if jump_key_hold_time < 0.2:
-	# 		y_velocity = jump_height_min
-	# 	elif jump_key_hold_time < 0.6:
-	# 		y_velocity = (jump_height_min + (jump_height_max - jump_height_min)) * (jump_key_hold_time / 0.4)
-
-	# if jump_key_held and -y_velocity < max_jump_height:
-	# 	y_velocity -= jump_boost_when_held
-	# 	print(y_velocity)
-	# elif -y_velocity > max_jump_height:
-	# 	jump_key_held = false
