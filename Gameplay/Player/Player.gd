@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 
-const weight = 5
-const jump_height = 400
+export var weight = 5
+export var jump_height = 400
 
 var y_velocity = 0
 var jumping = true
