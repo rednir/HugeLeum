@@ -6,6 +6,7 @@
 [ext_resource path="res://Gameplay/Camera/Camera.gd" type="Script" id=4]
 
 [node name="Game" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 104.043, 353.207 )
