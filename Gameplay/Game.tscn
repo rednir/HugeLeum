@@ -9,6 +9,7 @@ script = ExtResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 104.043, 353.207 )
+weight = 5
 jump_height = 400
 max_jump_key_hold_time = 0.18
 
