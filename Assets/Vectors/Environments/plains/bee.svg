@@ -2,13 +2,16 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="256"
+   height="256"
+   viewBox="0 0 67.733332 67.733336"
    version="1.1"
    id="svg5"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
    sodipodi:docname="bee.svg"
+   inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/bee.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,17 +26,36 @@
      inkscape:pagecheckerboard="1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="4"
-     inkscape:cx="421.5"
-     inkscape:cy="386.5"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="106.06602"
+     inkscape:cy="-113.13708"
      inkscape:window-width="1920"
      inkscape:window-height="1052"
      inkscape:window-x="0"
      inkscape:window-y="28"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     units="px" />
   <defs
      id="defs2">
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect7751"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect7747"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
     <inkscape:path-effect
        effect="powerclip"
        id="path-effect3428"
@@ -105,8 +127,7 @@
          cx="95.508781"
          cy="128.43637"
          rx="20.448936"
-         ry="14.42986"
-         d="M 115.95772,128.43637 A 20.448936,14.42986 0 0 1 95.508781,142.86623 20.448936,14.42986 0 0 1 75.059845,128.43637 20.448936,14.42986 0 0 1 95.508781,114.00651 20.448936,14.42986 0 0 1 115.95772,128.43637 Z" />
+         ry="14.42986" />
       <path
          id="lpe_path-effect2379-1"
          style="fill:#ff0000;stroke:none;stroke-width:0.550526;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
@@ -133,8 +154,7 @@
          cx="95.508781"
          cy="128.43637"
          rx="20.448936"
-         ry="14.42986"
-         d="M 115.95772,128.43637 A 20.448936,14.42986 0 0 1 95.508781,142.86623 20.448936,14.42986 0 0 1 75.059845,128.43637 20.448936,14.42986 0 0 1 95.508781,114.00651 20.448936,14.42986 0 0 1 115.95772,128.43637 Z" />
+         ry="14.42986" />
       <path
          id="lpe_path-effect2379-9"
          style="fill:#ff0000;stroke:none;stroke-width:0.550526;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
@@ -161,8 +181,7 @@
          cx="95.508781"
          cy="128.43637"
          rx="20.448936"
-         ry="14.42986"
-         d="M 115.95772,128.43637 A 20.448936,14.42986 0 0 1 95.508781,142.86623 20.448936,14.42986 0 0 1 75.059845,128.43637 20.448936,14.42986 0 0 1 95.508781,114.00651 20.448936,14.42986 0 0 1 115.95772,128.43637 Z" />
+         ry="14.42986" />
       <path
          id="lpe_path-effect2743-6"
          style="fill:#ff0000;stroke:none;stroke-width:0.550526;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
@@ -189,8 +208,7 @@
          cx="95.508781"
          cy="128.43637"
          rx="20.448936"
-         ry="14.42986"
-         d="M 115.95772,128.43637 A 20.448936,14.42986 0 0 1 95.508781,142.86623 20.448936,14.42986 0 0 1 75.059845,128.43637 20.448936,14.42986 0 0 1 95.508781,114.00651 20.448936,14.42986 0 0 1 115.95772,128.43637 Z" />
+         ry="14.42986" />
       <path
          id="lpe_path-effect2379-8"
          style="fill:#ff0000;stroke:none;stroke-width:0.550526;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
@@ -214,69 +232,137 @@
          class="powerclip"
          d="M 70.741686,101.81237 H 120.8912 v 40.16934 H 70.741686 Z m 45.216034,26.624 a 20.448936,14.42986 0 0 0 -20.448939,-14.42986 20.448936,14.42986 0 0 0 -20.448936,14.42986 20.448936,14.42986 0 0 0 20.448936,14.42986 20.448936,14.42986 0 0 0 20.448939,-14.42986 z" />
     </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2375-3">
+      <ellipse
+         style="display:none;fill:#ff0000;stroke:none;stroke-width:0.550526;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="ellipse2377-7"
+         cx="95.508781"
+         cy="128.43637"
+         rx="20.448936"
+         ry="14.42986"
+         d="M 115.95772,128.43637 A 20.448936,14.42986 0 0 1 95.508781,142.86623 20.448936,14.42986 0 0 1 75.059845,128.43637 20.448936,14.42986 0 0 1 95.508781,114.00651 20.448936,14.42986 0 0 1 115.95772,128.43637 Z" />
+      <path
+         id="lpe_path-effect2379-5"
+         style="fill:#ff0000;stroke:none;stroke-width:0.550526;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         class="powerclip"
+         d="M 70.741686,101.81237 H 120.8912 v 40.16934 H 70.741686 Z m 45.216034,26.624 a 20.448936,14.42986 0 0 0 -20.448939,-14.42986 20.448936,14.42986 0 0 0 -20.448936,14.42986 20.448936,14.42986 0 0 0 20.448936,14.42986 20.448936,14.42986 0 0 0 20.448939,-14.42986 z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipath_lpe_path-effect3428-9">
+      <ellipse
+         style="display:none;fill:#ff0000;stroke:none;stroke-width:0.550526;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="ellipse3430-2"
+         cx="95.508781"
+         cy="128.43637"
+         rx="20.448936"
+         ry="14.42986"
+         d="M 115.95772,128.43637 A 20.448936,14.42986 0 0 1 95.508781,142.86623 20.448936,14.42986 0 0 1 75.059845,128.43637 20.448936,14.42986 0 0 1 95.508781,114.00651 20.448936,14.42986 0 0 1 115.95772,128.43637 Z" />
+      <path
+         id="lpe_path-effect3428-2"
+         style="fill:#ff0000;stroke:none;stroke-width:0.550526;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         class="powerclip"
+         d="M 70.741686,101.81237 H 120.8912 v 40.16934 H 70.741686 Z m 45.216034,26.624 a 20.448936,14.42986 0 0 0 -20.448939,-14.42986 20.448936,14.42986 0 0 0 -20.448936,14.42986 20.448936,14.42986 0 0 0 20.448936,14.42986 20.448936,14.42986 0 0 0 20.448939,-14.42986 z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipath_lpe_path-effect7751">
+      <ellipse
+         style="display:none;fill:#ff0000;stroke:none;stroke-width:0.550526;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="ellipse7753"
+         cx="95.508781"
+         cy="128.43637"
+         rx="20.448936"
+         ry="14.42986"
+         d="M 115.95772,128.43637 A 20.448936,14.42986 0 0 1 95.508781,142.86623 20.448936,14.42986 0 0 1 75.059845,128.43637 20.448936,14.42986 0 0 1 95.508781,114.00651 20.448936,14.42986 0 0 1 115.95772,128.43637 Z" />
+      <path
+         id="lpe_path-effect7751"
+         style="fill:#ff0000;stroke:none;stroke-width:0.550526;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         class="powerclip"
+         d="M 70.741686,101.81237 H 120.8912 v 40.16934 H 70.741686 Z m 45.216034,26.624 a 20.448936,14.42986 0 0 0 -20.448939,-14.42986 20.448936,14.42986 0 0 0 -20.448936,14.42986 20.448936,14.42986 0 0 0 20.448936,14.42986 20.448936,14.42986 0 0 0 20.448939,-14.42986 z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipath_lpe_path-effect7747">
+      <ellipse
+         style="display:none;fill:#ff0000;stroke:none;stroke-width:0.550526;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="ellipse7758"
+         cx="95.508781"
+         cy="128.43637"
+         rx="20.448936"
+         ry="14.42986"
+         d="M 115.95772,128.43637 A 20.448936,14.42986 0 0 1 95.508781,142.86623 20.448936,14.42986 0 0 1 75.059845,128.43637 20.448936,14.42986 0 0 1 95.508781,114.00651 20.448936,14.42986 0 0 1 115.95772,128.43637 Z" />
+      <path
+         id="lpe_path-effect7747"
+         style="fill:#ff0000;stroke:none;stroke-width:0.550526;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         class="powerclip"
+         d="M 70.741686,101.81237 H 120.8912 v 40.16934 H 70.741686 Z m 45.216034,26.624 a 20.448936,14.42986 0 0 0 -20.448939,-14.42986 20.448936,14.42986 0 0 0 -20.448936,14.42986 20.448936,14.42986 0 0 0 20.448936,14.42986 20.448936,14.42986 0 0 0 20.448939,-14.42986 z" />
+    </clipPath>
   </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
     <ellipse
-       style="opacity:0.681905;fill:#ffffff;stroke:none;stroke-width:0.529167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       style="opacity:0.51619;fill:#ffffff;stroke:none;stroke-width:0.529167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        id="path3825"
-       cx="39.142029"
-       cy="-179.83841"
+       cx="18.103764"
+       cy="-45.300018"
        rx="7.5770912"
        ry="10.664055"
        transform="matrix(0.73865455,-0.67408416,-0.67408416,-0.73865455,0,0)" />
     <ellipse
        style="fill:#ffd42a;stroke-width:0.772181;stroke-linejoin:round"
        id="path868-7"
-       cx="-150.62141"
-       cy="122.82215"
+       cx="-44.391209"
+       cy="37.626316"
        rx="22.934963"
        ry="14.847909"
        transform="scale(-1,1)" />
     <ellipse
        style="fill:#d4aa00;stroke-width:0.667194;stroke-linejoin:round"
        id="path868"
-       cx="-127.33981"
-       cy="116.32253"
+       cx="-21.109604"
+       cy="31.126699"
        rx="17.122393"
        ry="14.847909"
        transform="scale(-1,1)" />
     <ellipse
        style="fill:#ffffff;stroke:#000000;stroke-width:0.574366;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        id="path868-3-6"
-       cx="-111.75942"
-       cy="113.46317"
+       cx="-5.5292139"
+       cy="28.26734"
        transform="scale(-1,1)"
        rx="4.7164907"
        ry="5.6099925" />
     <ellipse
        style="fill:#000000;stroke:none;stroke-width:0.275731;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        id="path868-3-6-5"
-       cx="-111.07817"
-       cy="114.26791"
+       cx="-4.8479624"
+       cy="29.072073"
        transform="scale(-1,1)"
        rx="2.4194219"
        ry="2.5203614" />
     <ellipse
        style="fill:#ffffff;stroke:#000000;stroke-width:0.566354;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        id="path868-3"
-       cx="-118.77863"
-       cy="111.18433"
+       cx="-12.548426"
+       cy="25.988501"
        transform="scale(-1,1)"
        rx="6.74226"
        ry="7.7658424" />
     <ellipse
        style="fill:#000000;stroke:none;stroke-width:0.407331;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        id="path868-3-6-5-3"
-       cx="-118.1181"
-       cy="112.92757"
+       cx="-11.887895"
+       cy="27.731733"
        transform="scale(-1,1)"
        rx="3.3448517"
        ry="3.9785078" />
     <path
-       style="fill:#000000;stroke:none;stroke-width:0.557704;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;opacity:1"
+       style="fill:#000000;stroke:none;stroke-width:0.557704;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        id="path2105"
        clip-path="url(#clipPath2375)"
        sodipodi:type="arc"
@@ -284,8 +370,7 @@
        sodipodi:cy="121.89704"
        sodipodi:rx="20.074759"
        sodipodi:ry="15.08467"
-       d="M 115.8912,121.89704 A 20.074759,15.08467 0 0 1 95.816444,136.98171 20.074759,15.08467 0 0 1 75.741686,121.89704 20.074759,15.08467 0 0 1 95.816444,106.81237 20.074759,15.08467 0 0 1 115.8912,121.89704 Z"
-       transform="matrix(-0.41586525,0.79709311,-0.79709311,-0.41586525,278.23486,95.334514)"
+       transform="matrix(-0.41586525,0.79709311,-0.79709311,-0.41586525,172.00465,10.138681)"
        inkscape:path-effect="#path-effect2379" />
     <path
        style="fill:#000000;stroke:none;stroke-width:0.557704;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
@@ -296,22 +381,190 @@
        sodipodi:cy="121.89704"
        sodipodi:rx="20.074759"
        sodipodi:ry="15.08467"
-       transform="matrix(-0.27450705,0.85612336,-0.85612336,-0.27450705,284.26687,74.802702)"
-       d="M 115.8912,121.89704 A 20.074759,15.08467 0 0 1 95.816444,136.98171 20.074759,15.08467 0 0 1 75.741686,121.89704 20.074759,15.08467 0 0 1 95.816444,106.81237 20.074759,15.08467 0 0 1 115.8912,121.89704 Z"
+       transform="matrix(-0.27450705,0.85612336,-0.85612336,-0.27450705,178.03666,-10.393131)"
        inkscape:path-effect="#path-effect3428" />
     <ellipse
-       style="opacity:0.681905;fill:#ffffff;stroke:none;stroke-width:0.529167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       style="opacity:0.687619;fill:#ffffff;stroke:none;stroke-width:0.529167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        id="path3825-2"
-       cx="-189.52393"
-       cy="29.344994"
+       cx="-53.627335"
+       cy="20.667183"
        rx="7.5770912"
        ry="10.664055"
        transform="rotate(-137.61693)"
        inkscape:transform-center-x="-6.3610148"
        inkscape:transform-center-y="-27.314946" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 116.54896,104.0474 c -2.91042,-8.731256 -5.55625,-3.04271 -5.55625,-3.04271"
+       style="fill:none;stroke:#000000;stroke-width:0.57282292;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 10.318751,18.851567 C 7.4083316,10.120311 4.7625016,15.808857 4.7625016,15.808857"
        id="path4668" />
+    <ellipse
+       style="opacity:1;fill:#000000;stroke:none;stroke-width:0.823402;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path5898"
+       cx="4.7006025"
+       cy="15.692063"
+       rx="1.3330067"
+       ry="1.3563929" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.709214;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 5.391692,22.746243 C 1.78829,11.936043 -1.487522,18.979052 -1.487522,18.979052"
+       id="path4668-0" />
+    <ellipse
+       style="fill:#000000;stroke:none;stroke-width:1.01946;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path5898-2"
+       cx="-1.5641583"
+       cy="18.834452"
+       rx="1.6504005"
+       ry="1.679355" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.945;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:12.2;stroke-dasharray:none;stroke-opacity:1"
+       d="M 8.2475355,38.370965 C 14.61235,38.88015 23.353362,30.224002 13.424251,39.389335"
+       id="path6656" />
+    <ellipse
+       style="fill:#ffd42a;stroke-width:0.772181;stroke-linejoin:round"
+       id="path868-7-9"
+       cx="-125.33698"
+       cy="36.879108"
+       rx="22.934963"
+       ry="14.847909"
+       transform="scale(-1,1)"
+       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/bee2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <ellipse
+       style="fill:#d4aa00;stroke-width:0.667194;stroke-linejoin:round"
+       id="path868-73"
+       cx="-102.05537"
+       cy="30.379496"
+       rx="17.122393"
+       ry="14.847909"
+       transform="scale(-1,1)"
+       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/bee2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <ellipse
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.574366;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path868-3-6-6"
+       cx="-86.474976"
+       cy="27.520136"
+       transform="scale(-1,1)"
+       rx="4.7164907"
+       ry="5.6099925"
+       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/bee2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <ellipse
+       style="fill:#000000;stroke:none;stroke-width:0.275731;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path868-3-6-5-1"
+       cx="-85.793724"
+       cy="28.324869"
+       transform="scale(-1,1)"
+       rx="2.4194219"
+       ry="2.5203614"
+       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/bee2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <ellipse
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.566354;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path868-3-2"
+       cx="-93.494186"
+       cy="25.241297"
+       transform="scale(-1,1)"
+       rx="6.74226"
+       ry="7.7658424"
+       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/bee2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <ellipse
+       style="fill:#000000;stroke:none;stroke-width:0.407331;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path868-3-6-5-3-9"
+       cx="-92.833656"
+       cy="26.984529"
+       transform="scale(-1,1)"
+       rx="3.3448517"
+       ry="3.9785078"
+       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/bee2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:#000000;stroke:none;stroke-width:0.557704;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path2105-3"
+       clip-path="url(#clipath_lpe_path-effect7747)"
+       sodipodi:type="arc"
+       sodipodi:cx="95.816444"
+       sodipodi:cy="121.89704"
+       sodipodi:rx="20.074759"
+       sodipodi:ry="15.08467"
+       transform="matrix(-0.41586525,0.79709311,-0.79709311,-0.41586525,252.95041,9.391477)"
+       inkscape:path-effect="#path-effect7747"
+       d="M 115.8912,121.89704 A 20.074759,15.08467 0 0 1 95.816444,136.98171 20.074759,15.08467 0 0 1 75.741686,121.89704 20.074759,15.08467 0 0 1 95.816444,106.81237 20.074759,15.08467 0 0 1 115.8912,121.89704 Z"
+       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/bee2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:#000000;stroke:none;stroke-width:0.557704;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path2105-7-1"
+       clip-path="url(#clipath_lpe_path-effect7751)"
+       sodipodi:type="arc"
+       sodipodi:cx="95.816444"
+       sodipodi:cy="121.89704"
+       sodipodi:rx="20.074759"
+       sodipodi:ry="15.08467"
+       transform="matrix(-0.27450705,0.85612336,-0.85612336,-0.27450705,258.98242,-11.140334)"
+       inkscape:path-effect="#path-effect7751"
+       d="M 115.8912,121.89704 A 20.074759,15.08467 0 0 1 95.816444,136.98171 20.074759,15.08467 0 0 1 75.741686,121.89704 20.074759,15.08467 0 0 1 95.816444,106.81237 20.074759,15.08467 0 0 1 115.8912,121.89704 Z"
+       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/bee2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <ellipse
+       style="opacity:0.687619;fill:#ffffff;stroke:none;stroke-width:0.529167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path3825-2-9"
+       cx="-76.861847"
+       cy="116.39979"
+       rx="7.5770912"
+       ry="10.664055"
+       transform="matrix(-0.73865455,0.67408416,0.67408416,0.73865455,0,0)"
+       inkscape:transform-center-x="-6.3610161"
+       inkscape:transform-center-y="27.314945"
+       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/bee2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.572823;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 91.264501,18.104363 c -2.910419,-8.731256 -5.556249,-3.04271 -5.556249,-3.04271"
+       id="path4668-4"
+       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/bee2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <ellipse
+       style="fill:#000000;stroke:none;stroke-width:0.823402;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path5898-7"
+       cx="85.646362"
+       cy="14.944858"
+       rx="1.3330067"
+       ry="1.3563929"
+       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/bee2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.709214;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 86.337442,21.999039 C 82.73404,11.188839 79.458228,18.231848 79.458228,18.231848"
+       id="path4668-0-8"
+       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/bee2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <ellipse
+       style="fill:#000000;stroke:none;stroke-width:1.01946;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path5898-2-4"
+       cx="79.381599"
+       cy="18.087248"
+       rx="1.6504005"
+       ry="1.679355" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.945;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:12.2;stroke-dasharray:none;stroke-opacity:1"
+       d="m 89.193285,37.623761 c 6.364815,0.509185 15.105825,-8.146963 5.176716,1.01837"
+       id="path6656-5"
+       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/bee2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
   </g>
 </svg>
