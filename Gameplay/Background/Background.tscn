@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/plains-bg.png" type="Texture" id=1]
+[ext_resource path="res://Gameplay/Background/Background.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 5, 1 )
+motion_mirroring = Vector2( 1024, 600 )
+
+[node name="Sprite1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 512.548, 300 )
+texture = ExtResource( 1 )
