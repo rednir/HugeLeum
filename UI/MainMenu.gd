@@ -1,7 +1,7 @@
 extends Control
 
 
-onready var animation_player = $AnimationPlayer
+onready var fade = $Fade
 
 
 func _ready():
@@ -9,8 +9,8 @@ func _ready():
 
 
 func on_play_button_pressed():
-	animation_player.play("out")
-	animation_player.connect("animation_finished", self, "play", ["out"])
+	fade.play("in")
+	fade.connect("animation_finished", self, "play", ["in"])
 	
 
 func play(_a, _b):
