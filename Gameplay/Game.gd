@@ -1,9 +1,18 @@
 extends Node2D
 
 
-var scroll_speed = 100
+const game_environments = [GameEnvironment.PLAINS, GameEnvironment.DESERT]
 
 onready var camera = $Camera
+onready var ground = $Camera/Ground
+onready var background = $Background
+
+export var env_change_interval = 20
+export var env_change_timer = 0
+
+var scroll_speed = 100
+
+var current_environment_index = 0
 
 
 func _ready():
@@ -11,4 +20,10 @@ func _ready():
 
 
 func _process(delta):
-	pass
+	env_change_timer += delta
+
+	if env_change_timer > env_change_interval:
+		current_environment_index += 1 if current_environment_index == 0 else -1
+		ground.change_environment(game_environments[current_environment_index])
+		background.change_environment(game_environments[current_environment_index])
+		env_change_timer = 0
