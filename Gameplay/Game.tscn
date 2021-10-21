@@ -5,6 +5,10 @@
 [ext_resource path="res://Gameplay/Game.gd" type="Script" id=3]
 [ext_resource path="res://Gameplay/Camera/Camera.gd" type="Script" id=4]
 [ext_resource path="res://Gameplay/Powerups/HealthPickup.tscn" type="PackedScene" id=5]
+<<<<<<< HEAD
+=======
+[ext_resource path="res://Gameplay/Obstacles/Rock.tscn" type="PackedScene" id=6]
+>>>>>>> 2565934d8eed2f9e20d2f01f94a93672e0cc2d9f
 [ext_resource path="res://Gameplay/Powerups/ShieldPowerup.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Gameplay/Background/Background.tscn" type="PackedScene" id=8]
 
@@ -33,3 +37,6 @@ position = Vector2( 258.621, 182.342 )
 position = Vector2( 585.09, 412.655 )
 
 [node name="Background" parent="." instance=ExtResource( 8 )]
+
+[node name="Rock" parent="." instance=ExtResource( 6 )]
+position = Vector2( 793.202, 416.223 )
