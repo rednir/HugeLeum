@@ -18,7 +18,7 @@ func _process(delta):
 	pass
 
 
-func _on_enviornment_change(env: int):
+func change_environment(env: int):
 	other_sprite.texture = main_sprite.texture
 
 	match env:
