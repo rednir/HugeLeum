@@ -9,7 +9,7 @@ extents = Vector2( 513.668, 76.5744 )
 [sub_resource type="Animation" id=2]
 resource_name = "switch"
 tracks/0/type = "value"
-tracks/0/path = NodePath("OtherSprite:position")
+tracks/0/path = NodePath("ParallaxBackground/ParallaxLayer/OtherSprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -18,10 +18,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 0.25, 1 ),
 "update": 0,
-"values": [ Vector2( -283, -27 ), Vector2( -283, 171 ) ]
+"values": [ Vector2( 512, 300 ), Vector2( 512, 500 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("MainSprite:position")
+tracks/1/path = NodePath("ParallaxBackground/ParallaxLayer/MainSprite:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -30,25 +30,15 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 0.25, 1 ),
 "update": 0,
-"values": [ Vector2( -283, 171 ), Vector2( -283, -27 ) ]
+"values": [ Vector2( 512, 500 ), Vector2( 512, 300 ) ]
 }
 
 [node name="Ground" type="StaticBody2D"]
-position = Vector2( 794.5, 330 )
+position = Vector2( 794.5, 327.881 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
-
-[node name="MainSprite" type="Sprite" parent="."]
-position = Vector2( -283, -27 )
-scale = Vector2( 0.64, 0.64 )
-texture = ExtResource( 1 )
-
-[node name="OtherSprite" type="Sprite" parent="."]
-position = Vector2( -283, 171 )
-scale = Vector2( 0.64, 0.64 )
-texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -283.459, 199.116 )
@@ -56,3 +46,18 @@ shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/switch = SubResource( 2 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1024, 0 )
+
+[node name="OtherSprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 512, 487.5 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 1 )
+
+[node name="MainSprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 512, 312.5 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 1 )

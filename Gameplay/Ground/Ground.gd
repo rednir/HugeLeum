@@ -6,12 +6,17 @@ const plains_texture = preload("res://Assets/plains-ground.png")
 const desert_texture = preload("res://Assets/desert-ground.png")
 
 onready var animation_player = $AnimationPlayer
-onready var main_sprite = $MainSprite
-onready var other_sprite = $OtherSprite
+onready var parallax_background = $ParallaxBackground
+onready var main_sprite = $ParallaxBackground/ParallaxLayer/MainSprite
+onready var other_sprite = $ParallaxBackground/ParallaxLayer/OtherSprite
 
 
 func _ready():
 	pass
+
+
+func _process(delta):
+	parallax_background.scroll_offset -= Vector2(400, 0) * delta
 
 
 func _on_enviornment_change(env: int):
