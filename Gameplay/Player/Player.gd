@@ -10,6 +10,9 @@ export var max_time_airborne = 0.2
 
 var lives = starting_lives
 
+var shielded = false
+var time_shielded_for = 0
+
 var velocity = Vector2(0, 0)
 
 var time_airborne = 0
@@ -23,10 +26,25 @@ func _ready():
 func _process(delta):
 	collision_info = move_and_collide(Vector2(velocity.x * delta, velocity.y * delta))
 
-	if collision_info and collision_info.collider.name == "HealthPickup":
-		collision_info.collider.on_pickup()
-		lives += 1
-		print("life added")
+	if collision_info:
+		match collision_info.collider.name:
+			"HealthPickup":
+				collision_info.collider.on_pickup()
+				lives += 1
+				print("life added")
+			"ShieldPowerup":
+				collision_info.collider.on_pickup()
+				shielded = true
+				time_shielded_for = 0
+				print("shield picked up")
+
+	if shielded:
+		time_shielded_for += delta
+
+	if time_shielded_for > 3:
+		print("shield ran out")
+		shielded = false
+		time_shielded_for = 0
 
 	if collision_info and collision_info.collider.name == "Ground":
 		time_airborne = 0
