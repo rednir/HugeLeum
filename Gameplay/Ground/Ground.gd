@@ -21,15 +21,16 @@ func _ready():
 
 
 func _process(_delta):
-	if camera_starting_pos_x == null:
-		camera_starting_pos_x = camera.position.x
+	pass
+	# if camera_starting_pos_x == null:
+	# 	camera_starting_pos_x = camera.position.x
 
-	camera_distance_travelled_x += camera.get_camera_position().x - camera_last_pos_x
-	print(camera_distance_travelled_x)
+	# camera_distance_travelled_x += camera.get_camera_position().x - camera_last_pos_x
+	# print(camera_distance_travelled_x)
 
-	if camera_distance_travelled_x > screen_width * 2:
-		translate(Vector2(screen_width * 2, 0))
-		print("translated")
+	# if camera_distance_travelled_x > screen_width * 2:
+	# 	translate(Vector2(screen_width * 2, 0))
+	# 	print("translated")
 
 
 func _on_enviornment_change(env: int):
