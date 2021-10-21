@@ -10,10 +10,6 @@ onready var other_sprite = $ParallaxBackground/ParallaxLayer/OtherSprite
 onready var animation_player = $AnimationPlayer
 
 
-func _process(delta):
-	$ParallaxBackground.scroll_offset -= Vector2(speed * delta, 0)
-
-
 func _on_enviornment_change(env: int):
 	other_sprite.texture = main_sprite.texture
 	
