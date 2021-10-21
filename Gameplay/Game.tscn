@@ -5,10 +5,11 @@
 [ext_resource path="res://Gameplay/Game.gd" type="Script" id=3]
 [ext_resource path="res://Gameplay/Camera/Camera.gd" type="Script" id=4]
 [ext_resource path="res://Gameplay/Powerups/HealthPickup.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Gameplay/Powerups/ShieldPowerup.gd" type="Script" id=6]
+[ext_resource path="res://Gameplay/Powerups/Powerups.gd" type="Script" id=6]
 [ext_resource path="res://Gameplay/Powerups/ShieldPowerup.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Gameplay/Obstacles/Rock.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Gameplay/Background/Background.tscn" type="PackedScene" id=8]
+
 
 [node name="Game" type="Node2D"]
 position = Vector2( 0, -1 )
@@ -32,9 +33,6 @@ position = Vector2( 153.577, 182.869 )
 position = Vector2( 258.621, 182.342 )
 script = ExtResource( 6 )
 
-<<<<<<< HEAD
 [node name="Rock" parent="." instance=ExtResource( 8 )]
 position = Vector2( 585.09, 412.655 )
-=======
 [node name="Background" parent="." instance=ExtResource( 8 )]
->>>>>>> 72b209d2d3094a406a1455b74004e10c82a8ad6d
