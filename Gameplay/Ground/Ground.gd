@@ -15,7 +15,7 @@ func _ready():
 
 
 func _process(delta):
-	parallax_background.scroll_offset -= Vector2(speed, 0) * delta
+	pass
 
 
 func _on_enviornment_change(env: int):

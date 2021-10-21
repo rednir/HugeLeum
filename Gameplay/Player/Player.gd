@@ -28,7 +28,7 @@ func _process(delta):
 		lives += 1
 		print("life added")
 
-	if collision_info and (collision_info.collider.name == "Ground1" or collision_info.collider.name == "Ground2"):
+	if collision_info and collision_info.collider.name == "Ground":
 		time_airborne = 0
 		velocity.y = (velocity.y - jump_height) if Input.is_action_just_pressed("jump") else 0
 	else:
