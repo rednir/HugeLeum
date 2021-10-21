@@ -50,22 +50,21 @@ func _process(delta):
 
 func check_collisions():
 	if collision_info:
-		match collision_info.collider.name:
-			"HealthPickup":
+		if collision_info.collider.name == "HealthPickup":
 				collision_info.collider.on_pickup()
 				lives += 1
 				print("life added")
-			"ShieldPowerup":
+		elif collision_info.collider.name == "ShieldPowerup":
 				collision_info.collider.on_pickup()
 				shielded = true
 				time_shielded_for = 0
 				print("shield picked up")
-			"Rock":
-				if not shielded and not knocked_back:
-					lives -= 1
-				if not knocked_back:
-					knocked_back = true
-					velocity = initial_knock_back_velocity
+		elif collision_info.collider.is_in_group("damaging"):
+			if not shielded and not knocked_back:
+				lives -= 1
+			if not knocked_back:
+				knocked_back = true
+				velocity = initial_knock_back_velocity
 
 
 func update_status_effects(delta):
