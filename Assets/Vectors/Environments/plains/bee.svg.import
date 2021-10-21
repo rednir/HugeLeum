@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bee.svg-ba0b4ea60162707802f67c0eafd0844d.stex"
+path="res://.import/bee.svg-c05ef7354e50ca243671e0dc5a71b596.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Vectors/environments/plains/bee.svg"
-dest_files=[ "res://.import/bee.svg-ba0b4ea60162707802f67c0eafd0844d.stex" ]
+source_file="res://Assets/Vectors/Environments/plains/bee.svg"
+dest_files=[ "res://.import/bee.svg-c05ef7354e50ca243671e0dc5a71b596.stex" ]
 
 [params]
 
