@@ -1,7 +1,5 @@
 extends StaticBody2D
 
-const screen_width = 1024
-
 const plains_texture = preload("res://Assets/plains-ground.png")
 const desert_texture = preload("res://Assets/desert-ground.png")
 
@@ -10,13 +8,14 @@ onready var parallax_background = $ParallaxBackground
 onready var main_sprite = $ParallaxBackground/ParallaxLayer/MainSprite
 onready var other_sprite = $ParallaxBackground/ParallaxLayer/OtherSprite
 
+export var speed = 300
 
 func _ready():
 	pass
 
 
 func _process(delta):
-	parallax_background.scroll_offset -= Vector2(400, 0) * delta
+	parallax_background.scroll_offset -= Vector2(speed, 0) * delta
 
 
 func _on_enviornment_change(env: int):
