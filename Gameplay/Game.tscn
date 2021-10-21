@@ -6,13 +6,11 @@
 [ext_resource path="res://Gameplay/Camera/Camera.gd" type="Script" id=4]
 
 [node name="Game" type="Node2D"]
+position = Vector2( 0, -1 )
 script = ExtResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 104.043, 353.207 )
-weight = 20
-jump_height = 400
-max_jump_key_hold_time = 0.18
 
 [node name="Ground1" parent="." instance=ExtResource( 2 )]
 position = Vector2( 793.5, 330 )

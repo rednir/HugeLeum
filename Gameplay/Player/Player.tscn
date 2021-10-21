@@ -8,8 +8,6 @@ extents = Vector2( 91.9948, 100.254 )
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 2 )
-weight = 5
-jump_height = 500
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -0.0212708, 0.00866699 )

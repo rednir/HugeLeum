@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/plains-bg.png-8bbacdafd342171ca22a8556abdd1d64.stex"
+path="res://.import/desert-bg.png-a793751cd1e3d99fafa9d543941fdb58.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/plains-bg.png"
-dest_files=[ "res://.import/plains-bg.png-8bbacdafd342171ca22a8556abdd1d64.stex" ]
+source_file="res://Assets/desert-bg.png"
+dest_files=[ "res://.import/desert-bg.png-a793751cd1e3d99fafa9d543941fdb58.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
