@@ -2,7 +2,7 @@ extends StaticBody2D
 
 const plains_texture = preload("res://Assets/plains-ground.png")
 const desert_texture = preload("res://Assets/desert-ground.png")
-const ice_texture = preload("res://Assets/ice-ground.png") # TODO
+const ice_texture = preload("res://Assets/ice-ground.png")
 
 onready var animation_player = $AnimationPlayer
 onready var parallax_background = $ParallaxBackground
