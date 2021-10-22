@@ -17,6 +17,7 @@ const game_environments = [GameEnvironment.PLAINS, GameEnvironment.DESERT]
 onready var camera = $Camera
 onready var ground = $Camera/Ground
 onready var background = $Background
+onready var music_player = $MusicPlayer
 
 export var env_change_interval = 20
 export var scroll_speed = 120
@@ -48,6 +49,8 @@ func _ready():
 				if child.name == "LargeSunflower"
 				else Vector2(child.position.x, child.position.y - 150)
 			)
+
+	music_player.playing = true
 
 
 func _process(delta):
