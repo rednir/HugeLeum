@@ -16,8 +16,16 @@ script = ExtResource( 3 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 104.043, 353.207 )
 
+[node name="Background" parent="." instance=ExtResource( 8 )]
+speed = 20
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -5.0
+
 [node name="Camera" type="Camera2D" parent="."]
-position = Vector2( 511.992, 297.835 )
+position = Vector2( 511.992, 297.762 )
+z_index = 1
 current = true
 script = ExtResource( 4 )
 
@@ -29,16 +37,4 @@ position = Vector2( 281.508, 32.165 )
 [node name="ScoreDisplay" parent="Camera" instance=ExtResource( 12 )]
 position = Vector2( -19.8659, -210.123 )
 
-[node name="Background" parent="." instance=ExtResource( 8 )]
-speed = 20
-
-[node name="Camera" type="Camera2D" parent="."]
-position = Vector2( 511.992, 297.835 )
-current = true
-script = ExtResource( 4 )
-
-[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
-volume_db = -5.0
-
-[node name="Fade" parent="." instance=ExtResource( 10 )]
+[node name="Fade" parent="Camera" instance=ExtResource( 10 )]

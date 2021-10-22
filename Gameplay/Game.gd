@@ -106,4 +106,4 @@ func on_player_death():
 	set_process(false)
 
 	var results = results_scene.instance()
-	add_child(results)
+	camera.add_child(results)

@@ -6,7 +6,7 @@
 [ext_resource path="res://Assets/Audio/gameover.mp3" type="AudioStream" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0, 0, 0, 0.745098 )
+bg_color = Color( 0, 0, 0, 0.862745 )
 border_width_left = 20
 border_width_top = 20
 border_width_right = 20
@@ -52,15 +52,16 @@ tracks/0/keys = {
 [node name="Results" type="CenterContainer"]
 margin_right = 1024.0
 margin_bottom = 600.0
+use_top_left = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Panel" type="Panel" parent="."]
-margin_left = 162.0
-margin_top = 74.0
-margin_right = 862.0
-margin_bottom = 524.0
+margin_left = -350.0
+margin_top = -225.0
+margin_right = 350.0
+margin_bottom = 225.0
 rect_min_size = Vector2( 700, 450 )
 custom_styles/panel = SubResource( 1 )
 __meta__ = {
