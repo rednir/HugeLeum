@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ice-ground.svg-4b4296344c42192687c74b298b5881b0.stex"
+path="res://.import/ice-ground.svg-d688132b846e56e29b09080b1c7a3dc2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Vectors/Environments/ice/ice-ground.svg"
-dest_files=[ "res://.import/ice-ground.svg-4b4296344c42192687c74b298b5881b0.stex" ]
+source_file="res://Assets/Vectors/environments/ice/ice-ground.svg"
+dest_files=[ "res://.import/ice-ground.svg-d688132b846e56e29b09080b1c7a3dc2.stex" ]
 
 [params]
 
