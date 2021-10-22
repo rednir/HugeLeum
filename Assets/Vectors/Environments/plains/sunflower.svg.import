@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sunflower.svg-2611faf454852b22eb8f0a7ea5fce6fb.stex"
+path="res://.import/sunflower.svg-939677d8ae8c618ece50d675ca303339.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Vectors/Environments/plains/sunflower.svg"
-dest_files=[ "res://.import/sunflower.svg-2611faf454852b22eb8f0a7ea5fce6fb.stex" ]
+source_file="res://Assets/Vectors/environments/plains/sunflower.svg"
+dest_files=[ "res://.import/sunflower.svg-939677d8ae8c618ece50d675ca303339.stex" ]
 
 [params]
 
