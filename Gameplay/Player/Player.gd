@@ -1,5 +1,11 @@
 extends KinematicBody2D
 
+signal death
+
+onready var animation_player = $AnimationPlayer
+onready var list_lost_audio = $LifeLostAudio
+onready var death_audio = $DeathAudio
+
 export var starting_lives = 2
 
 export var horizontal_move_speed = 570
@@ -37,7 +43,8 @@ func _process(delta):
 	check_collisions()
 
 	if lives < 1:
-		print("oh no you died")
+		set_process(false)
+		death()
 
 	update_status_effects(delta)
 
@@ -45,6 +52,12 @@ func _process(delta):
 	update_movement_x()
 
 	collision_info = null
+
+
+func death():
+	emit_signal("death")
+	animation_player.play("death")
+	death_audio.play()
 
 
 func check_collisions():
