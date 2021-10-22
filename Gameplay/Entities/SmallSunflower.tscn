@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/sunflower.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 88.603, 3.12024 )
+extents = Vector2( 130.996, 3.30898 )
 
 [node name="SmallSunflower" type="StaticBody2D" groups=[
 "collidable",
