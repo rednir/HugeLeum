@@ -3,7 +3,7 @@ extends KinematicBody2D
 signal death
 
 onready var animation_player = $AnimationPlayer
-onready var list_lost_audio = $LifeLostAudio
+onready var life_lost_audio = $LifeLostAudio
 onready var death_audio = $DeathAudio
 
 export var starting_lives = 2
@@ -75,6 +75,7 @@ func check_collisions():
 		elif collision_info.collider.is_in_group("damaging"):
 			if not shielded and not knocked_back:
 				animation_player.play("life-lost")
+				life_lost_audio.play()
 				lives -= 1
 			if not knocked_back:
 				knocked_back = true

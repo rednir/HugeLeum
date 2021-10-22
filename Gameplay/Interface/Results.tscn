@@ -1,0 +1,131 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Assets/Fonts/FRUIT-PUNCH.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://UI/Button/Button.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Fonts/Inter-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Audio/gameover.mp3" type="AudioStream" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.745098 )
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color( 1, 0.376471, 0.376471, 0.705882 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=2]
+size = 70
+outline_size = 5
+outline_color = Color( 1, 0.223529, 0.223529, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://Assets/Fonts/FRUIT-PUNCH.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=6]
+resource_name = "in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.2, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 600 ), Vector2( 0, 0 ) ]
+}
+
+[node name="Results" type="CenterContainer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 162.0
+margin_top = 74.0
+margin_right = 862.0
+margin_bottom = 524.0
+rect_min_size = Vector2( 700, 450 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOverLabel" type="Label" parent="Panel"]
+margin_left = 187.607
+margin_top = 58.7643
+margin_right = 508.607
+margin_bottom = 126.764
+custom_fonts/font = SubResource( 2 )
+text = "Game Over!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="Panel"]
+margin_left = 178.0
+margin_top = 135.0
+margin_right = 528.0
+margin_bottom = 174.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 0.705882 )
+text = "0m"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfoLabel" type="Label" parent="Panel"]
+margin_left = 107.0
+margin_top = 224.0
+margin_right = 603.0
+margin_bottom = 290.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 0.54902 )
+text = "Total jumps: 0
+Powerups Collected: 0
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayAgainButton" parent="Panel" instance=ExtResource( 2 )]
+margin_left = 187.513
+margin_top = 319.429
+margin_right = 338.513
+margin_bottom = 388.429
+rect_pivot_offset = Vector2( -150.582, -308.97 )
+text = "Play Again"
+
+[node name="MainMenuButton" parent="Panel" instance=ExtResource( 2 )]
+margin_left = 366.919
+margin_top = 318.775
+margin_right = 517.919
+margin_bottom = 387.775
+rect_pivot_offset = Vector2( -150.582, -308.97 )
+text = "Main Menu"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "in"
+anims/in = SubResource( 6 )
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true

@@ -12,9 +12,11 @@ const powerups = [
 	preload("res://Gameplay/Powerups/ShieldPowerup.tscn")
 ]
 
-const game_environments = [GameEnvironment.PLAINS, GameEnvironment.DESERT, GameEnvironment.ICE]
+const results_scene = preload("res://Gameplay/Interface/Results.tscn")
+
 
 onready var camera = $Camera
+onready var player  = $Player
 onready var ground = $Camera/Ground
 onready var score_display = $Camera/ScoreDisplay
 onready var background = $Background
@@ -34,6 +36,8 @@ var env_change_timer = 0
 
 
 func _ready():
+	player.connect("death", self, "on_player_death")
+
 	camera.set_scroll_speed(scroll_speed)
 
 	randomize()
@@ -88,12 +92,20 @@ func _process(delta):
 
 func next_environment():
 	current_environment_index += 1
-	current_environment_index %= game_environments.size()
-	ground.change_environment(game_environments[current_environment_index])
-	background.change_environment(game_environments[current_environment_index])
+	current_environment_index %= GameEnvironment.list.size()
+	ground.change_environment(GameEnvironment.list[current_environment_index])
+	background.change_environment(GameEnvironment.list[current_environment_index])
 
 	scroll_speed += scroll_speed_change
 	camera.set_scroll_speed(min(scroll_speed, max_scroll_speed))
 
 	env_change_timer = 0
 	env_change_interval += env_change_time_increment
+
+
+func on_player_death():
+	camera.set_scroll_speed(0)
+	set_process(false)
+
+	var results = results_scene.instance()
+	add_child(results)

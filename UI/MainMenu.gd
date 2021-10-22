@@ -2,12 +2,19 @@ extends Control
 
 
 onready var fade = $Fade
+onready var ground = $Ground
+onready var bg = $Background
 onready var ground_parallax = $Ground/ParallaxBackground
 onready var bg_parallax = $Background/ParallaxBackground
 
 
 func _ready():
 	$PlayButton.connect("pressed", self, "on_play_button_pressed")
+
+	randomize()
+	var env = randi() % GameEnvironment.list.size()
+	ground.change_environment(env)
+	bg.change_environment(env)
 
 
 func on_play_button_pressed():
