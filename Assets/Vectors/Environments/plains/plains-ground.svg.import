@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/plains-ground.svg-de03325022f1e6a2164e3c2e365a3dfe.stex"
+path="res://.import/plains-ground.svg-a8a471b064b2e69ccb477a8a23599b34.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Vectors/environments/plains/plains-ground.svg"
-dest_files=[ "res://.import/plains-ground.svg-de03325022f1e6a2164e3c2e365a3dfe.stex" ]
+source_file="res://Assets/Vectors/Environments/plains/plains-ground.svg"
+dest_files=[ "res://.import/plains-ground.svg-a8a471b064b2e69ccb477a8a23599b34.stex" ]
 
 [params]
 
