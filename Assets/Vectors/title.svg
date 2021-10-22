@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="800"
+   height="400"
+   viewBox="0 0 211.66666 105.83333"
+   version="1.1"
+   id="svg5"
+   inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/title.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="title.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     width="800px"
+     units="px"
+     inkscape:lockguides="true"
+     inkscape:zoom="0.7402988"
+     inkscape:cx="210.72572"
+     inkscape:cy="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     inkscape:window-x="0"
+     inkscape:window-y="28"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter10128"
+       x="-0.31571206"
+       y="-0.71363219"
+       width="1.6314241"
+       height="2.4272644">
+      <feFlood
+         flood-opacity="1"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood10118" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="out"
+         result="composite1"
+         id="feComposite10120" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="3.5"
+         result="blur"
+         id="feGaussianBlur10122" />
+      <feOffset
+         dx="0"
+         dy="0"
+         result="offset"
+         id="feOffset10124" />
+      <feComposite
+         in="offset"
+         in2="SourceGraphic"
+         operator="atop"
+         result="fbSourceGraphic"
+         id="feComposite10126" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix10238" />
+      <feFlood
+         id="feFlood10240"
+         flood-opacity="0.596078"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         in="fbSourceGraphic" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite10242"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         id="feGaussianBlur10244"
+         in="composite1"
+         stdDeviation="5"
+         result="blur" />
+      <feOffset
+         id="feOffset10246"
+         dx="0"
+         dy="0"
+         result="offset" />
+      <feComposite
+         in2="offset"
+         id="feComposite10248"
+         in="fbSourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g9876"
+       transform="matrix(1.4766741,0,0,1.4766741,31.467558,12.154533)"
+       style="filter:url(#filter10128)">
+      <text
+         xml:space="preserve"
+         style="font-size:17.0246px;line-height:1.25;font-family:'Tiki Tropic';-inkscape-font-specification:'Tiki Tropic';fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         x="17.670277"
+         y="31.727829"
+         id="text2630"
+         transform="rotate(-6.0735541)"><tspan
+           sodipodi:role="line"
+           id="tspan2628"
+           style="fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           x="17.670277"
+           y="31.727829">HUGE </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:17.0246px;line-height:1.25;font-family:'Tiki Tropic';-inkscape-font-specification:'Tiki Tropic';fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         x="38.378181"
+         y="44.143341"
+         id="text2630-7"
+         transform="rotate(-6.0735541)"><tspan
+           sodipodi:role="line"
+           id="tspan2628-5"
+           style="fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           x="38.378181"
+           y="44.143341">LEUM </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:17.0246px;line-height:1.25;font-family:'Tiki Tropic';-inkscape-font-specification:'Tiki Tropic';fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         x="18.199444"
+         y="32.256996"
+         id="text9814"
+         transform="rotate(-6.0735541)"><tspan
+           sodipodi:role="line"
+           id="tspan9812"
+           style="fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           x="18.199444"
+           y="32.256996">HUGE </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:17.0246px;line-height:1.25;font-family:'Tiki Tropic';-inkscape-font-specification:'Tiki Tropic';fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         x="18.728611"
+         y="32.786163"
+         id="text9818"
+         transform="rotate(-6.0735541)"><tspan
+           sodipodi:role="line"
+           id="tspan9816"
+           style="fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           x="18.728611"
+           y="32.786163">HUGE </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:17.0246px;line-height:1.25;font-family:'Tiki Tropic';-inkscape-font-specification:'Tiki Tropic';fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         x="19.257778"
+         y="33.315331"
+         id="text9822"
+         transform="rotate(-6.0735541)"><tspan
+           sodipodi:role="line"
+           id="tspan9820"
+           style="fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           x="19.257778"
+           y="33.315331">HUGE </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:17.0246px;line-height:1.25;font-family:'Tiki Tropic';-inkscape-font-specification:'Tiki Tropic';fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         x="19.786942"
+         y="33.844494"
+         id="text9826"
+         transform="rotate(-6.0735541)"><tspan
+           sodipodi:role="line"
+           id="tspan9824"
+           style="fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           x="19.786942"
+           y="33.844494">HUGE </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:17.0246px;line-height:1.25;font-family:'Tiki Tropic';-inkscape-font-specification:'Tiki Tropic';fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         x="38.907349"
+         y="44.672508"
+         id="text9830"
+         transform="rotate(-6.0735541)"><tspan
+           sodipodi:role="line"
+           id="tspan9828"
+           style="fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           x="38.907349"
+           y="44.672508">LEUM </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:17.0246px;line-height:1.25;font-family:'Tiki Tropic';-inkscape-font-specification:'Tiki Tropic';fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         x="39.436516"
+         y="45.201675"
+         id="text9834"
+         transform="rotate(-6.0735541)"><tspan
+           sodipodi:role="line"
+           id="tspan9832"
+           style="fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           x="39.436516"
+           y="45.201675">LEUM </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:17.0246px;line-height:1.25;font-family:'Tiki Tropic';-inkscape-font-specification:'Tiki Tropic';fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         x="39.965683"
+         y="45.730843"
+         id="text9838"
+         transform="rotate(-6.0735541)"><tspan
+           sodipodi:role="line"
+           id="tspan9836"
+           style="fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           x="39.965683"
+           y="45.730843">LEUM </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:17.0246px;line-height:1.25;font-family:'Tiki Tropic';-inkscape-font-specification:'Tiki Tropic';fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         x="40.49485"
+         y="46.26001"
+         id="text9842"
+         transform="rotate(-6.0735541)"><tspan
+           sodipodi:role="line"
+           id="tspan9840"
+           style="fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           x="40.49485"
+           y="46.26001">LEUM </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:17.0246px;line-height:1.25;font-family:'Tiki Tropic';-inkscape-font-specification:'Tiki Tropic';fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         x="41.024017"
+         y="46.789177"
+         id="text9846"
+         transform="rotate(-6.0735541)"><tspan
+           sodipodi:role="line"
+           id="tspan9844"
+           style="fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           x="41.024017"
+           y="46.789177">LEUM </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:17.0246px;line-height:1.25;font-family:'Tiki Tropic';-inkscape-font-specification:'Tiki Tropic';fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         x="20.316109"
+         y="34.373661"
+         id="text9850"
+         transform="rotate(-6.0735541)"><tspan
+           sodipodi:role="line"
+           id="tspan9848"
+           style="fill:#ffffff;stroke:#000000;stroke-width:1.11314;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           x="20.316109"
+           y="34.373661">HUGE </tspan></text>
+    </g>
+  </g>
+</svg>
