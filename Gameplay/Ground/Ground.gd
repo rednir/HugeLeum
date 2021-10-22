@@ -2,6 +2,7 @@ extends StaticBody2D
 
 const plains_texture = preload("res://Assets/plains-ground.png")
 const desert_texture = preload("res://Assets/desert-ground.png")
+const ice_texture = preload("res://Assets/ice-ground.png") # TODO
 
 onready var animation_player = $AnimationPlayer
 onready var parallax_background = $ParallaxBackground
@@ -27,5 +28,8 @@ func change_environment(env: int):
 
 		GameEnvironment.DESERT:
 			main_sprite.texture = desert_texture
+
+		GameEnvironment.ICE:
+			main_sprite.texture = ice_texture
 
 	animation_player.play("switch")
