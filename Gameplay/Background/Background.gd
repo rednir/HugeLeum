@@ -4,6 +4,8 @@ const plainsbg_texture = preload("res://Assets/plains-bg.png")
 const plainsbg2_texture = preload("res://Assets/plains-bg2.png")
 const desertbg_texture = preload("res://Assets/desert-bg.png")
 const desertbg2_texture = preload("res://Assets/desert-bg2.png")
+const icebg_texture = preload("res://Assets/ice-bg.png")
+const icebg2_texture = preload("res://Assets/ice-bg2.png")
 
 export var speed = 20
 
@@ -27,5 +29,9 @@ func change_environment(env: int):
 		GameEnvironment.DESERT:
 			bg_main_sprite.texture = desertbg_texture
 			bg2_main_sprite.texture = desertbg2_texture
+
+		GameEnvironment.ICE:
+			bg_main_sprite.texture = icebg_texture
+			bg2_main_sprite.texture = icebg2_texture
 
 	animation_player.play("switch")

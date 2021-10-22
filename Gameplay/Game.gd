@@ -12,7 +12,7 @@ const powerups = [
 	preload("res://Gameplay/Powerups/ShieldPowerup.tscn")
 ]
 
-const game_environments = [GameEnvironment.PLAINS, GameEnvironment.DESERT]
+const game_environments = [GameEnvironment.PLAINS, GameEnvironment.DESERT, GameEnvironment.ICE]
 
 onready var camera = $Camera
 onready var ground = $Camera/Ground
@@ -84,7 +84,8 @@ func _process(delta):
 
 
 func next_environment():
-	current_environment_index += 1 if current_environment_index == 0 else -1
+	current_environment_index += 1
+	current_environment_index %= game_environments.size()
 	ground.change_environment(game_environments[current_environment_index])
 	background.change_environment(game_environments[current_environment_index])
 
