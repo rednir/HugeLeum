@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ice-bg2.svg-d4fcfeeea71633188103241e92bc32e4.stex"
+path="res://.import/spider.png-1342188bf198bf367b0ce0303b9ed79d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Vectors/environments/ice/ice-bg2.svg"
-dest_files=[ "res://.import/ice-bg2.svg-d4fcfeeea71633188103241e92bc32e4.stex" ]
+source_file="res://Assets/spider.png"
+dest_files=[ "res://.import/spider.png-1342188bf198bf367b0ce0303b9ed79d.stex" ]
 
 [params]
 
