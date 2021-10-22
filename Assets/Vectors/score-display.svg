@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="180"
+   height="140"
+   viewBox="0 0 47.624999 37.041667"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="score-display.svg"
+   inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/score-display.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     width="256px"
+     inkscape:zoom="2"
+     inkscape:cx="79.500001"
+     inkscape:cy="39.5"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     inkscape:window-x="0"
+     inkscape:window-y="28"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect1946"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1942">
+      <path
+         id="lpe_path-effect1946"
+         style="fill:#ffffff;stroke-width:1.32292;stroke-linecap:round;stroke-linejoin:round"
+         class="powerclip"
+         d="m 8.530033,16.907665 h 51.37383 V 56.713796 H 8.530033 Z m 37.928593,2.371172 V 55.286959 H 57.269998 V 19.278837 Z" />
+    </clipPath>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter3414"
+       x="-0.69552001"
+       y="-1.2652931"
+       width="2.39104"
+       height="3.5305861">
+      <feFlood
+         flood-opacity="1"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood3404" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite3406" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="6.8"
+         result="blur"
+         id="feGaussianBlur3408" />
+      <feOffset
+         dx="0"
+         dy="0"
+         result="offset"
+         id="feOffset3410" />
+      <feComposite
+         in="offset"
+         in2="offset"
+         operator="atop"
+         result="composite2"
+         id="feComposite3412" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:0.8;fill:#ffffff;stroke-width:1.17167;stroke-linecap:round;stroke-linejoin:round;filter:url(#filter3414)"
+       id="rect2902"
+       width="23.464458"
+       height="12.898198"
+       x="9.0295315"
+       y="10.61912"
+       transform="matrix(0.83996617,0,0,0.80103667,6.2390295,5.0525419)" />
+    <g
+       id="g1919"
+       clip-path="url(#clipPath1942)"
+       transform="matrix(0.63032543,0,0,0.5694462,4.9131009,-2.5841376)">
+      <path
+         id="path2848"
+         style="fill:#ffffff;stroke-width:1.79311;stroke-linecap:round;stroke-linejoin:round"
+         transform="matrix(0.99424072,-0.10716988,0.12176251,0.99255926,0,0)"
+         d="m 10.251323,27.411982 h 39.20615 v 19.656936 h -39.20615 z" />
+      <path
+         id="path2845"
+         style="fill:#ffffff;stroke-width:1.75355;stroke-linecap:round;stroke-linejoin:round"
+         transform="matrix(0.98671417,0.16246581,0.16895687,-0.98562344,0,0)"
+         d="m 21.043797,-42.816715 h 37.507835 v 19.650324 H 21.043797 Z" />
+      <path
+         id="path2842"
+         style="fill:#ffffff;stroke-width:1.32292;stroke-linecap:round;stroke-linejoin:round"
+         d="m 13.530033,26.109383 h 2.243578 v 19.510673 h -2.243578 z" />
+    </g>
+    <path
+       style="fill:#ececec;stroke-width:0.289397;stroke-linecap:round;stroke-linejoin:round"
+       d="M 26.287867,25.279177 C 22.085815,24.650835 17.536784,23.971675 16.178907,23.769931 L 13.710041,23.403124 23.926322,16.90171 c 5.618955,-3.575779 10.226589,-6.501416 10.239188,-6.501416 0.01259,0 0.0229,3.607339 0.0229,8.016309 v 8.016309 l -0.130229,-0.0057 c -0.07161,-0.0032 -3.568261,-0.519745 -7.770312,-1.148087 z"
+       id="path3701" />
+  </g>
+</svg>

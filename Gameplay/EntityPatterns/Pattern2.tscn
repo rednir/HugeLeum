@@ -10,10 +10,10 @@
 position = Vector2( 472.557, 221.125 )
 
 [node name="Rock" parent="." instance=ExtResource( 1 )]
-position = Vector2( 258.167, 410.821 )
+position = Vector2( 257.044, 408.576 )
 
 [node name="Rock2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 698.171, 405.209 )
+position = Vector2( 700.416, 411.944 )
 
 [node name="SmallSunflower" parent="." instance=ExtResource( 3 )]
 position = Vector2( 897.969, 369.29 )

@@ -8,13 +8,13 @@
 [node name="Pattern3" type="Node2D"]
 
 [node name="Rock" parent="." instance=ExtResource( 1 )]
-position = Vector2( 335.616, 415.311 )
+position = Vector2( 336.738, 428.781 )
 
 [node name="Bee" parent="." instance=ExtResource( 4 )]
 position = Vector2( 874.398, 341.228 )
 
 [node name="LargeSunflower" parent="." instance=ExtResource( 2 )]
-position = Vector2( 105.511, 350.208 )
+position = Vector2( 107.756, 340.106 )
 
 [node name="SmallSunflower" parent="." instance=ExtResource( 3 )]
 position = Vector2( 628.579, 376.025 )
