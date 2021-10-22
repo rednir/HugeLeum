@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/Fonts/FRUIT-PUNCH.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/Button/Button.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Fonts/Inter-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Assets/Audio/gameover.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Gameplay/Interface/Results.gd" type="Script" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.862745 )
@@ -50,9 +51,11 @@ tracks/0/keys = {
 }
 
 [node name="Results" type="CenterContainer"]
-margin_right = 1024.0
+margin_left = 2.0
+margin_right = 1026.0
 margin_bottom = 600.0
 use_top_left = true
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
