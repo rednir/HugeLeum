@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/life-lost.ogg-ccd775961dde8d2d9e01bf403bbf44ae.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/life-lost.ogg"
+dest_files=[ "res://.import/life-lost.ogg-ccd775961dde8d2d9e01bf403bbf44ae.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
