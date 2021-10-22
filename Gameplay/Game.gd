@@ -1,10 +1,10 @@
 extends Node2D
 
 const plains_entity_patterns = [
-	preload("res://Gameplay/EntityPatterns/Pattern1.tscn"),
-	preload("res://Gameplay/EntityPatterns/Pattern2.tscn"),
-	preload("res://Gameplay/EntityPatterns/Pattern3.tscn"),
-	preload("res://Gameplay/EntityPatterns/Pattern4.tscn")
+	preload("res://Gameplay/EntityPatterns/Plains/Pattern1.tscn"),
+	preload("res://Gameplay/EntityPatterns/Plains/Pattern2.tscn"),
+	preload("res://Gameplay/EntityPatterns/Plains/Pattern3.tscn"),
+	preload("res://Gameplay/EntityPatterns/Plains/Pattern4.tscn")
 ]
 
 const powerups = [
@@ -35,6 +35,8 @@ var env_change_timer = 0
 
 func _ready():
 	camera.set_scroll_speed(scroll_speed)
+
+	randomize()
 
 	var starting_scene = plains_entity_patterns[randi() % plains_entity_patterns.size()].instance()
 	add_child(starting_scene)

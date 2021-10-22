@@ -62,6 +62,7 @@ func death():
 
 func check_collisions():
 	if collision_info:
+		print(collision_info.collider.name)
 		if "HealthPickup" in collision_info.collider.name: # weird jank where sometimes the health pickup is called "@6HealthPickup@6"
 			collision_info.collider.on_pickup()
 			lives += 1
