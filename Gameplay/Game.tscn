@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Gameplay/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Gameplay/Ground/Ground.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Gameplay/Background/Background.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Gameplay/Entities/Bee.tscn" type="PackedScene" id=9]
 [ext_resource path="res://UI/Fade/Fade.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Gameplay/Entities/Sunflower.tscn" type="PackedScene" id=11]
 
 [node name="Game" type="Node2D"]
 position = Vector2( 0, -1 )
@@ -23,7 +24,9 @@ position = Vector2( 511.992, 297.835 )
 current = true
 script = ExtResource( 4 )
 
-[node name="Ground" parent="Camera" instance=ExtResource( 2 )]
+[node name="Ground" parent="Camera" groups=[
+"collidable",
+] instance=ExtResource( 2 )]
 position = Vector2( 281.508, 32.165 )
 
 [node name="HealthPickup" parent="." instance=ExtResource( 5 )]
@@ -40,7 +43,14 @@ position = Vector2( 585.09, 412.655 )
 [node name="Rock" parent="." instance=ExtResource( 6 )]
 position = Vector2( 793.202, 416.223 )
 
-[node name="Bee" parent="." instance=ExtResource( 9 )]
-position = Vector2( 610.064, 265.193 )
+[node name="Bee" parent="." groups=[
+"collidable",
+] instance=ExtResource( 9 )]
+position = Vector2( 624.897, 200.566 )
 
 [node name="Fade" parent="." instance=ExtResource( 10 )]
+
+[node name="Sunflower" parent="." groups=[
+"collidable",
+] instance=ExtResource( 11 )]
+position = Vector2( 427.089, 354.929 )

@@ -103,7 +103,7 @@ func update_movement_x():
 
 
 func update_movement_y(delta):
-	if collision_info and collision_info.collider.name == "Ground":
+	if collision_info and collision_info.collider.is_in_group("collidable"):
 		time_airborne = 0
 		velocity.y = (velocity.y - jump_height) if Input.is_action_just_pressed("jump") else 0
 	else:
