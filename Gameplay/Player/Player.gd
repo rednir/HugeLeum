@@ -73,6 +73,7 @@ func check_collisions():
 			print("shield picked up")
 		elif collision_info.collider.is_in_group("damaging"):
 			if not shielded and not knocked_back:
+				animation_player.play("life-lost")
 				lives -= 1
 			if not knocked_back:
 				knocked_back = true
