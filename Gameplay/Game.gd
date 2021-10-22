@@ -14,7 +14,7 @@ const powerups = [
 
 const results_scene = preload("res://Gameplay/Interface/Results.tscn")
 
-onready var fade = $Camera/Fade
+onready var fade = $Camera/Fade/AnimationPlayer
 onready var camera = $Camera
 onready var player = $Player
 onready var ground = $Camera/Ground
