@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/beetle.svg-f4a84bc5974b4a13a0f9e9ca9d95b314.stex"
+path="res://.import/beetle.svg-dd3c67f2cb6b6307c727689da84e71b2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Vectors/environments/ice/beetle.svg"
-dest_files=[ "res://.import/beetle.svg-f4a84bc5974b4a13a0f9e9ca9d95b314.stex" ]
+source_file="res://Assets/Vectors/Environments/ice/beetle.svg"
+dest_files=[ "res://.import/beetle.svg-dd3c67f2cb6b6307c727689da84e71b2.stex" ]
 
 [params]
 

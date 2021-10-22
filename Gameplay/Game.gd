@@ -104,6 +104,7 @@ func next_environment():
 
 
 func on_player_death():
+	music_player.stop()
 	camera.set_scroll_speed(0)
 	set_process(false)
 
