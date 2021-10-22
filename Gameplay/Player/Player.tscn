@@ -119,11 +119,9 @@ tracks/1/keys = {
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 0.607062, 0.607062, 0.607062, 0.507833 )
 position = Vector2( -0.0212708, 0.00866699 )
 scale = Vector2( 0.248887, 0.250094 )
 texture = ExtResource( 1 )
-offset = Vector2( 20, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.759949, 4.27924 )
