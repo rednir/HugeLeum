@@ -1,10 +1,9 @@
 extends Node2D
 
-
 const plains_entity_patterns = [
-	preload("res://Gameplay/EntityPatterns/Pattern1.tscn"), 
-	preload("res://Gameplay/EntityPatterns/Pattern2.tscn"), 
-	preload("res://Gameplay/EntityPatterns/Pattern3.tscn"), 
+	preload("res://Gameplay/EntityPatterns/Pattern1.tscn"),
+	preload("res://Gameplay/EntityPatterns/Pattern2.tscn"),
+	preload("res://Gameplay/EntityPatterns/Pattern3.tscn"),
 	preload("res://Gameplay/EntityPatterns/Pattern4.tscn")
 ]
 
@@ -40,12 +39,15 @@ func _ready():
 	add_child(next_scene)
 	for child in next_scene.get_children():
 		child.position.x += 1024
-		if child.is_in_group("can_spawn_powerups"): # randi() % 10 == 1 and 
+		if child.is_in_group("can_spawn_powerups"):  # randi() % 10 == 1 and
 			var powerup = powerups[randi() % powerups.size()].instance()
 			add_child(powerup)
 			powerup.reset_hitbox()
-			powerup.position = Vector2(child.position.x, child.position.y - 180) if child.name == "LargeSunflower" \
+			powerup.position = (
+				Vector2(child.position.x, child.position.y - 180)
+				if child.name == "LargeSunflower"
 				else Vector2(child.position.x, child.position.y - 150)
+			)
 
 
 func _process(delta):
@@ -59,7 +61,7 @@ func _process(delta):
 		add_child(scene_instance)
 		for child in scene_instance.get_children():
 			child.position.x += total_distance_travelled + 1024
-			if child.is_in_group("can_spawn_powerups"): # randi() % 10 == 1 and 
+			if child.is_in_group("can_spawn_powerups"):  # randi() % 10 == 1 and
 				var powerup = powerups[randi() % powerups.size()].instance()
 				add_child(powerup)
 				#powerup.reset_hitbox()
