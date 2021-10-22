@@ -12,7 +12,6 @@ const powerups = [
 	preload("res://Gameplay/Powerups/ShieldPowerup.tscn")
 ]
 
-const game_environments = [GameEnvironment.PLAINS, GameEnvironment.DESERT, GameEnvironment.ICE]
 
 onready var camera = $Camera
 onready var ground = $Camera/Ground
@@ -85,9 +84,9 @@ func _process(delta):
 
 func next_environment():
 	current_environment_index += 1
-	current_environment_index %= game_environments.size()
-	ground.change_environment(game_environments[current_environment_index])
-	background.change_environment(game_environments[current_environment_index])
+	current_environment_index %= GameEnvironment.list.size()
+	ground.change_environment(GameEnvironment.list[current_environment_index])
+	background.change_environment(GameEnvironment.list[current_environment_index])
 
 	scroll_speed += scroll_speed_change
 	camera.set_scroll_speed(min(scroll_speed, max_scroll_speed))

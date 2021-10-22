@@ -34,6 +34,7 @@ __meta__ = {
 }
 
 [node name="Background" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1.18921, 0 )
 
 [node name="Ground" parent="." instance=ExtResource( 1 )]
 
