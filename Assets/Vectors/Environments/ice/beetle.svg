@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1024"
+   height="600"
+   viewBox="0 0 270.93333 158.75"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="beetle.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="2.9647587"
+     inkscape:cx="414.36762"
+     inkscape:cy="532.75837"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect22694"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect21813"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect2074"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect2070"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect960"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath956">
+      <ellipse
+         style="display:none;fill:#ff0000;stroke-width:0.227961"
+         id="ellipse958"
+         cx="61.488285"
+         cy="129.13431"
+         rx="16.152945"
+         ry="10.798377"
+         d="M 77.64123,129.13431 A 16.152945,10.798377 0 0 1 61.488285,139.93268 16.152945,10.798377 0 0 1 45.33534,129.13431 16.152945,10.798377 0 0 1 61.488285,118.33593 16.152945,10.798377 0 0 1 77.64123,129.13431 Z" />
+      <path
+         id="lpe_path-effect960"
+         style="fill:#ff0000;stroke-width:0.227961"
+         class="powerclip"
+         d="m 47.653246,111.01563 h 47.83894 v 40.69952 h -47.83894 z m 29.347896,18.76185 a 13.550134,12.068087 0 0 0 -13.550134,-12.06809 13.550134,12.068087 0 0 0 -13.550134,12.06809 13.550134,12.068087 0 0 0 13.550134,12.06809 13.550134,12.068087 0 0 0 13.550134,-12.06809 z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2062">
+      <ellipse
+         style="display:none;fill:#ff0000;fill-opacity:1;stroke-width:0.256816"
+         id="ellipse2064"
+         cx="62.469952"
+         cy="129.40204"
+         rx="11.423078"
+         ry="10.173677"
+         d="M 73.893029,129.40204 A 11.423078,10.173677 0 0 1 62.469952,139.57572 11.423078,10.173677 0 0 1 51.046874,129.40204 11.423078,10.173677 0 0 1 62.469952,119.22836 11.423078,10.173677 0 0 1 73.893029,129.40204 Z" />
+      <path
+         id="lpe_path-effect2070"
+         style="fill:#ff0000;fill-opacity:1;stroke-width:0.256816"
+         class="powerclip"
+         d="m 56.042063,112.97898 h 46.946517 v 37.48678 H 56.042063 Z m 17.850966,16.42306 a 11.423078,10.173677 0 0 0 -11.423077,-10.17368 11.423078,10.173677 0 0 0 -11.423078,10.17368 11.423078,10.173677 0 0 0 11.423078,10.17368 11.423078,10.173677 0 0 0 11.423077,-10.17368 z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2066">
+      <ellipse
+         style="display:none;fill:#ff0000;fill-opacity:1;stroke-width:0.304637"
+         id="ellipse2068"
+         cx="63.451008"
+         cy="129.77748"
+         rx="13.550134"
+         ry="12.068087"
+         d="M 77.001142,129.77748 A 13.550134,12.068087 0 0 1 63.451008,141.84557 13.550134,12.068087 0 0 1 49.900874,129.77748 13.550134,12.068087 0 0 1 63.451008,117.70939 13.550134,12.068087 0 0 1 77.001142,129.77748 Z" />
+      <path
+         id="lpe_path-effect2074"
+         style="fill:#ff0000;fill-opacity:1;stroke-width:0.304637"
+         class="powerclip"
+         d="m 47.653246,111.01563 h 47.83894 v 40.69952 h -47.83894 z m 29.347896,18.76185 a 13.550134,12.068087 0 0 0 -13.550134,-12.06809 13.550134,12.068087 0 0 0 -13.550134,12.06809 13.550134,12.068087 0 0 0 13.550134,12.06809 13.550134,12.068087 0 0 0 13.550134,-12.06809 z" />
+    </clipPath>
+    <filter
+       id="mask-powermask-path-effect3265_inverse"
+       inkscape:label="filtermask-powermask-path-effect3265"
+       style="color-interpolation-filters:sRGB"
+       height="100"
+       width="100"
+       x="-50"
+       y="-50">
+      <feColorMatrix
+         id="mask-powermask-path-effect3265_primitive1"
+         values="1"
+         type="saturate"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="mask-powermask-path-effect3265_primitive2"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         in="fbSourceGraphic" />
+    </filter>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath21809">
+      <ellipse
+         style="display:none;fill:#ffd42a;fill-opacity:1;stroke-width:0.347824"
+         id="ellipse21811"
+         cx="112.13356"
+         cy="144.21634"
+         rx="28.513071"
+         ry="19.990385"
+         d="m 140.64663,144.21634 a 28.513071,19.990385 0 0 1 -28.51307,19.99038 28.513071,19.990385 0 0 1 -28.513071,-19.99038 28.513071,19.990385 0 0 1 28.513071,-19.99039 28.513071,19.990385 0 0 1 28.51307,19.99039 z" />
+      <path
+         id="lpe_path-effect21813"
+         style="fill:#ffd42a;fill-opacity:1;stroke-width:0.347824"
+         class="powerclip"
+         d="m 88.258703,118.42276 h 54.978367 v 39.80709 H 88.258703 Z m 52.387927,25.79358 a 28.513071,19.990385 0 0 0 -28.51307,-19.99039 28.513071,19.990385 0 0 0 -28.513071,19.99039 28.513071,19.990385 0 0 0 28.513071,19.99038 28.513071,19.990385 0 0 0 28.51307,-19.99038 z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath21809-7">
+      <ellipse
+         style="display:none;fill:#ffd42a;fill-opacity:1;stroke-width:0.347824"
+         id="ellipse21811-8"
+         cx="112.13356"
+         cy="144.21634"
+         rx="28.513071"
+         ry="19.990385"
+         d="m 140.64663,144.21634 a 28.513071,19.990385 0 0 1 -28.51307,19.99038 28.513071,19.990385 0 0 1 -28.513071,-19.99038 28.513071,19.990385 0 0 1 28.513071,-19.99039 28.513071,19.990385 0 0 1 28.51307,19.99039 z" />
+      <path
+         id="lpe_path-effect21813-9"
+         style="fill:#ffd42a;fill-opacity:1;stroke-width:0.347824"
+         class="powerclip"
+         d="m 88.258703,118.42276 h 54.978367 v 39.80709 H 88.258703 Z m 52.387927,25.79358 a 28.513071,19.990385 0 0 0 -28.51307,-19.99039 28.513071,19.990385 0 0 0 -28.513071,19.99039 28.513071,19.990385 0 0 0 28.513071,19.99038 28.513071,19.990385 0 0 0 28.51307,-19.99038 z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipath_lpe_path-effect22694">
+      <ellipse
+         style="display:none;fill:#ffd42a;fill-opacity:1;stroke-width:0.347824"
+         id="ellipse22696"
+         cx="112.13356"
+         cy="144.21634"
+         rx="28.513071"
+         ry="19.990385"
+         d="m 140.64663,144.21634 a 28.513071,19.990385 0 0 1 -28.51307,19.99038 28.513071,19.990385 0 0 1 -28.513071,-19.99038 28.513071,19.990385 0 0 1 28.513071,-19.99039 28.513071,19.990385 0 0 1 28.51307,19.99039 z" />
+      <path
+         id="lpe_path-effect22694"
+         style="fill:#ffd42a;fill-opacity:1;stroke-width:0.347824"
+         class="powerclip"
+         d="m 88.258703,118.42276 h 54.978367 v 39.80709 H 88.258703 Z m 52.387927,25.79358 a 28.513071,19.990385 0 0 0 -28.51307,-19.99039 28.513071,19.990385 0 0 0 -28.513071,19.99039 28.513071,19.990385 0 0 0 28.513071,19.99038 28.513071,19.990385 0 0 0 28.51307,-19.99038 z" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#0e0e00;fill-opacity:1;stroke:#000000;stroke-width:0.333055px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 95.734031,141.92862 -12.918876,4.1565 -7.975997,12.69421 2.13442,0.11228 6.403267,-10.67211 -0.112334,-1.46039 1.011042,0.56169 12.357182,-4.15651"
+       id="path3384"
+       inkscape:export-filename="D:\Art\kajamGame\beetle.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#0e0e00;fill-opacity:1;stroke:#000000;stroke-width:0.312708px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 134.62088,142.85084 12.12966,3.90258 7.48875,11.91871 -2.00403,0.10543 -6.01209,-10.02015 0.10542,-1.37118 -0.94928,0.52738 -11.60228,-3.90259"
+       id="path3384-1"
+       inkscape:export-filename="D:\Art\kajamGame\beetle.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#0e0e00;fill-opacity:1;stroke:#000000;stroke-width:0.378406px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 103.56913,147.8263 -4.850106,4.85012 -1.02107,6.63701 h 1.65924 l 0.765806,-5.36066 -0.510526,-0.7658 0.893436,-0.12772 4.85011,-4.72248"
+       id="path7224"
+       inkscape:export-filename="D:\Art\kajamGame\beetle.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#0e0e00;fill-opacity:1;stroke:#000000;stroke-width:0.378406px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 129.63593,147.28011 4.85011,4.85012 1.02107,6.63701 h -1.65924 l -0.76581,-5.36066 0.51053,-0.7658 -0.89344,-0.12772 -4.85011,-4.72248"
+       id="path7224-9"
+       inkscape:export-filename="D:\Art\kajamGame\beetle.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#161600;fill-opacity:1;stroke-width:0.264583"
+       id="path846"
+       clip-path="url(#clipPath2066)"
+       inkscape:path-effect="#path-effect960;#path-effect2074"
+       sodipodi:type="arc"
+       sodipodi:cx="71.572716"
+       sodipodi:cy="131.36539"
+       sodipodi:rx="18.91947"
+       sodipodi:ry="15.349759"
+       d="m 90.492186,131.36539 a 18.91947,15.349759 0 0 1 -18.91947,15.34976 18.91947,15.349759 0 0 1 -18.91947,-15.34976 18.91947,15.349759 0 0 1 18.91947,-15.34976 18.91947,15.349759 0 0 1 18.91947,15.34976 z"
+       transform="matrix(0.84302325,0,0,0.65148604,9.1577635,46.713283)"
+       inkscape:export-filename="D:\Art\kajamGame\beetle.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#0e0e00;fill-opacity:1;stroke-width:0.264583"
+       id="path2100"
+       ry="14.903545"
+       rx="22.489183"
+       cy="136.98769"
+       cx="116.3726"
+       inkscape:export-filename="D:\Art\kajamGame\beetle.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#121200;fill-opacity:1;stroke-width:0.245412"
+       id="path1562"
+       clip-path="url(#clipPath2062)"
+       inkscape:path-effect="#path-effect2070"
+       sodipodi:type="arc"
+       sodipodi:cx="79.51532"
+       sodipodi:cy="131.72237"
+       sodipodi:rx="18.473257"
+       sodipodi:ry="13.743389"
+       d="M 97.988577,131.72237 A 18.473257,13.743389 0 0 1 79.51532,145.46576 18.473257,13.743389 0 0 1 61.042063,131.72237 18.473257,13.743389 0 0 1 79.51532,117.97898 18.473257,13.743389 0 0 1 97.988577,131.72237 Z"
+       transform="matrix(1,0,0,0.81281955,0.17848748,26.080991)"
+       inkscape:export-filename="D:\Art\kajamGame\beetle.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#ffeeaa;fill-opacity:1;stroke-width:0.264583"
+       id="path2100-2"
+       clip-path="url(#clipPath21809)"
+       inkscape:path-effect="#path-effect21813"
+       sodipodi:type="arc"
+       sodipodi:cx="115.74789"
+       sodipodi:cy="138.32631"
+       sodipodi:rx="22.489183"
+       sodipodi:ry="14.903545"
+       d="m 138.23707,138.32631 a 22.489183,14.903545 0 0 1 -22.48918,14.90354 22.489183,14.903545 0 0 1 -22.489187,-14.90354 22.489183,14.903545 0 0 1 22.489187,-14.90355 22.489183,14.903545 0 0 1 22.48918,14.90355 z"
+       transform="translate(-0.08924279,-0.26772837)"
+       inkscape:export-filename="D:\Art\kajamGame\beetle.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#ffeeaa;fill-opacity:1;stroke-width:0.264583"
+       id="path2100-2-1"
+       clip-path="url(#clipath_lpe_path-effect22694)"
+       inkscape:path-effect="#path-effect22694"
+       sodipodi:type="arc"
+       sodipodi:cx="115.74789"
+       sodipodi:cy="138.32631"
+       sodipodi:rx="22.489183"
+       sodipodi:ry="14.903545"
+       transform="matrix(0.64682541,0,0,0.57565194,6.074534,51.978324)"
+       d="m 138.23707,138.32631 a 22.489183,14.903545 0 0 1 -22.48918,14.90354 22.489183,14.903545 0 0 1 -22.489187,-14.90354 22.489183,14.903545 0 0 1 22.489187,-14.90355 22.489183,14.903545 0 0 1 22.48918,14.90355 z"
+       inkscape:export-filename="D:\Art\kajamGame\beetle.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#0e0e00;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 100.04116,146.80439 -9.370487,3.83744 -5.533054,8.38882 1.60637,0.0892 4.551383,-6.42548 -0.178485,-1.16016 0.892426,0.53546 9.192007,-4.19441 z"
+       id="path15637"
+       inkscape:export-filename="D:\Art\kajamGame\beetle.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#0e0e00;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 133.28778,146.37347 9.37049,3.83744 5.53305,8.38882 -1.60637,0.0892 -4.55138,-6.42548 0.17849,-1.16016 -0.89243,0.53546 -9.19201,-4.19441 z"
+       id="path15637-4"
+       inkscape:export-filename="D:\Art\kajamGame\beetle.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#800000;fill-opacity:1;stroke-width:0.250508"
+       id="path22724"
+       cx="76.793419"
+       cy="125.98688"
+       rx="1.3832632"
+       ry="0.40000069"
+       inkscape:export-filename="D:\Art\kajamGame\beetle.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#800000;fill-opacity:1;stroke-width:0.250508"
+       id="path22724-3"
+       cx="74.919319"
+       cy="137.1469"
+       rx="1.3832632"
+       ry="0.40000069"
+       inkscape:export-filename="D:\Art\kajamGame\beetle.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>
