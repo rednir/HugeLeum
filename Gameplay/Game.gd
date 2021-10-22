@@ -1,11 +1,5 @@
 extends Node2D
 
-const game_environments = [GameEnvironment.PLAINS, GameEnvironment.DESERT]
-
-onready var camera = $Camera
-onready var ground = $Camera/Ground
-onready var background = $Background
-
 
 const plains_entity_patterns = [
 	preload("res://Gameplay/EntityPatterns/Pattern1.tscn"), 
