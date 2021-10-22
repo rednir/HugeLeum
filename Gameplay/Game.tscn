@@ -9,7 +9,7 @@
 [ext_resource path="res://Gameplay/Interface/ScoreDisplay.tscn" type="PackedScene" id=12]
 
 [node name="Game" type="Node2D"]
-position = Vector2( 0, -1 )
+position = Vector2( 1, -1 )
 script = ExtResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]

@@ -1,10 +1,9 @@
 extends KinematicBody2D
 
-
 export var starting_lives = 2
 
-export var horizontal_move_speed = 375
-export var slowdown_speed = 50
+export var horizontal_move_speed = 570
+export var slowdown_speed = 25
 
 export var weight = 35
 export var jump_height = 800
@@ -44,21 +43,21 @@ func _process(delta):
 
 	update_movement_y(delta)
 	update_movement_x()
-	
+
 	collision_info = null
 
 
 func check_collisions():
 	if collision_info:
 		if collision_info.collider.name == "HealthPickup":
-				collision_info.collider.on_pickup()
-				lives += 1
-				print("life added")
+			collision_info.collider.on_pickup()
+			lives += 1
+			print("life added")
 		elif collision_info.collider.name == "ShieldPowerup":
-				collision_info.collider.on_pickup()
-				shielded = true
-				time_shielded_for = 0
-				print("shield picked up")
+			collision_info.collider.on_pickup()
+			shielded = true
+			time_shielded_for = 0
+			print("shield picked up")
 		elif collision_info.collider.is_in_group("damaging"):
 			if not shielded and not knocked_back:
 				lives -= 1
@@ -85,7 +84,7 @@ func update_status_effects(delta):
 func update_movement_x():
 	# Start applying weight if been in air for too long.
 	velocity.y += weight if time_airborne > max_time_airborne else 1
-	
+
 	if not knocked_back and Input.is_action_pressed("move_left"):
 		velocity.x = -horizontal_move_speed
 	elif not knocked_back and Input.is_action_pressed("move_right"):
@@ -108,4 +107,8 @@ func update_movement_y(delta):
 		velocity.y = (velocity.y - jump_height) if Input.is_action_just_pressed("jump") else 0
 	else:
 		# If player stops holding jump, start applying weight by maxing out `time_airborne`
-		time_airborne = max_time_airborne if Input.is_action_just_released("jump") else (time_airborne + delta)
+		time_airborne = (
+			max_time_airborne
+			if Input.is_action_just_released("jump")
+			else (time_airborne + delta)
+		)
