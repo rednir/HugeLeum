@@ -21,6 +21,7 @@ onready var background = $Background
 onready var music_player = $MusicPlayer
 
 export var env_change_interval = 20
+export var env_change_time_increment = 3
 export var scroll_speed = 120
 export var scroll_speed_change = 75
 export var max_scroll_speed = 500
@@ -93,3 +94,4 @@ func next_environment():
 	camera.set_scroll_speed(min(scroll_speed, max_scroll_speed))
 
 	env_change_timer = 0
+	env_change_interval += env_change_time_increment
