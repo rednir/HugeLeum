@@ -12,8 +12,11 @@ const powerups = [
 	preload("res://Gameplay/Powerups/ShieldPowerup.tscn")
 ]
 
+const results_scene = preload("res://Gameplay/Interface/Results.tscn")
+
 
 onready var camera = $Camera
+onready var player  = $Player
 onready var ground = $Camera/Ground
 onready var score_display = $Camera/ScoreDisplay
 onready var background = $Background
@@ -33,6 +36,8 @@ var env_change_timer = 0
 
 
 func _ready():
+	player.connect("death", self, "on_player_death")
+
 	camera.set_scroll_speed(scroll_speed)
 
 	var starting_scene = plains_entity_patterns[randi() % plains_entity_patterns.size()].instance()
@@ -94,3 +99,11 @@ func next_environment():
 
 	env_change_timer = 0
 	env_change_interval += env_change_time_increment
+
+
+func on_player_death():
+	camera.set_scroll_speed(0)
+	set_process(false)
+
+	var results = results_scene.instance()
+	add_child(results)
