@@ -1,11 +1,5 @@
 extends Node2D
 
-const game_environments = [GameEnvironment.PLAINS, GameEnvironment.DESERT]
-
-onready var camera = $Camera
-onready var ground = $Camera/Ground
-onready var background = $Background
-
 
 const plains_entity_patterns = [
 	preload("res://Gameplay/EntityPatterns/Pattern1.tscn"), 
@@ -13,6 +7,17 @@ const plains_entity_patterns = [
 	preload("res://Gameplay/EntityPatterns/Pattern3.tscn"), 
 	preload("res://Gameplay/EntityPatterns/Pattern4.tscn")
 ]
+
+const powerups = [
+	preload("res://Gameplay/Powerups/HealthPickup.tscn"),
+	preload("res://Gameplay/Powerups/ShieldPowerup.tscn")
+]
+
+const game_environments = [GameEnvironment.PLAINS, GameEnvironment.DESERT]
+
+onready var camera = $Camera
+onready var ground = $Camera/Ground
+onready var background = $Background
 
 export var env_change_interval = 20
 export var scroll_speed = 120
@@ -35,6 +40,11 @@ func _ready():
 	add_child(next_scene)
 	for child in next_scene.get_children():
 		child.position.x += 1024
+		if randi() % 10 == 1 and child.is_in_group("can_spawn_powerups"):
+			var powerup = powerups[randi() % powerups.size()].instance()
+			add_child(powerup)
+			powerup.position = Vector2(child.position.x, child.position.y - 180) if child.name == "LargeSunflower" \
+				else Vector2(child.position.x, child.position.y - 150)
 
 
 func _process(delta):
@@ -48,6 +58,11 @@ func _process(delta):
 		add_child(scene_instance)
 		for child in scene_instance.get_children():
 			child.position.x += total_distance_travelled + 1024
+			if randi() % 10 == 1 and child.is_in_group("can_spawn_powerups"):
+				var powerup = powerups[randi() % powerups.size()].instance()
+				add_child(powerup)
+				powerup.position = Vector2(child.position.x, child.position.y - 180) if child.name == "LargeSunflower" \
+					else Vector2(child.position.x, child.position.y - 120)
 		distance_travelled_since_pattern_instance = 0
 
 	if env_change_timer > env_change_interval:

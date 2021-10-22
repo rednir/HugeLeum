@@ -6,6 +6,7 @@
 extents = Vector2( 194.635, 3.12024 )
 
 [node name="LargeSunflower" type="StaticBody2D" groups=[
+"can_spawn_powerups",
 "collidable",
 ]]
 

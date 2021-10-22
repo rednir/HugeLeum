@@ -18,6 +18,7 @@ extents = Vector2( 49.6319, 29.8258 )
 extents = Vector2( 39.5053, 29.0591 )
 
 [node name="Bee" type="StaticBody2D" groups=[
+"can_spawn_powerups",
 "collidable",
 ]]
 
