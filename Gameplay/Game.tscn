@@ -14,8 +14,9 @@
 [ext_resource path="res://Gameplay/Interface/ScoreDisplay.tscn" type="PackedScene" id=12]
 
 [node name="Game" type="Node2D"]
-position = Vector2( 0, -1 )
+position = Vector2( 1, -1 )
 script = ExtResource( 3 )
+env_change_interval = 5
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 104.043, 353.207 )
