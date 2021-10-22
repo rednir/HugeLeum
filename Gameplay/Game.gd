@@ -14,9 +14,9 @@ const powerups = [
 
 const results_scene = preload("res://Gameplay/Interface/Results.tscn")
 
-
+onready var fade = $Camera/Fade
 onready var camera = $Camera
-onready var player  = $Player
+onready var player = $Player
 onready var ground = $Camera/Ground
 onready var score_display = $Camera/ScoreDisplay
 onready var background = $Background
@@ -84,7 +84,7 @@ func _process(delta):
 						powerup.position = Vector2(child.position.x, child.position.y - 120)
 		distance_travelled_since_pattern_instance = 0
 
-	score_display.score = int(round(total_distance_travelled / 300)) 
+	score_display.score = int(round(total_distance_travelled / 300))
 
 	if env_change_timer > env_change_interval:
 		next_environment()
@@ -109,4 +109,24 @@ func on_player_death():
 	set_process(false)
 
 	var results = results_scene.instance()
+	results.connect("main_menu_pressed", self, "on_main_menu_button_pressed")
+	results.connect("play_again_pressed", self, "on_play_again_button_pressed")
 	camera.add_child(results)
+
+
+func on_main_menu_button_pressed():
+	fade.play("in")
+	fade.connect("animation_finished", self, "on_main_menu_animation_finished", ["in"])
+
+
+func on_play_again_button_pressed():
+	fade.play("in")
+	fade.connect("animation_finished", self, "on_play_again_animation_finished", ["in"])
+
+
+func on_main_menu_animation_finished(_a, _b):
+	get_tree().change_scene("res://UI/MainMenu.tscn")
+
+
+func on_play_again_animation_finished(_a, _b):
+	get_tree().change_scene("res://Gameplay/Game.tscn")
