@@ -40,9 +40,10 @@ func _ready():
 	add_child(next_scene)
 	for child in next_scene.get_children():
 		child.position.x += 1024
-		if randi() % 10 == 1 and child.is_in_group("can_spawn_powerups"):
+		if child.is_in_group("can_spawn_powerups"): # randi() % 10 == 1 and 
 			var powerup = powerups[randi() % powerups.size()].instance()
 			add_child(powerup)
+			powerup.reset_hitbox()
 			powerup.position = Vector2(child.position.x, child.position.y - 180) if child.name == "LargeSunflower" \
 				else Vector2(child.position.x, child.position.y - 150)
 
@@ -58,11 +59,15 @@ func _process(delta):
 		add_child(scene_instance)
 		for child in scene_instance.get_children():
 			child.position.x += total_distance_travelled + 1024
-			if randi() % 10 == 1 and child.is_in_group("can_spawn_powerups"):
+			if child.is_in_group("can_spawn_powerups"): # randi() % 10 == 1 and 
 				var powerup = powerups[randi() % powerups.size()].instance()
 				add_child(powerup)
-				powerup.position = Vector2(child.position.x, child.position.y - 180) if child.name == "LargeSunflower" \
-					else Vector2(child.position.x, child.position.y - 120)
+				#powerup.reset_hitbox()
+				match child.name:
+					"LargeSunflower":
+						powerup.position = Vector2(child.position.x, child.position.y - 180)
+					"Bee":
+						powerup.position = Vector2(child.position.x, child.position.y - 120)
 		distance_travelled_since_pattern_instance = 0
 
 	if env_change_timer > env_change_interval:

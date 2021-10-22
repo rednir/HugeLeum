@@ -49,11 +49,11 @@ func _process(delta):
 
 func check_collisions():
 	if collision_info:
-		if collision_info.collider.name == "HealthPickup":
+		if "HealthPickup" in collision_info.collider.name: # weird jank where sometimes the health pickup is called "@6HealthPickup@6"
 			collision_info.collider.on_pickup()
 			lives += 1
 			print("life added")
-		elif collision_info.collider.name == "ShieldPowerup":
+		elif "ShieldPowerup" in collision_info.collider.name:
 			collision_info.collider.on_pickup()
 			shielded = true
 			time_shielded_for = 0

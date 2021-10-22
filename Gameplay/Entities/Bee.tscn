@@ -30,7 +30,6 @@ height = 27.6888
 position = Vector2( -0.914703, -0.840908 )
 scale = Vector2( 0.608438, 0.608438 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -42,5 +41,5 @@ position = Vector2( -42.2633, -13.8377 )
 shape = SubResource( 5 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2( 73.4173, 9.92125 )
+position = Vector2( 75.4016, 11.1118 )
 shape = SubResource( 6 )
