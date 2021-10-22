@@ -82,9 +82,6 @@ func update_status_effects(delta):
 
 
 func update_movement_x():
-	# Start applying weight if been in air for too long.
-	velocity.y += weight if time_airborne > max_time_airborne else 1
-
 	if not knocked_back and Input.is_action_pressed("move_left"):
 		velocity.x = -horizontal_move_speed
 	elif not knocked_back and Input.is_action_pressed("move_right"):
@@ -102,13 +99,16 @@ func update_movement_x():
 
 
 func update_movement_y(delta):
+	# Start applying weight if been in air for too long.
+	velocity.y += weight if time_airborne >= max_time_airborne else 1
+
 	if collision_info and collision_info.collider.is_in_group("collidable"):
 		time_airborne = 0
 		velocity.y = (velocity.y - jump_height) if Input.is_action_just_pressed("jump") else 0
 	else:
 		# If player stops holding jump, start applying weight by maxing out `time_airborne`
 		time_airborne = (
-			max_time_airborne
-			if Input.is_action_just_released("jump")
-			else (time_airborne + delta)
+			time_airborne + delta
+			if Input.is_action_pressed("jump")
+			else max_time_airborne
 		)
