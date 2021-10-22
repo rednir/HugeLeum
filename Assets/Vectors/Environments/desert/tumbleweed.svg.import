@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tumbleweed.svg-49a9c021904ad79291824ede30a95cb1.stex"
+path="res://.import/tumbleweed.svg-a4c757116c8dedbe2dd9fec1beeb63c6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Vectors/Environments/desert/tumbleweed.svg"
-dest_files=[ "res://.import/tumbleweed.svg-49a9c021904ad79291824ede30a95cb1.stex" ]
+source_file="res://Assets/Vectors/environments/desert/tumbleweed.svg"
+dest_files=[ "res://.import/tumbleweed.svg-a4c757116c8dedbe2dd9fec1beeb63c6.stex" ]
 
 [params]
 
