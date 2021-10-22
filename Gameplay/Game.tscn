@@ -13,6 +13,9 @@
 position = Vector2( 1, -1 )
 script = ExtResource( 3 )
 
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 104.043, 353.207 )
+
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2( 511.992, 297.835 )
 current = true
@@ -27,9 +30,6 @@ position = Vector2( 281.508, 32.165 )
 position = Vector2( -19.8659, -210.123 )
 
 [node name="Background" parent="." instance=ExtResource( 8 )]
-
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 104.043, 353.207 )
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2( 511.992, 297.835 )

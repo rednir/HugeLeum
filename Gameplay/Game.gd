@@ -16,6 +16,7 @@ const game_environments = [GameEnvironment.PLAINS, GameEnvironment.DESERT]
 
 onready var camera = $Camera
 onready var ground = $Camera/Ground
+onready var score_display = $Camera/ScoreDisplay
 onready var background = $Background
 onready var music_player = $MusicPlayer
 
@@ -24,6 +25,7 @@ export var scroll_speed = 120
 export var scroll_speed_change = 75
 export var max_scroll_speed = 500
 
+var elapsed_time = 0
 var total_distance_travelled = 0
 var distance_travelled_since_pattern_instance = 0
 var current_environment_index = 0
@@ -55,8 +57,10 @@ func _ready():
 func _process(delta):
 	env_change_timer += delta
 
-	total_distance_travelled += scroll_speed * delta
-	distance_travelled_since_pattern_instance += scroll_speed * delta
+	elapsed_time += delta
+	if not elapsed_time < 3:
+		total_distance_travelled += scroll_speed * delta
+		distance_travelled_since_pattern_instance += scroll_speed * delta
 
 	if distance_travelled_since_pattern_instance > 1024:
 		var scene_instance = plains_entity_patterns[randi() % plains_entity_patterns.size()].instance()
@@ -72,6 +76,8 @@ func _process(delta):
 					"Bee":
 						powerup.position = Vector2(child.position.x, child.position.y - 120)
 		distance_travelled_since_pattern_instance = 0
+
+	score_display.score = int(round(total_distance_travelled / 300)) 
 
 	if env_change_timer > env_change_interval:
 		next_environment()
