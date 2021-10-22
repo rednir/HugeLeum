@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Gameplay/Entities/Rock.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Gameplay/Entities/Bee.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Gameplay/Entities/SmallSunflower.tscn" type="PackedScene" id=3]
+
+[node name="Pattern2" type="Node2D"]
+
+[node name="Bee" parent="." instance=ExtResource( 2 )]
+position = Vector2( 472.557, 221.125 )
+
+[node name="Rock" parent="." instance=ExtResource( 1 )]
+position = Vector2( 258.167, 410.821 )
+
+[node name="Rock2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 698.171, 405.209 )
+
+[node name="SmallSunflower" parent="." instance=ExtResource( 3 )]
+position = Vector2( 897.969, 369.29 )

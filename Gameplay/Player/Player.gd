@@ -3,8 +3,8 @@ extends KinematicBody2D
 
 export var starting_lives = 2
 
-export var horizontal_move_speed = 570
-export var slowdown_speed = 25
+export var horizontal_move_speed = 375
+export var slowdown_speed = 50
 
 export var weight = 35
 export var jump_height = 800

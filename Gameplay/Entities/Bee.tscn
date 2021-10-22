@@ -22,12 +22,15 @@ height = 25.8575
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 29.0124, 10.1367 )
 
-[node name="Bee" type="StaticBody2D"]
+[node name="Bee" type="StaticBody2D" groups=[
+"collidable",
+]]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -0.914703, -0.840908 )
 scale = Vector2( 0.608438, 0.608438 )
 frames = SubResource( 1 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
