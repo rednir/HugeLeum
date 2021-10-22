@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ice-bg2.svg-d4fcfeeea71633188103241e92bc32e4.stex"
+path="res://.import/ice-bg2.svg-8f7e5b02c073ea115b6f6ae36fb68ece.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Vectors/environments/ice/ice-bg2.svg"
-dest_files=[ "res://.import/ice-bg2.svg-d4fcfeeea71633188103241e92bc32e4.stex" ]
+source_file="res://Assets/Vectors/Environments/ice/ice-bg2.svg"
+dest_files=[ "res://.import/ice-bg2.svg-8f7e5b02c073ea115b6f6ae36fb68ece.stex" ]
 
 [params]
 
