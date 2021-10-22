@@ -6,7 +6,9 @@
 
 [node name="Pattern2" type="Node2D"]
 
-[node name="Bee" parent="." instance=ExtResource( 2 )]
+[node name="Bee" parent="." groups=[
+"can_spawn_powerups",
+] instance=ExtResource( 2 )]
 position = Vector2( 472.557, 221.125 )
 
 [node name="Rock" parent="." instance=ExtResource( 1 )]
