@@ -42,13 +42,13 @@ onready var player = $Player
 onready var background = $Background
 onready var music_player = $MusicPlayer
 
+export var hard_mode = true
 export var env_change_interval = 20
 export var env_change_time_increment = 3
 export var scroll_speed = 120
 export var scroll_speed_change = 75
 export var max_scroll_speed = 500
 export var player_horizontal_movement_rate_increase = 1.07
-
 export var pixels_per_metre = 300
 
 var dead = false
@@ -217,4 +217,4 @@ func on_main_menu_animation_finished(_a, _b):
 
 
 func on_play_again_animation_finished(_a, _b):
-	get_tree().change_scene("res://Gameplay/Game.tscn")
+	get_tree().change_scene("res://Gameplay/HardMode.tscn" if hard_mode else "res://Gameplay/Game.tscn")
