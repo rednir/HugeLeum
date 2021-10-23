@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Assets/Fonts/FRUIT-PUNCH.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/Button/Button.tscn" type="PackedScene" id=2]
@@ -38,6 +38,18 @@ font_data = SubResource( 9 )
 
 [sub_resource type="DynamicFont" id=11]
 font_data = ExtResource( 3 )
+
+[sub_resource type="InputEventAction" id=15]
+action = "ui_accept"
+
+[sub_resource type="ShortCut" id=16]
+shortcut = SubResource( 15 )
+
+[sub_resource type="InputEventAction" id=13]
+action = "back"
+
+[sub_resource type="ShortCut" id=14]
+shortcut = SubResource( 13 )
 
 [sub_resource type="Animation" id=7]
 length = 2.5
@@ -144,6 +156,7 @@ margin_top = 319.429
 margin_right = 338.513
 margin_bottom = 388.429
 rect_pivot_offset = Vector2( -150.582, -308.97 )
+shortcut = SubResource( 16 )
 text = "Play Again"
 
 [node name="MainMenuButton" parent="Panel" instance=ExtResource( 2 )]
@@ -152,6 +165,7 @@ margin_top = 318.775
 margin_right = 517.919
 margin_bottom = 387.775
 rect_pivot_offset = Vector2( -150.582, -308.97 )
+shortcut = SubResource( 14 )
 text = "Main Menu"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
