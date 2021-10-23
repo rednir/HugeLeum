@@ -29,8 +29,8 @@
      units="px"
      width="8px"
      inkscape:zoom="1.0469406"
-     inkscape:cx="-2.865492"
-     inkscape:cy="19.10328"
+     inkscape:cx="-0.95516403"
+     inkscape:cy="19.103281"
      inkscape:window-width="1920"
      inkscape:window-height="1052"
      inkscape:window-x="0"
@@ -58,14 +58,14 @@
      inkscape:groupmode="layer"
      id="layer1">
     <circle
-       style="opacity:0.47809524;fill:#ffe680;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;filter:url(#filter858)"
+       style="opacity:0.2;fill:#ffe680;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;filter:url(#filter858)"
        id="path846"
        cx="4.2664714"
        cy="4.2664714"
        r="0.7818141"
-       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/snow.png"
-       inkscape:export-xdpi="129.95419"
-       inkscape:export-ydpi="129.95419"
+       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/sand-particle.png"
+       inkscape:export-xdpi="55.711002"
+       inkscape:export-ydpi="55.711002"
        transform="matrix(20.609064,0,0,20.609064,-83.009453,-86.042098)" />
   </g>
 </svg>
