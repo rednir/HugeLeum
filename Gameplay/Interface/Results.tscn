@@ -46,7 +46,7 @@ action = "ui_accept"
 shortcut = SubResource( 7 )
 
 [sub_resource type="InputEventAction" id=9]
-action = "back"
+action = "ui_back"
 
 [sub_resource type="ShortCut" id=10]
 shortcut = SubResource( 9 )
