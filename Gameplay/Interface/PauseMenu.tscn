@@ -18,23 +18,22 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="ShaderMaterial" id=4]
+[sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 70
 outline_size = 5
 outline_color = Color( 0.505882, 0.505882, 0.505882, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="InputEventAction" id=6]
+[sub_resource type="InputEventAction" id=4]
 action = "ui_cancel"
 
-[sub_resource type="ShortCut" id=7]
-shortcut = SubResource( 6 )
+[sub_resource type="ShortCut" id=5]
+shortcut = SubResource( 4 )
 
-[sub_resource type="Animation" id=3]
-resource_name = "in"
+[sub_resource type="Animation" id=6]
 length = 2.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Panel/Blur:modulate")
@@ -61,8 +60,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 600 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "out"
+[sub_resource type="Animation" id=7]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
@@ -113,11 +111,11 @@ __meta__ = {
 [node name="Blur" type="TextureRect" parent="Panel"]
 modulate = Color( 1, 1, 1, 0 )
 show_behind_parent = true
-material = SubResource( 4 )
+material = SubResource( 2 )
 margin_left = -212.0
-margin_top = -950.0
+margin_top = -950.794
 margin_right = 812.0
-margin_bottom = 450.0
+margin_bottom = 449.206
 rect_min_size = Vector2( 1024, 600 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -132,7 +130,7 @@ margin_left = 22.0
 margin_top = 59.0
 margin_right = 580.0
 margin_bottom = 127.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Paused..."
 align = 1
 __meta__ = {
@@ -145,7 +143,8 @@ margin_top = 165.478
 margin_right = 277.11
 margin_bottom = 234.478
 rect_pivot_offset = Vector2( -150.582, -308.97 )
-shortcut = SubResource( 7 )
+hint_tooltip = "Resume"
+shortcut = SubResource( 5 )
 text = "Resume"
 
 [node name="MainMenuButton" parent="Panel" instance=ExtResource( 3 )]
@@ -154,9 +153,10 @@ margin_top = 165.269
 margin_right = 455.182
 margin_bottom = 234.269
 rect_pivot_offset = Vector2( -150.582, -308.97 )
+hint_tooltip = "Main Menu"
 text = "Main Menu"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "in"
-anims/in = SubResource( 3 )
-anims/out = SubResource( 5 )
+anims/in = SubResource( 6 )
+anims/out = SubResource( 7 )

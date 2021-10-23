@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/plains-bg2.svg-cabfa31bd7da0baa4b8edc67e4c93bef.stex"
+path="res://.import/sand-particle.svg-ada566879cd2af2e0774340dd2b3cf0b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Vectors/environments/plains/plains-bg2.svg"
-dest_files=[ "res://.import/plains-bg2.svg-cabfa31bd7da0baa4b8edc67e4c93bef.stex" ]
+source_file="res://Assets/Vectors/Environments/desert/sand-particle.svg"
+dest_files=[ "res://.import/sand-particle.svg-ada566879cd2af2e0774340dd2b3cf0b.stex" ]
 
 [params]
 

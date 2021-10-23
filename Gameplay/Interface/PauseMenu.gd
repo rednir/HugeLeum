@@ -16,6 +16,7 @@ func _ready():
 func on_main_menu_button_pressed():
 	emit_signal("main_menu_pressed")
 
+
 func on_resume_button_pressed():
 	animation_player.play("out")
 	animation_player.connect("animation_finished", self, "on_out_anim_finished", ["out"])

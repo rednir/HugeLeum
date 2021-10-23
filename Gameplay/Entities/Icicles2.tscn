@@ -32,7 +32,9 @@ extents = Vector2( 13.7018, 12.682 )
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 10.1662, 8.43935 )
 
-[node name="Icicles2" type="StaticBody2D"]
+[node name="Icicles2" type="StaticBody2D" groups=[
+"damaging",
+]]
 collision_mask = 17
 
 [node name="Sprite" type="Sprite" parent="."]

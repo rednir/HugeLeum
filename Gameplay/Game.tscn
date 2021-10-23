@@ -118,7 +118,7 @@ tracks/3/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=3]
 resource_name = "speedup"
 tracks/0/type = "value"
 tracks/0/path = NodePath("../CanvasLayer/SpeedUpLabel:rect_scale")
@@ -157,30 +157,30 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.901961 ), Color( 1, 1, 1, 0.901961 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 615.523, 10 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 618.324, 11.5314 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 13.6643, 449.39 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 11.4198, 444.568 )
 
-[sub_resource type="DynamicFont" id=11]
+[sub_resource type="DynamicFont" id=8]
 size = 120
 outline_size = 10
 font_data = ExtResource( 11 )
 
-[sub_resource type="InputEventAction" id=8]
+[sub_resource type="InputEventAction" id=9]
 action = "ui_cancel"
 
-[sub_resource type="ShortCut" id=9]
-shortcut = SubResource( 8 )
+[sub_resource type="ShortCut" id=10]
+shortcut = SubResource( 9 )
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 1, 0, 0, 0.588235 )
 
 [node name="Game" type="Node2D"]
@@ -195,7 +195,6 @@ collision_layer = 16
 collision_mask = 9
 
 [node name="Background" parent="." instance=ExtResource( 8 )]
-speed = 20
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
@@ -217,7 +216,7 @@ position = Vector2( 281.508, 32.165 )
 autoplay = "init"
 anims/death = SubResource( 1 )
 anims/init = SubResource( 2 )
-anims/speedup = SubResource( 10 )
+anims/speedup = SubResource( 3 )
 
 [node name="DeathBorder" type="StaticBody2D" parent="Camera" groups=[
 "insta-kill",
@@ -227,19 +226,19 @@ collision_mask = 17
 
 [node name="Top" type="CollisionShape2D" parent="Camera/DeathBorder"]
 position = Vector2( -2.40271, -517.004 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="Bottom" type="CollisionShape2D" parent="Camera/DeathBorder"]
 position = Vector2( -3.42218, 352.905 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Left" type="CollisionShape2D" parent="Camera/DeathBorder"]
 position = Vector2( -606.751, -82.7008 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="Right" type="CollisionShape2D" parent="Camera/DeathBorder"]
 position = Vector2( 602.728, -84.8393 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 5
@@ -263,7 +262,7 @@ margin_bottom = 50.082
 rect_rotation = 30.0
 rect_scale = Vector2( 0.2, 0.2 )
 rect_pivot_offset = Vector2( 232, 52 )
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 1, 0.345098, 0.415686, 1 )
 text = "Speed up!"
 valign = 1
@@ -277,7 +276,7 @@ margin_top = 17.2421
 margin_right = 1009.01
 margin_bottom = 57.2421
 mouse_default_cursor_shape = 2
-shortcut = SubResource( 9 )
+shortcut = SubResource( 10 )
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 7 )
 stretch_mode = 4
@@ -294,7 +293,7 @@ margin_left = 1.992
 margin_top = -3.23801
 margin_right = 1025.99
 margin_bottom = 596.762
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
