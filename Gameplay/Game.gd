@@ -92,6 +92,7 @@ func _process(delta):
 		total_distance_travelled += scroll_speed * delta
 		distance_travelled_since_pattern_instance += scroll_speed * delta
 
+	
 	if distance_travelled_since_pattern_instance > 1024:
 		var scene_instance
 		match current_environment_index:
