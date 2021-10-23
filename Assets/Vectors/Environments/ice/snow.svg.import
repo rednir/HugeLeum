@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/snow.svg-ad46fb017381676d5e7f162ad8f06610.stex"
+path="res://.import/snow.svg-bacc69408f1d3446a47524bb8d8d1d94.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Vectors/environments/ice/snow.svg"
-dest_files=[ "res://.import/snow.svg-ad46fb017381676d5e7f162ad8f06610.stex" ]
+source_file="res://Assets/Vectors/Environments/ice/snow.svg"
+dest_files=[ "res://.import/snow.svg-bacc69408f1d3446a47524bb8d8d1d94.stex" ]
 
 [params]
 
