@@ -65,8 +65,6 @@ func _ready():
 	camera.set_scroll_speed(scroll_speed)
 
 	randomize()
-	
-	dead = false
 
 	var starting_scene = plains_entity_patterns[randi() % plains_entity_patterns.size()].instance()
 	add_child(starting_scene)
@@ -130,6 +128,8 @@ func next_environment():
 	current_environment_index %= GameEnvironment.list.size()
 	ground.change_environment(GameEnvironment.list[current_environment_index])
 	background.change_environment(GameEnvironment.list[current_environment_index])
+	disable_active_hitboxes()
+	
 	camera_animation_player.play("speedup")
 
 	scroll_speed += scroll_speed_change
@@ -141,6 +141,19 @@ func next_environment():
 	player.horizontal_move_speed *= 1.07
 
 	music_player.pitch_scale = min((music_player.pitch_scale + 0.04), 1.5)
+
+
+func disable_active_hitboxes():
+	for child in get_children():
+		if "Pattern" in child.name:
+			for grandchild in child.get_children():
+				for great_grandchild in grandchild.get_children():
+					if great_grandchild is CollisionShape2D:
+						great_grandchild.set_deferred("disabled", true)
+					else:
+						for great_great_grandchild in great_grandchild.get_children():
+							if great_great_grandchild is CollisionShape2D:
+								great_great_grandchild.set_deferred("disabled", true)
 
 
 func on_player_death():

@@ -34,6 +34,7 @@ extents = Vector2( 10.1662, 8.43935 )
 
 [node name="Icicles2" type="StaticBody2D" groups=[
 "damaging",
+"entity",
 ]]
 collision_mask = 17
 
