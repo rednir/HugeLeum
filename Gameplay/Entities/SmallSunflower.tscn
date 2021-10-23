@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/sunflower.png" type="Texture" id=1]
+[ext_resource path="res://Gameplay/Entities/SmallSunflower.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 130.996, 3.30898 )
@@ -10,6 +11,7 @@ extents = Vector2( 130.996, 3.30898 )
 "entity",
 ]]
 collision_mask = 17
+script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -1.41423 )

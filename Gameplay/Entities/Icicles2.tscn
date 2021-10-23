@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/icicles2.png" type="Texture" id=1]
+[ext_resource path="res://Gameplay/Entities/Icicles2.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 9.45914, 62.1795 )
@@ -37,6 +38,7 @@ extents = Vector2( 10.1662, 8.43935 )
 "entity",
 ]]
 collision_mask = 17
+script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.196958, 0.196958 )

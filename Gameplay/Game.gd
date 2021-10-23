@@ -94,7 +94,6 @@ func _process(delta):
 		total_distance_travelled += scroll_speed * delta
 		distance_travelled_since_pattern_instance += scroll_speed * delta
 
-	
 	if distance_travelled_since_pattern_instance > 1024:
 		var scene_instance
 		match current_environment_index:
@@ -110,7 +109,7 @@ func _process(delta):
 			child.position.x += total_distance_travelled + 1024
 			if randi() % 1 == 1 and child.is_in_group("can_spawn_powerups"):
 				var powerup = powerups[randi() % powerups.size()].instance()
-				
+
 				# No point of spawning health pickups if max lives is 1.
 				if player.max_lives == 1 and powerup.name == "HealthPickup":
 					continue
@@ -142,7 +141,7 @@ func next_environment():
 	ground.change_environment(GameEnvironment.list[current_environment_index])
 	background.change_environment(GameEnvironment.list[current_environment_index])
 	disable_active_hitboxes()
-	
+
 	camera_animation_player.play("speedup")
 
 	scroll_speed += scroll_speed_change
@@ -153,14 +152,16 @@ func next_environment():
 
 	player.horizontal_move_speed *= player_horizontal_movement_rate_increase
 
-	music_player.pitch_scale = min((music_player.pitch_scale + 0.04), 1.5)
+	music_player.pitch_scale = min(music_player.pitch_scale + 0.04, 1.5)
 
 
 func disable_active_hitboxes():
 	for child in get_children():
 		if "Pattern" in child.name:
-			for grandchild in child.get_children():
-				for great_grandchild in grandchild.get_children():
+			for entity in child.get_children():
+				if entity.get("disappear") == false:
+					entity.disappear = true
+				for great_grandchild in entity.get_children():
 					if great_grandchild is CollisionShape2D:
 						great_grandchild.set_deferred("disabled", true)
 					else:
@@ -189,7 +190,11 @@ func on_player_death():
 	var results = results_scene.instance()
 	results.connect("main_menu_pressed", self, "on_main_menu_button_pressed")
 	results.connect("play_again_pressed", self, "on_play_again_button_pressed")
-	results.set_display_stats(total_distance_travelled / pixels_per_metre, player.total_times_jumped, player.num_of_powerups_collected)
+	results.set_display_stats(
+		total_distance_travelled / pixels_per_metre,
+		player.total_times_jumped,
+		player.num_of_powerups_collected
+	)
 	canvas_layer.add_child(results)
 
 
@@ -223,4 +228,6 @@ func on_main_menu_animation_finished(_a, _b):
 
 
 func on_play_again_animation_finished(_a, _b):
-	get_tree().change_scene("res://Gameplay/HardMode.tscn" if hard_mode else "res://Gameplay/Game.tscn")
+	get_tree().change_scene(
+		"res://Gameplay/HardMode.tscn" if hard_mode else "res://Gameplay/Game.tscn"
+	)
