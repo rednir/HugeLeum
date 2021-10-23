@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/plains-bg2.svg-cabfa31bd7da0baa4b8edc67e4c93bef.stex"
+path="res://.import/worm-falling.png-369b260f959ede3a4997d0bda105709e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Vectors/environments/plains/plains-bg2.svg"
-dest_files=[ "res://.import/plains-bg2.svg-cabfa31bd7da0baa4b8edc67e4c93bef.stex" ]
+source_file="res://Assets/worm-falling.png"
+dest_files=[ "res://.import/worm-falling.png-369b260f959ede3a4997d0bda105709e.stex" ]
 
 [params]
 
