@@ -157,6 +157,7 @@ func on_resume_button_pressed():
 
 
 func on_main_menu_button_pressed():
+	get_tree().paused = false
 	fade.play("in")
 	fade.connect("animation_finished", self, "on_main_menu_animation_finished", ["in"])
 
