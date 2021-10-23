@@ -42,7 +42,7 @@ onready var player = $Player
 onready var background = $Background
 onready var music_player = $MusicPlayer
 
-export var hard_mode = true
+export var hard_mode = false
 export var env_change_interval = 20
 export var env_change_time_increment = 3
 export var scroll_speed = 120
