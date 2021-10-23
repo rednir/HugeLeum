@@ -124,16 +124,11 @@ func update_movement_y(delta):
 
 	if collision_info and collision_info.collider.is_in_group("collidable"):
 		time_airborne = 0
-<<<<<<< HEAD
-		#velocity.y = (velocity.y - jump_height) if Input.is_action_pressed("jump") else 0
 		if Input.is_action_pressed("jump") and temp_cooldown <= 0:
 			velocity.y = max((velocity.y - jump_height), -jump_height)
 			temp_cooldown = jump_cooldown_time
 		else:
 			velocity.y = 0
-=======
-		velocity.y = max((velocity.y - jump_height), -jump_height) if Input.is_action_pressed("jump") else 0
->>>>>>> 296751b6183d7a08fc686ed7840b7d180a42db36
 	else:
 		# If player stops holding jump, start applying weight by maxing out `time_airborne`
 		time_airborne = (
