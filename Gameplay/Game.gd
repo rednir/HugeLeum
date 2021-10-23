@@ -127,7 +127,7 @@ func next_environment():
 	env_change_timer = 0
 	env_change_interval += env_change_time_increment
 
-	player.horizontal_move_speed *= 1.08
+	player.horizontal_move_speed *= 1.07
 
 
 func on_player_death():
