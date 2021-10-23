@@ -18,11 +18,6 @@ animations = [ {
 "name": "moving",
 "speed": 4.0
 }, {
-"frames": [ ExtResource( 8 ) ],
-"loop": true,
-"name": "still",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "falling",
@@ -31,6 +26,11 @@ animations = [ {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "dying",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "still",
 "speed": 5.0
 } ]
 
