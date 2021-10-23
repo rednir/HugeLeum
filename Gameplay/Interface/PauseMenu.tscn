@@ -1,0 +1,155 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Assets/Fonts/FRUIT-PUNCH.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://UI/blur.gdshader" type="Shader" id=2]
+[ext_resource path="res://UI/Button/Button.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/white.png" type="Texture" id=4]
+[ext_resource path="res://Gameplay/Interface/PauseMenu.gd" type="Script" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.862745 )
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color( 0.533333, 0.533333, 0.533333, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 70
+outline_size = 5
+outline_color = Color( 0.505882, 0.505882, 0.505882, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "in"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel/Blur:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 0.6, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.2, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 600 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.25, 0.2 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 600 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel/Blur:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1.2 ),
+"update": 3,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="PauseMenu" type="CenterContainer"]
+pause_mode = 2
+margin_right = 1024.0
+margin_bottom = 600.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 212.0
+margin_top = 150.0
+margin_right = 812.0
+margin_bottom = 450.0
+rect_min_size = Vector2( 600, 300 )
+rect_pivot_offset = Vector2( -974.735, -592.24 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Blur" type="TextureRect" parent="Panel"]
+modulate = Color( 1, 1, 1, 0 )
+show_behind_parent = true
+material = SubResource( 4 )
+margin_left = -212.0
+margin_top = -950.0
+margin_right = 812.0
+margin_bottom = 450.0
+rect_min_size = Vector2( 1024, 600 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PausedLabel" type="Label" parent="Panel"]
+margin_left = 22.0
+margin_top = 59.0
+margin_right = 580.0
+margin_bottom = 127.0
+custom_fonts/font = SubResource( 2 )
+text = "Paused..."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResumeButton" parent="Panel" instance=ExtResource( 3 )]
+margin_left = 126.11
+margin_top = 165.478
+margin_right = 277.11
+margin_bottom = 234.478
+rect_pivot_offset = Vector2( -150.582, -308.97 )
+text = "Resume"
+
+[node name="MainMenuButton" parent="Panel" instance=ExtResource( 3 )]
+margin_left = 304.182
+margin_top = 165.269
+margin_right = 455.182
+margin_bottom = 234.269
+rect_pivot_offset = Vector2( -150.582, -308.97 )
+text = "Main Menu"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "in"
+anims/in = SubResource( 3 )
+anims/out = SubResource( 5 )

@@ -13,10 +13,12 @@ const powerups = [
 ]
 
 const results_scene = preload("res://Gameplay/Interface/Results.tscn")
+const pause_menu_scene = preload("res://Gameplay/Interface/PauseMenu.tscn")
 
 onready var canvas_layer = $CanvasLayer
 onready var fade = $CanvasLayer/Fade/AnimationPlayer
 onready var score_display = $CanvasLayer/ScoreDisplay
+onready var pause_button = $CanvasLayer/PauseButton
 
 onready var camera = $Camera
 onready var camera_animation_player = $Camera/AnimationPlayer
@@ -41,6 +43,7 @@ var env_change_timer = 0
 
 func _ready():
 	player.connect("death", self, "on_player_death")
+	pause_button.connect("pressed", self, "on_pause_button_pressed")
 
 	camera.set_scroll_speed(scroll_speed)
 
@@ -119,11 +122,24 @@ func on_player_death():
 	self.add_child(timer)
 	timer.start()
 	yield(timer, "timeout")
+	timer.queue_free()
 
 	var results = results_scene.instance()
 	results.connect("main_menu_pressed", self, "on_main_menu_button_pressed")
 	results.connect("play_again_pressed", self, "on_play_again_button_pressed")
 	canvas_layer.add_child(results)
+
+
+func on_pause_button_pressed():
+	get_tree().paused = true
+	var pause_menu = pause_menu_scene.instance()
+	pause_menu.connect("main_menu_pressed", self, "on_main_menu_button_pressed")
+	pause_menu.connect("resume_pressed", self, "on_resume_button_pressed")
+	canvas_layer.add_child(pause_menu)
+
+
+func on_resume_button_pressed():
+	get_tree().paused = false
 
 
 func on_main_menu_button_pressed():
