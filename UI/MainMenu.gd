@@ -35,4 +35,4 @@ func on_hard_mode_toggled(button_pressed: bool):
 
 
 func play(_a, _b):
-	get_tree().change_scene("Gameplay/Game.tscn")
+	get_tree().change_scene("res://Gameplay/HardMode.tscn" if hard_mode_button.pressed else "res://Gameplay/Game.tscn")
