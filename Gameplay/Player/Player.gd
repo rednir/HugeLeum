@@ -103,7 +103,7 @@ func update_status_effects(delta):
 	if shielded:
 		time_shielded_for += delta
 
-	if time_shielded_for > 3:
+	if time_shielded_for > 7:
 		shielded = false
 		shield.visible = false
 		time_shielded_for = 0
