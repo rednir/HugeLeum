@@ -105,6 +105,8 @@ func update_status_effects(delta):
 
 
 func update_movement_x(delta):
+	horizontal_move_speed = min(50000, horizontal_move_speed)
+
 	if not knocked_back and Input.is_action_pressed("move_left"):
 		velocity.x = -horizontal_move_speed * delta
 	elif not knocked_back and Input.is_action_pressed("move_right"):
