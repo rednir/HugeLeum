@@ -24,6 +24,7 @@ extents = Vector2( 59.8292, 158.341 )
 extents = Vector2( 104.001, 57.8503 )
 
 [node name="Icicles1" type="StaticBody2D" groups=[
+"can_spawn_powerups",
 "damaging",
 "entity",
 ]]

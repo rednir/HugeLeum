@@ -106,7 +106,7 @@ func _process(delta):
 		add_child(scene_instance)
 		for child in scene_instance.get_children():
 			child.position.x += total_distance_travelled + 1024
-			if randi() % 10 == 1 and child.is_in_group("can_spawn_powerups"):
+			if child.is_in_group("can_spawn_powerups"): # randi() % 10 == 1 and 
 				var powerup = powerups[randi() % powerups.size()].instance()
 				add_child(powerup)
 				match child.name:
@@ -114,6 +114,12 @@ func _process(delta):
 						powerup.position = Vector2(child.position.x, child.position.y - 180)
 					"Bee":
 						powerup.position = Vector2(child.position.x, child.position.y - 120)
+					"Spider":
+						powerup.position = Vector2(child.position.x, child.position.y - 150)
+					"Icicles1":
+						powerup.position = Vector2(child.position.x, child.position.y - 150)
+					"Snowman":
+						powerup.position = Vector2(child.position.x, child.position.y - 200)
 		distance_travelled_since_pattern_instance = 0
 
 	heart_display.set_hearts(player.lives)

@@ -7,6 +7,7 @@ radius = 38.8644
 height = 56.108
 
 [node name="Spider" type="StaticBody2D" groups=[
+"can_spawn_powerups",
 "damaging",
 "entity",
 ]]
