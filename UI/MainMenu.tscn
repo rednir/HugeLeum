@@ -45,6 +45,7 @@ margin_top = 332.221
 margin_right = 590.0
 margin_bottom = 421.221
 rect_scale = Vector2( 1.00521, 0.972 )
+hint_tooltip = "Play"
 text = "Play"
 
 [node name="Fade" parent="." instance=ExtResource( 5 )]
