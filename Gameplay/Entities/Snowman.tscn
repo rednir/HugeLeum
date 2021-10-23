@@ -6,7 +6,7 @@
 extents = Vector2( 17.4923, 66.5048 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 37.986, 32.8529 )
+extents = Vector2( 64.5592, 9.90949 )
 
 [node name="Snowman" type="StaticBody2D" groups=[
 "collidable",
@@ -24,6 +24,6 @@ scale = Vector2( 2.19406, 2.08794 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2( -110.055, -28.5406 )
+position = Vector2( -102.639, -29.0703 )
 shape = SubResource( 2 )
 one_way_collision = true
