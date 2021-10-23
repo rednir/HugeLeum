@@ -42,7 +42,7 @@ onready var player = $Player
 onready var background = $Background
 onready var music_player = $MusicPlayer
 
-export var hard_mode = true
+export var hard_mode = false
 export var env_change_interval = 20
 export var env_change_time_increment = 3
 export var scroll_speed = 120
@@ -105,10 +105,16 @@ func _process(delta):
 			2:
 				scene_instance = ice_entity_patterns[randi() % ice_entity_patterns.size()].instance()
 		add_child(scene_instance)
+
 		for child in scene_instance.get_children():
 			child.position.x += total_distance_travelled + 1024
-			if randi() % 10 == 1 and child.is_in_group("can_spawn_powerups"):
+			if randi() % 1 == 1 and child.is_in_group("can_spawn_powerups"):
 				var powerup = powerups[randi() % powerups.size()].instance()
+				
+				# No point of spawning health pickups if max lives is 1.
+				if player.max_lives == 1 and powerup.name == "HealthPickup":
+					continue
+
 				add_child(powerup)
 				match child.name:
 					"LargeSunflower":
