@@ -1,10 +1,15 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Assets/Fonts/FRUIT-PUNCH.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/Button/Button.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Fonts/Inter-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Assets/Audio/gameover.mp3" type="AudioStream" id=4]
 [ext_resource path="res://Gameplay/Interface/Results.gd" type="Script" id=5]
+[ext_resource path="res://Assets/white.png" type="Texture" id=6]
+[ext_resource path="res://UI/blur.gdshader" type="Shader" id=7]
+
+[sub_resource type="ShaderMaterial" id=7]
+shader = ExtResource( 7 )
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.862745 )
@@ -36,7 +41,7 @@ font_data = ExtResource( 3 )
 
 [sub_resource type="Animation" id=6]
 resource_name = "in"
-length = 0.5
+length = 2.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
 tracks/0/interp = 1
@@ -49,15 +54,38 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 0, 600 ), Vector2( 0, 0 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Blur:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 0.6, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="Results" type="CenterContainer"]
-margin_left = 2.0
-margin_right = 1026.0
-margin_bottom = 600.0
+margin_top = 600.0
+margin_right = 1024.0
+margin_bottom = 1200.0
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Blur" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 7 )
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 1024, 600 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 6 )
+expand = true
 
 [node name="Panel" type="Panel" parent="."]
 margin_left = 162.0
