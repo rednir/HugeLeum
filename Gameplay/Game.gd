@@ -42,7 +42,7 @@ onready var player = $Player
 onready var background = $Background
 onready var music_player = $MusicPlayer
 
-export var env_change_interval = 20
+export var env_change_interval = 2000
 export var env_change_time_increment = 3
 export var scroll_speed = 120
 export var scroll_speed_change = 75
@@ -50,6 +50,7 @@ export var max_scroll_speed = 500
 
 export var pixels_per_metre = 300
 
+var dead = false
 var elapsed_time = 0
 var total_distance_travelled = 0
 var distance_travelled_since_pattern_instance = 0
@@ -64,6 +65,8 @@ func _ready():
 	camera.set_scroll_speed(scroll_speed)
 
 	randomize()
+	
+	dead = false
 
 	var starting_scene = plains_entity_patterns[randi() % plains_entity_patterns.size()].instance()
 	add_child(starting_scene)
@@ -139,6 +142,7 @@ func next_environment():
 
 
 func on_player_death():
+	dead = true
 	heart_display.set_hearts(0)
 
 	music_player.stop()
@@ -162,11 +166,12 @@ func on_player_death():
 
 
 func on_pause_button_pressed():
-	get_tree().paused = true
-	var pause_menu = pause_menu_scene.instance()
-	pause_menu.connect("main_menu_pressed", self, "on_main_menu_button_pressed")
-	pause_menu.connect("resume_pressed", self, "on_resume_button_pressed")
-	canvas_layer.add_child(pause_menu)
+	if dead == false:
+		get_tree().paused = true
+		var pause_menu = pause_menu_scene.instance()
+		pause_menu.connect("main_menu_pressed", self, "on_main_menu_button_pressed")
+		pause_menu.connect("resume_pressed", self, "on_resume_button_pressed")
+		canvas_layer.add_child(pause_menu)
 
 
 func on_resume_button_pressed():
@@ -174,12 +179,14 @@ func on_resume_button_pressed():
 
 
 func on_main_menu_button_pressed():
+
 	get_tree().paused = false
 	fade.play("in")
 	fade.connect("animation_finished", self, "on_main_menu_animation_finished", ["in"])
 
 
 func on_play_again_button_pressed():
+	dead = false
 	fade.play("in")
 	fade.connect("animation_finished", self, "on_play_again_animation_finished", ["in"])
 
