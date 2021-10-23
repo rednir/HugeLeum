@@ -149,6 +149,8 @@ func update_movement_y(delta):
 			already_jumped_this_key_press = true
 			total_times_jumped += 1
 			jump_audio.play()
+		elif collision_info.normal.y != -1:
+			velocity.y += weight * delta
 		else:
 			velocity.y = 0
 	else:
