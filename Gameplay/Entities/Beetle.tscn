@@ -25,6 +25,7 @@ extents = Vector2( 10.2646, 1.26712 )
 
 [node name="Beetle" type="StaticBody2D" groups=[
 "collidable",
+"entity",
 ]]
 collision_mask = 17
 

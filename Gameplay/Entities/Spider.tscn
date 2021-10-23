@@ -8,6 +8,7 @@ height = 56.108
 
 [node name="Spider" type="StaticBody2D" groups=[
 "damaging",
+"entity",
 ]]
 collision_mask = 17
 

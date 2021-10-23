@@ -10,6 +10,7 @@ extents = Vector2( 64.5592, 9.90949 )
 
 [node name="Snowman" type="StaticBody2D" groups=[
 "collidable",
+"entity",
 ]]
 collision_mask = 17
 
