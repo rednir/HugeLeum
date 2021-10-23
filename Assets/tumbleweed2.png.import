@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tumbleweed.png-38f3b887a8f533c8d49f9c63d5144c9b.stex"
+path="res://.import/tumbleweed2.png-a48f4553ba4599a8311472779305a3da.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tumbleweed.png"
-dest_files=[ "res://.import/tumbleweed.png-38f3b887a8f533c8d49f9c63d5144c9b.stex" ]
+source_file="res://Assets/tumbleweed2.png"
+dest_files=[ "res://.import/tumbleweed2.png-a48f4553ba4599a8311472779305a3da.stex" ]
 
 [params]
 
