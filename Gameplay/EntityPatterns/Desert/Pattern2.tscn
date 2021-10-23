@@ -7,7 +7,7 @@
 [node name="Pattern2" type="Node2D"]
 
 [node name="Tumbleweed" parent="." instance=ExtResource( 4 )]
-position = Vector2( 629.321, 221.428 )
+position = Vector2( 879.354, 360.217 )
 
 [node name="Eagle" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1167.53, 184.347 )

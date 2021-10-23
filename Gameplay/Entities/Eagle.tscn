@@ -4,7 +4,7 @@
 [ext_resource path="res://Assets/eagle2.png" type="Texture" id=2]
 [ext_resource path="res://Gameplay/Entities/Eagle.gd" type="Script" id=3]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=4]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 1 ) ],
 "loop": true,
@@ -12,7 +12,7 @@ animations = [ {
 "speed": 1.5
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 62.2254, 5.80757 )
 
 [sub_resource type="RectangleShape2D" id=3]
@@ -21,21 +21,22 @@ extents = Vector2( 86.8727, 5.80756 )
 [node name="Eagle" type="KinematicBody2D" groups=[
 "collidable",
 ]]
+collision_mask = 17
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -153.276, -63.0917 )
 scale = Vector2( 0.332053, 0.332053 )
-frames = SubResource( 1 )
+frames = SubResource( 4 )
 animation = "flap wings"
-frame = 1
+frame = 2
 playing = true
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -2.92318, 9.28887 )
 scale = Vector2( 1.06369, 1 )
-shape = SubResource( 2 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2( 84.6273, 33.0407 )

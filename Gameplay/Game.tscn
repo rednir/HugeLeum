@@ -139,6 +139,8 @@ script = ExtResource( 3 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 104.043, 353.207 )
 z_index = 1
+collision_layer = 16
+collision_mask = 9
 
 [node name="Background" parent="." instance=ExtResource( 8 )]
 speed = 20
@@ -167,6 +169,8 @@ anims/init = SubResource( 2 )
 [node name="DeathBorder" type="StaticBody2D" parent="Camera" groups=[
 "insta-kill",
 ]]
+collision_layer = 8
+collision_mask = 17
 
 [node name="Top" type="CollisionShape2D" parent="Camera/DeathBorder"]
 position = Vector2( -2.40271, -517.004 )

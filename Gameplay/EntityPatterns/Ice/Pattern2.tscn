@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Gameplay/Entities/Beetle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Gameplay/Entities/Snowman.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Gameplay/Entities/Icicles1.tscn" type="PackedScene" id=4]
+
+[node name="Pattern2" type="Node2D"]
+
+[node name="Beetle" parent="." instance=ExtResource( 1 )]
+position = Vector2( 397.3, 406.241 )
+
+[node name="Snowman" parent="." instance=ExtResource( 3 )]
+position = Vector2( 869.517, 316.269 )
+
+[node name="Icicles1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 683.319, 383.977 )

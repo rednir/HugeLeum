@@ -8,6 +8,7 @@ extents = Vector2( 130.996, 3.30898 )
 [node name="SmallSunflower" type="StaticBody2D" groups=[
 "collidable",
 ]]
+collision_mask = 17
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -1.41423 )
