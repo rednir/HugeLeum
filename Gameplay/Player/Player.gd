@@ -29,6 +29,8 @@ var knocked_back = false
 var knock_back_velocity = Vector2(0, 0)
 var time_knocked_back_for = 0
 
+var already_jumped_this_key_press = false
+
 var time_airborne = 0
 var collision_info = null
 
@@ -117,9 +119,16 @@ func update_movement_y(delta):
 	# Start applying weight if been in air for too long.
 	velocity.y += weight if time_airborne >= max_time_airborne else 1
 
+	if not Input.is_action_pressed("jump"):
+		already_jumped_this_key_press = false
+
 	if collision_info and collision_info.collider.is_in_group("collidable"):
 		time_airborne = 0
-		velocity.y = (velocity.y - jump_height) if Input.is_action_pressed("jump") else 0
+		if Input.is_action_pressed("jump") and not already_jumped_this_key_press:
+			velocity.y = max((velocity.y - jump_height), -jump_height)
+			already_jumped_this_key_press = true
+		else:
+			velocity.y = 0
 	else:
 		# If player stops holding jump, start applying weight by maxing out `time_airborne`
 		time_airborne = (

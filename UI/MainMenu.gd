@@ -1,7 +1,7 @@
 extends Control
 
 
-onready var fade = $Fade
+onready var fade = $Fade/AnimationPlayer
 onready var ground = $Ground
 onready var bg = $Background
 onready var ground_parallax = $Ground/ParallaxBackground

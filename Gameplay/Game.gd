@@ -21,11 +21,15 @@ const powerups = [
 
 const results_scene = preload("res://Gameplay/Interface/Results.tscn")
 
+onready var canvas_layer = $CanvasLayer
+onready var fade = $CanvasLayer/Fade/AnimationPlayer
+onready var score_display = $CanvasLayer/ScoreDisplay
 
 onready var camera = $Camera
-onready var player  = $Player
+onready var camera_animation_player = $Camera/AnimationPlayer
 onready var ground = $Camera/Ground
-onready var score_display = $Camera/ScoreDisplay
+
+onready var player = $Player
 onready var background = $Background
 onready var music_player = $MusicPlayer
 
@@ -98,7 +102,7 @@ func _process(delta):
 						powerup.position = Vector2(child.position.x, child.position.y - 120)
 		distance_travelled_since_pattern_instance = 0
 
-	score_display.score = int(round(total_distance_travelled / 300)) 
+	score_display.score = int(round(total_distance_travelled / 300))
 
 	if env_change_timer > env_change_interval:
 		next_environment()
@@ -118,8 +122,37 @@ func next_environment():
 
 
 func on_player_death():
+	music_player.stop()
+	camera_animation_player.play("death")
 	camera.set_scroll_speed(0)
 	set_process(false)
 
+	# Wait a bit before showing results screen.
+	var timer = Timer.new()
+	timer.set_wait_time(1)
+	self.add_child(timer)
+	timer.start()
+	yield(timer, "timeout")
+
 	var results = results_scene.instance()
-	add_child(results)
+	results.connect("main_menu_pressed", self, "on_main_menu_button_pressed")
+	results.connect("play_again_pressed", self, "on_play_again_button_pressed")
+	canvas_layer.add_child(results)
+
+
+func on_main_menu_button_pressed():
+	fade.play("in")
+	fade.connect("animation_finished", self, "on_main_menu_animation_finished", ["in"])
+
+
+func on_play_again_button_pressed():
+	fade.play("in")
+	fade.connect("animation_finished", self, "on_play_again_animation_finished", ["in"])
+
+
+func on_main_menu_animation_finished(_a, _b):
+	get_tree().change_scene("res://UI/MainMenu.tscn")
+
+
+func on_play_again_animation_finished(_a, _b):
+	get_tree().change_scene("res://Gameplay/Game.tscn")

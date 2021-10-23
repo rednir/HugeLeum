@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bee.svg-c05ef7354e50ca243671e0dc5a71b596.stex"
+path="res://.import/heart1.png-acf1be995974cb41c2a0b7b19d29e349.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Vectors/Environments/plains/bee.svg"
-dest_files=[ "res://.import/bee.svg-c05ef7354e50ca243671e0dc5a71b596.stex" ]
+source_file="res://Assets/heart1.png"
+dest_files=[ "res://.import/heart1.png-acf1be995974cb41c2a0b7b19d29e349.stex" ]
 
 [params]
 

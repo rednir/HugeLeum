@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Gameplay/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Gameplay/Ground/Ground.tscn" type="PackedScene" id=2]
@@ -9,16 +9,110 @@
 [ext_resource path="res://UI/Fade/Fade.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Gameplay/Interface/ScoreDisplay.tscn" type="PackedScene" id=12]
 
+[sub_resource type="Animation" id=1]
+resource_name = "death"
+length = 15.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 15 ),
+"transitions": PoolRealArray( 0.6, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../CanvasLayer/Red:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.6 ),
+"transitions": PoolRealArray( 1, 1.5, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 0.721569 ), Color( 1, 0, 0, 0.721569 ), Color( 1, 0, 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -30, 0 ), Vector2( 30, 0 ), Vector2( -25, 0 ), Vector2( 25, 0 ), Vector2( -20, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "init"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../CanvasLayer/Red:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 0 ) ]
+}
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 0, 0, 0.588235 )
+
 [node name="Game" type="Node2D"]
 position = Vector2( 1, -1 )
 script = ExtResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 104.043, 353.207 )
+z_index = 1
+
+[node name="Background" parent="." instance=ExtResource( 8 )]
+speed = 20
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -5.0
 
 [node name="Camera" type="Camera2D" parent="."]
-position = Vector2( 511.992, 297.835 )
+position = Vector2( 511.992, 297.762 )
+z_index = 1
 current = true
+zoom = Vector2( 0.760091, 0.760091 )
 script = ExtResource( 4 )
 
 [node name="Ground" parent="Camera" groups=[
@@ -26,19 +120,26 @@ script = ExtResource( 4 )
 ] instance=ExtResource( 2 )]
 position = Vector2( 281.508, 32.165 )
 
-[node name="ScoreDisplay" parent="Camera" instance=ExtResource( 12 )]
-position = Vector2( -19.8659, -210.123 )
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera"]
+autoplay = "init"
+anims/death = SubResource( 1 )
+anims/init = SubResource( 2 )
 
-[node name="Background" parent="." instance=ExtResource( 8 )]
-speed = 20
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 5
 
-[node name="Camera" type="Camera2D" parent="."]
-position = Vector2( 511.992, 297.835 )
-current = true
-script = ExtResource( 4 )
+[node name="ScoreDisplay" parent="CanvasLayer" instance=ExtResource( 12 )]
+position = Vector2( 514.126, 86.639 )
 
-[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
-volume_db = -5.0
+[node name="Fade" parent="CanvasLayer" instance=ExtResource( 10 )]
 
-[node name="Fade" parent="." instance=ExtResource( 10 )]
+[node name="Red" type="Panel" parent="CanvasLayer"]
+modulate = Color( 1, 0, 0, 0.130974 )
+margin_left = 1.992
+margin_top = -3.23801
+margin_right = 1025.99
+margin_bottom = 596.762
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

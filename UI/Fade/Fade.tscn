@@ -8,7 +8,7 @@ resource_name = "in"
 length = 0.3
 step = 0.05
 tracks/0/type = "value"
-tracks/0/path = NodePath("Fade/Blur:modulate")
+tracks/0/path = NodePath("AnimationPlayer/Blur:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -20,7 +20,7 @@ tracks/0/keys = {
 "values": [ Color( 0, 0, 0, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Fade/Panel:modulate")
+tracks/1/path = NodePath("AnimationPlayer/Panel:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -32,7 +32,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Fade/Blur:rect_scale")
+tracks/2/path = NodePath("AnimationPlayer/Blur:rect_scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -44,7 +44,7 @@ tracks/2/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Fade/Panel:rect_scale")
+tracks/3/path = NodePath("AnimationPlayer/Panel:rect_scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -61,7 +61,7 @@ resource_name = "out"
 length = 0.3
 step = 0.05
 tracks/0/type = "value"
-tracks/0/path = NodePath("Fade/Blur:modulate")
+tracks/0/path = NodePath("AnimationPlayer/Blur:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -73,7 +73,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Fade/Panel:modulate")
+tracks/1/path = NodePath("AnimationPlayer/Panel:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -85,7 +85,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Fade/Blur:rect_scale")
+tracks/2/path = NodePath("AnimationPlayer/Blur:rect_scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -97,7 +97,7 @@ tracks/2/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0, 0 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Fade/Panel:rect_scale")
+tracks/3/path = NodePath("AnimationPlayer/Panel:rect_scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -115,12 +115,16 @@ shader = ExtResource( 1 )
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0, 0, 0, 1 )
 
-[node name="Fade" type="AnimationPlayer"]
+[node name="Fade" type="CanvasLayer"]
+layer = 10
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "out"
 anims/in = SubResource( 1 )
 anims/out = SubResource( 2 )
 
-[node name="Blur" type="TextureRect" parent="."]
+[node name="Blur" type="TextureRect" parent="AnimationPlayer"]
+modulate = Color( 0, 0, 0, 0 )
 material = SubResource( 3 )
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -134,7 +138,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="AnimationPlayer"]
+modulate = Color( 1, 1, 1, 0 )
 margin_right = 1024.0
 margin_bottom = 600.0
 custom_styles/panel = SubResource( 4 )
