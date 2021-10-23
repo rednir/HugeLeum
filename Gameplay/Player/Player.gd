@@ -16,6 +16,7 @@ export var slowdown_speed = 300
 
 export var weight = 4500
 export var jump_height = 40000
+export var max_y_vel = 1000
 export var max_time_airborne = 0.2
 
 export var initial_knock_back_velocity = Vector2(-800, -300)
@@ -118,7 +119,9 @@ func update_status_effects(delta):
 func update_movement_x(delta):
 	horizontal_move_speed = min(50000, horizontal_move_speed)
 
-	if not knocked_back and Input.is_action_pressed("move_left"):
+	if not knocked_back and collision_info and collision_info.normal.y != -1:
+		velocity.x = 0	
+	elif not knocked_back and Input.is_action_pressed("move_left"):
 		velocity.x = max(velocity.x - slowdown_speed, -horizontal_move_speed * delta)
 	elif not knocked_back and Input.is_action_pressed("move_right"):
 		velocity.x = min(velocity.x + slowdown_speed, horizontal_move_speed * delta)
@@ -150,7 +153,7 @@ func update_movement_y(delta):
 			total_times_jumped += 1
 			jump_audio.play()
 		elif collision_info.normal.y != -1:
-			velocity.y += weight * delta
+			velocity.y += weight * delta if velocity.y < max_y_vel else 0
 		else:
 			velocity.y = 0
 	else:
