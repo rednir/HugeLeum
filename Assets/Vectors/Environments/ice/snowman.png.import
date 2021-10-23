@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/snowman.png-533923c26bf5ffb5f2bea01c7934d6f2.stex"
+path="res://.import/snowman.png-7e1741ed027648e9e298fb5a53774999.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Vectors/environments/ice/snowman.png"
-dest_files=[ "res://.import/snowman.png-533923c26bf5ffb5f2bea01c7934d6f2.stex" ]
+source_file="res://Assets/Vectors/Environments/ice/snowman.png"
+dest_files=[ "res://.import/snowman.png-7e1741ed027648e9e298fb5a53774999.stex" ]
 
 [params]
 
