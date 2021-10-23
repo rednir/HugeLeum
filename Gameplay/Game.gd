@@ -47,6 +47,7 @@ export var env_change_time_increment = 3
 export var scroll_speed = 120
 export var scroll_speed_change = 75
 export var max_scroll_speed = 500
+export var player_horizontal_movement_rate_increase = 1.07
 
 export var pixels_per_metre = 300
 
@@ -89,7 +90,7 @@ func _process(delta):
 	env_change_timer += delta
 
 	elapsed_time += delta
-	if not elapsed_time < 3:
+	if not elapsed_time < camera.initial_delay:
 		total_distance_travelled += scroll_speed * delta
 		distance_travelled_since_pattern_instance += scroll_speed * delta
 
@@ -144,7 +145,7 @@ func next_environment():
 	env_change_timer = 0
 	env_change_interval += env_change_time_increment
 
-	player.horizontal_move_speed *= 1.07
+	player.horizontal_move_speed *= player_horizontal_movement_rate_increase
 
 	music_player.pitch_scale = min((music_player.pitch_scale + 0.04), 1.5)
 
@@ -200,7 +201,6 @@ func on_resume_button_pressed():
 
 
 func on_main_menu_button_pressed():
-
 	get_tree().paused = false
 	fade.play("in")
 	fade.connect("animation_finished", self, "on_main_menu_animation_finished", ["in"])

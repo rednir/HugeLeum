@@ -4,12 +4,15 @@ extends Control
 onready var fade = $Fade/AnimationPlayer
 onready var ground = $Ground
 onready var bg = $Background
+onready var play_button = $PlayButton
+onready var hard_mode_button = $HardModeButton
 onready var ground_parallax = $Ground/ParallaxBackground
 onready var bg_parallax = $Background/ParallaxBackground
 
 
 func _ready():
-	$PlayButton.connect("pressed", self, "on_play_button_pressed")
+	play_button.connect("pressed", self, "on_play_button_pressed")
+	hard_mode_button.connect("toggled", self, "on_hard_mode_toggled")
 
 	randomize()
 	var env = randi() % GameEnvironment.list.size()
@@ -27,5 +30,9 @@ func _process(delta):
 	bg_parallax.scroll_offset -= Vector2(20, 0) * delta
 
 
+func on_hard_mode_toggled(button_pressed: bool):
+	play_button.text = "Hard Mode" if button_pressed else "Play"
+
+
 func play(_a, _b):
-	get_tree().change_scene("Gameplay/Game.tscn")
+	get_tree().change_scene("res://Gameplay/HardMode.tscn" if hard_mode_button.pressed else "res://Gameplay/Game.tscn")
