@@ -96,7 +96,7 @@ stream = ExtResource( 5 )
 
 [node name="Shield" type="Sprite" parent="."]
 visible = false
-modulate = Color( 1, 1, 1, 0.957411 )
+modulate = Color( 1, 1, 1, 0.921946 )
 position = Vector2( 3.77971, 11.3394 )
 scale = Vector2( 0.309563, 0.309563 )
 texture = ExtResource( 9 )
