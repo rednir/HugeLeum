@@ -8,6 +8,7 @@ onready var shield = $Shield
 onready var animation_player = $AnimationPlayer
 onready var life_lost_audio = $LifeLostAudio
 onready var pickup_audio = $PickupAudio
+onready var jump_audio = $JumpAudio
 onready var death_audio = $DeathAudio
 
 export var horizontal_move_speed = 31000
@@ -147,6 +148,7 @@ func update_movement_y(delta):
 			velocity.y = max(velocity.y - jump_height, -jump_height) * delta
 			already_jumped_this_key_press = true
 			total_times_jumped += 1
+			jump_audio.play()
 		else:
 			velocity.y = 0
 	else:

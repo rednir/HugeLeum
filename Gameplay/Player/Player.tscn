@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Assets/worm-falling.png" type="Texture" id=1]
 [ext_resource path="res://Gameplay/Player/Player.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Assets/worm1.png" type="Texture" id=7]
 [ext_resource path="res://Assets/worm2.png" type="Texture" id=8]
 [ext_resource path="res://Assets/shield-bubble.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Audio/jump.ogg" type="AudioStream" id=10]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -85,14 +86,17 @@ stream = ExtResource( 3 )
 stream = ExtResource( 4 )
 volume_db = -10.0
 
+[node name="JumpAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[node name="PickupAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "init"
 anims/death = SubResource( 3 )
 anims/init = SubResource( 4 )
 anims/life-lost = SubResource( 5 )
-
-[node name="PickupAudio" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
 
 [node name="Shield" type="Sprite" parent="."]
 visible = false
