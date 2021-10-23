@@ -139,7 +139,6 @@ script = ExtResource( 3 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 104.043, 353.207 )
 z_index = 1
-max_lives = 2
 
 [node name="Background" parent="." instance=ExtResource( 8 )]
 speed = 20

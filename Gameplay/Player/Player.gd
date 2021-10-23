@@ -7,17 +7,17 @@ onready var animation_player = $AnimationPlayer
 onready var life_lost_audio = $LifeLostAudio
 onready var death_audio = $DeathAudio
 
-export var horizontal_move_speed = 570
-export var slowdown_speed = 25
+export var horizontal_move_speed = 31000
+export var slowdown_speed = 2000
 
-export var weight = 35
-export var jump_height = 800
+export var weight = 4500
+export var jump_height = 40000
 export var max_time_airborne = 0.2
 
 export var initial_knock_back_velocity = Vector2(-800, -300)
 export var max_knock_back_time = 0.3
 
-export var max_lives = 3
+export var max_lives = 2
 export var lives = 2
 
 var shielded = false
@@ -42,19 +42,19 @@ func _ready():
 	pass
 
 
-func _process(delta):
+func _physics_process(delta):
 	collision_info = move_and_collide(velocity * delta)
 
 	check_collisions()
 
 	if lives < 1:
-		set_process(false)
+		set_physics_process(false)
 		death()
 
 	update_status_effects(delta)
 
 	update_movement_y(delta)
-	update_movement_x()
+	update_movement_x(delta)
 
 	collision_info = null
 
@@ -104,26 +104,23 @@ func update_status_effects(delta):
 			time_knocked_back_for = 0
 
 
-func update_movement_x():
+func update_movement_x(delta):
 	if not knocked_back and Input.is_action_pressed("move_left"):
-		velocity.x = -horizontal_move_speed
+		velocity.x = -horizontal_move_speed * delta
 	elif not knocked_back and Input.is_action_pressed("move_right"):
-		velocity.x = horizontal_move_speed
+		velocity.x = horizontal_move_speed * delta
 	elif velocity.x != 0:
-		if abs(velocity.x) - slowdown_speed < 0:
+		if abs(velocity.x) - slowdown_speed * delta < 0:
 			# Player is almost at a complete halt, so just set to 0.
 			velocity.x = 0
 		else:
 			# Gradually slowdown player velocity.
-			if not knocked_back:
-				velocity.x += -slowdown_speed if velocity.x > 0 else slowdown_speed
-			else:
-				velocity.x += 5
+			velocity.x += -slowdown_speed * delta if velocity.x > 0 else slowdown_speed * delta
 
 
 func update_movement_y(delta):
 	# Start applying weight if been in air for too long.
-	velocity.y += weight if time_airborne >= max_time_airborne else 1
+	velocity.y += weight * delta if time_airborne >= max_time_airborne else 1
 
 	if not Input.is_action_pressed("jump"):
 		already_jumped_this_key_press = false
@@ -131,7 +128,7 @@ func update_movement_y(delta):
 	if collision_info and collision_info.collider.is_in_group("collidable"):
 		time_airborne = 0
 		if Input.is_action_pressed("jump") and not already_jumped_this_key_press:
-			velocity.y = max((velocity.y - jump_height), -jump_height)
+			velocity.y = max((velocity.y - jump_height), -jump_height) * delta
 			already_jumped_this_key_press = true
 			total_times_jumped += 1
 		else:
