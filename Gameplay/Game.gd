@@ -42,7 +42,7 @@ onready var player = $Player
 onready var background = $Background
 onready var music_player = $MusicPlayer
 
-export var env_change_interval = 2000
+export var env_change_interval = 20
 export var env_change_time_increment = 3
 export var scroll_speed = 120
 export var scroll_speed_change = 75
