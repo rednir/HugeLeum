@@ -8,11 +8,11 @@
 [ext_resource path="res://Assets/white.png" type="Texture" id=6]
 [ext_resource path="res://UI/blur.gdshader" type="Shader" id=7]
 
-[sub_resource type="ShaderMaterial" id=7]
+[sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 7 )
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0, 0, 0, 0.862745 )
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 0.745098 )
 border_width_left = 20
 border_width_top = 20
 border_width_right = 20
@@ -23,25 +23,24 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 70
 outline_size = 5
 outline_color = Color( 1, 0.223529, 0.223529, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFontData" id=3]
+[sub_resource type="DynamicFontData" id=4]
 font_path = "res://Assets/Fonts/FRUIT-PUNCH.ttf"
 
-[sub_resource type="DynamicFont" id=4]
-size = 40
-font_data = SubResource( 3 )
-
 [sub_resource type="DynamicFont" id=5]
+size = 40
+font_data = SubResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
 font_data = ExtResource( 3 )
 
-[sub_resource type="Animation" id=6]
-resource_name = "in"
-length = 2.5
+[sub_resource type="Animation" id=7]
+length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
 tracks/0/interp = 1
@@ -53,18 +52,6 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 0.2, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 600 ), Vector2( 0, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Blur:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 2.5 ),
-"transitions": PoolRealArray( 0.6, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
 [node name="Results" type="CenterContainer"]
@@ -78,7 +65,7 @@ __meta__ = {
 
 [node name="Blur" type="TextureRect" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-material = SubResource( 7 )
+material = SubResource( 1 )
 margin_right = 1024.0
 margin_bottom = 600.0
 rect_min_size = Vector2( 1024, 600 )
@@ -93,7 +80,7 @@ margin_top = 75.0
 margin_right = 862.0
 margin_bottom = 525.0
 rect_min_size = Vector2( 700, 450 )
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -103,7 +90,7 @@ margin_left = 187.607
 margin_top = 58.7643
 margin_right = 508.607
 margin_bottom = 126.764
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Game Over!"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -114,7 +101,7 @@ margin_left = 178.0
 margin_top = 135.0
 margin_right = 528.0
 margin_bottom = 174.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 1, 1, 1, 0.705882 )
 text = "0m"
 align = 1
@@ -127,7 +114,7 @@ margin_left = 107.0
 margin_top = 224.0
 margin_right = 603.0
 margin_bottom = 290.0
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 1, 1, 1, 0.54902 )
 text = "Total jumps: 0
 Powerups Collected: 0
@@ -155,7 +142,7 @@ text = "Main Menu"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "in"
-anims/in = SubResource( 6 )
+anims/in = SubResource( 7 )
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )

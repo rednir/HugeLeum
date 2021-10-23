@@ -34,6 +34,9 @@ var already_jumped_this_key_press = false
 var time_airborne = 0
 var collision_info = null
 
+var total_times_jumped = 0
+var num_of_powerups_collected = 0
+
 
 func _ready():
 	pass
@@ -67,12 +70,12 @@ func check_collisions():
 		if "HealthPickup" in collision_info.collider.name: # weird jank where sometimes the health pickup is called "@6HealthPickup@6"
 			collision_info.collider.on_pickup()
 			lives += 1
-			print("life added")
+			num_of_powerups_collected += 1
 		elif "ShieldPowerup" in collision_info.collider.name:
 			collision_info.collider.on_pickup()
 			shielded = true
 			time_shielded_for = 0
-			print("shield picked up")
+			num_of_powerups_collected += 1
 		elif collision_info.collider.is_in_group("damaging"):
 			if not shielded and not knocked_back:
 				animation_player.play("life-lost")
@@ -127,6 +130,7 @@ func update_movement_y(delta):
 		if Input.is_action_pressed("jump") and not already_jumped_this_key_press:
 			velocity.y = max((velocity.y - jump_height), -jump_height)
 			already_jumped_this_key_press = true
+			total_times_jumped += 1
 		else:
 			velocity.y = 0
 	else:
