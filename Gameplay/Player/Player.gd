@@ -8,14 +8,14 @@ onready var life_lost_audio = $LifeLostAudio
 onready var death_audio = $DeathAudio
 
 export var horizontal_move_speed = 31000
-export var slowdown_speed = 2000
+export var slowdown_speed = 300
 
 export var weight = 4500
 export var jump_height = 40000
 export var max_time_airborne = 0.2
 
 export var initial_knock_back_velocity = Vector2(-800, -300)
-export var max_knock_back_time = 0.3
+export var max_knock_back_time = 0.4
 
 export var max_lives = 2
 export var lives = 2
@@ -108,16 +108,16 @@ func update_movement_x(delta):
 	horizontal_move_speed = min(50000, horizontal_move_speed)
 
 	if not knocked_back and Input.is_action_pressed("move_left"):
-		velocity.x = -horizontal_move_speed * delta
+		velocity.x = max(velocity.x - slowdown_speed, -horizontal_move_speed * delta)
 	elif not knocked_back and Input.is_action_pressed("move_right"):
-		velocity.x = horizontal_move_speed * delta
+		velocity.x = min(velocity.x + slowdown_speed, horizontal_move_speed * delta)
 	elif velocity.x != 0:
 		if abs(velocity.x) - slowdown_speed * delta < 0:
 			# Player is almost at a complete halt, so just set to 0.
 			velocity.x = 0
 		else:
 			# Gradually slowdown player velocity.
-			velocity.x += -slowdown_speed * delta if velocity.x > 0 else slowdown_speed * delta
+			velocity.x += -slowdown_speed * 6 * delta if velocity.x > 0 else slowdown_speed * 6 * delta
 
 
 func update_movement_y(delta):
