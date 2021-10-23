@@ -14,6 +14,7 @@ export var slowdown_speed = 25
 export var weight = 35
 export var jump_height = 800
 export var max_time_airborne = 0.2
+export var jump_cooldown_time = 15
 
 export var initial_knock_back_velocity = Vector2(-800, -300)
 export var max_knock_back_time = 0.3
@@ -28,6 +29,8 @@ var velocity = Vector2(0, 0)
 var knocked_back = false
 var knock_back_velocity = Vector2(0, 0)
 var time_knocked_back_for = 0
+
+var temp_cooldown = 0
 
 var time_airborne = 0
 var collision_info = null
@@ -53,6 +56,8 @@ func _process(delta):
 
 	collision_info = null
 
+	temp_cooldown -= 1
+
 
 func death():
 	emit_signal("death")
@@ -62,7 +67,6 @@ func death():
 
 func check_collisions():
 	if collision_info:
-		print(collision_info.collider.name)
 		if "HealthPickup" in collision_info.collider.name: # weird jank where sometimes the health pickup is called "@6HealthPickup@6"
 			collision_info.collider.on_pickup()
 			lives += 1
@@ -120,7 +124,12 @@ func update_movement_y(delta):
 
 	if collision_info and collision_info.collider.is_in_group("collidable"):
 		time_airborne = 0
-		velocity.y = (velocity.y - jump_height) if Input.is_action_pressed("jump") else 0
+		#velocity.y = (velocity.y - jump_height) if Input.is_action_pressed("jump") else 0
+		if Input.is_action_pressed("jump") and temp_cooldown <= 0:
+			velocity.y = (velocity.y - jump_height)
+			temp_cooldown = jump_cooldown_time
+		else:
+			velocity.y = 0
 	else:
 		# If player stops holding jump, start applying weight by maxing out `time_airborne`
 		time_airborne = (
