@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Gameplay/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Gameplay/Ground/Ground.tscn" type="PackedScene" id=2]
@@ -129,6 +129,12 @@ extents = Vector2( 13.6643, 449.39 )
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 11.4198, 444.568 )
 
+[sub_resource type="InputEventAction" id=8]
+action = "ui_cancel"
+
+[sub_resource type="ShortCut" id=9]
+shortcut = SubResource( 8 )
+
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 1, 0, 0, 0.588235 )
 
@@ -203,6 +209,7 @@ margin_top = 17.2421
 margin_right = 1009.01
 margin_bottom = 57.2421
 mouse_default_cursor_shape = 2
+shortcut = SubResource( 9 )
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 7 )
 stretch_mode = 4

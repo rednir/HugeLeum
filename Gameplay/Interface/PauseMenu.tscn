@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/Fonts/FRUIT-PUNCH.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/blur.gdshader" type="Shader" id=2]
@@ -26,6 +26,12 @@ size = 70
 outline_size = 5
 outline_color = Color( 0.505882, 0.505882, 0.505882, 1 )
 font_data = ExtResource( 1 )
+
+[sub_resource type="InputEventAction" id=6]
+action = "ui_cancel"
+
+[sub_resource type="ShortCut" id=7]
+shortcut = SubResource( 6 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "in"
@@ -139,6 +145,7 @@ margin_top = 165.478
 margin_right = 277.11
 margin_bottom = 234.478
 rect_pivot_offset = Vector2( -150.582, -308.97 )
+shortcut = SubResource( 7 )
 text = "Resume"
 
 [node name="MainMenuButton" parent="Panel" instance=ExtResource( 3 )]
