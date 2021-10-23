@@ -18,14 +18,14 @@ animations = [ {
 "name": "moving",
 "speed": 4.0
 }, {
-"frames": [ ExtResource( 1 ) ],
-"loop": true,
-"name": "falling",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 8 ) ],
 "loop": true,
 "name": "still",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "falling",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ) ],
@@ -199,7 +199,6 @@ anims/life-lost = SubResource( 5 )
 
 [node name="Shield" type="Sprite" parent="."]
 visible = false
-modulate = Color( 1, 1, 1, 0.921946 )
 position = Vector2( 3.77971, 11.3394 )
 scale = Vector2( 0.309563, 0.309563 )
 texture = ExtResource( 9 )
