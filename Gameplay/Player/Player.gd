@@ -115,7 +115,7 @@ func update_movement_x(delta):
 	elif not knocked_back and Input.is_action_pressed("move_right"):
 		velocity.x = min(velocity.x + slowdown_speed, horizontal_move_speed * delta)
 	elif velocity.x != 0:
-		if abs(velocity.x) - slowdown_speed * delta < 0:
+		if abs(velocity.x) - slowdown_speed * 6 * delta < 0:
 			# Player is almost at a complete halt, so just set to 0.
 			velocity.x = 0
 		else:
