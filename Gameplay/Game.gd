@@ -113,6 +113,13 @@ func on_player_death():
 	camera.set_scroll_speed(0)
 	set_process(false)
 
+	# Wait a bit before showing results screen.
+	var timer = Timer.new()
+	timer.set_wait_time(1)
+	self.add_child(timer)
+	timer.start()
+	yield(timer, "timeout")
+
 	var results = results_scene.instance()
 	results.connect("main_menu_pressed", self, "on_main_menu_button_pressed")
 	results.connect("play_again_pressed", self, "on_play_again_button_pressed")
