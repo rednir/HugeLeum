@@ -153,7 +153,6 @@ func update_movement_y(delta):
 
 
 func update_animation():
-	print(velocity.y)
 	if velocity.y > 77:
 		animated_sprite.play("falling")
 		animated_sprite.flip_h = false if velocity.x >= 0 else true
