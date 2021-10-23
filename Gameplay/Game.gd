@@ -10,8 +10,14 @@ const plains_entity_patterns = [
 const desert_entity_patterns = [
 	preload("res://Gameplay/EntityPatterns/Desert/Pattern1.tscn"),
 	preload("res://Gameplay/EntityPatterns/Desert/Pattern2.tscn"),
-	preload("res://Gameplay/EntityPatterns/Desert/Pattern3.tscn"),
-	preload("res://Gameplay/EntityPatterns/Desert/Pattern4.tscn")
+	preload("res://Gameplay/EntityPatterns/Desert/Pattern3.tscn")
+]
+
+const ice_entity_patterns = [
+	preload("res://Gameplay/EntityPatterns/Ice/Pattern1.tscn"),
+	preload("res://Gameplay/EntityPatterns/Ice/Pattern2.tscn"),
+	preload("res://Gameplay/EntityPatterns/Ice/Pattern3.tscn"),
+	preload("res://Gameplay/EntityPatterns/Ice/Pattern4.tscn")
 ]
 
 const powerups = [
@@ -91,9 +97,9 @@ func _process(delta):
 			0:
 				scene_instance = plains_entity_patterns[randi() % plains_entity_patterns.size()].instance()
 			1:
-				scene_instance = desert_entity_patterns[randi() % plains_entity_patterns.size()].instance()
+				scene_instance = desert_entity_patterns[randi() % desert_entity_patterns.size()].instance()
 			2:
-				scene_instance = plains_entity_patterns[randi() % plains_entity_patterns.size()].instance()
+				scene_instance = ice_entity_patterns[randi() % ice_entity_patterns.size()].instance()
 		add_child(scene_instance)
 		for child in scene_instance.get_children():
 			child.position.x += total_distance_travelled + 1024
