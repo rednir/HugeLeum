@@ -5,6 +5,7 @@ signal death
 
 onready var animation_player = $AnimationPlayer
 onready var life_lost_audio = $LifeLostAudio
+onready var pickup_audio = $PickupAudio
 onready var death_audio = $DeathAudio
 
 export var horizontal_move_speed = 31000
@@ -68,11 +69,13 @@ func death():
 func check_collisions():
 	if collision_info:
 		if "HealthPickup" in collision_info.collider.name: # weird jank where sometimes the health pickup is called "@6HealthPickup@6"
+			pickup_audio.play()
 			collision_info.collider.on_pickup()
 			num_of_powerups_collected += 1
 			if not lives >= max_lives:
 				lives += 1
 		elif "ShieldPowerup" in collision_info.collider.name:
+			pickup_audio.play()
 			collision_info.collider.on_pickup()
 			shielded = true
 			time_shielded_for = 0
