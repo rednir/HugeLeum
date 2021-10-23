@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/desert-bg2.svg-beb3da421890cc2b4a27c3ceaf81df95.stex"
+path="res://.import/desert-bg2.svg-134c4143ba043aa162cf0918a48c7646.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Vectors/Environments/desert/desert-bg2.svg"
-dest_files=[ "res://.import/desert-bg2.svg-beb3da421890cc2b4a27c3ceaf81df95.stex" ]
+source_file="res://Assets/Vectors/environments/desert/desert-bg2.svg"
+dest_files=[ "res://.import/desert-bg2.svg-134c4143ba043aa162cf0918a48c7646.stex" ]
 
 [params]
 
