@@ -133,6 +133,7 @@ stream = ExtResource( 3 )
 
 [node name="DeathAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = -10.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "init"
