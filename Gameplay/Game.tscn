@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Gameplay/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Gameplay/Ground/Ground.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Gameplay/Background/Background.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Gameplay/Interface/HeartDisplay.tscn" type="PackedScene" id=9]
 [ext_resource path="res://UI/Fade/Fade.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/Fonts/FRUIT-PUNCH.ttf" type="DynamicFontData" id=11]
 [ext_resource path="res://Gameplay/Interface/ScoreDisplay.tscn" type="PackedScene" id=12]
 
 [sub_resource type="Animation" id=1]
@@ -117,6 +118,45 @@ tracks/3/keys = {
 "values": [ false ]
 }
 
+[sub_resource type="Animation" id=10]
+resource_name = "speedup"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../CanvasLayer/SpeedUpLabel:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 0.3, 2.5, 0.3 ),
+"update": 0,
+"values": [ Vector2( 0.2, 0.2 ), Vector2( 1, 1 ), Vector2( 0.2, 0.2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../CanvasLayer/SpeedUpLabel:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -30.0, 30.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../CanvasLayer/SpeedUpLabel:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.901961 ), Color( 1, 1, 1, 0.901961 ), Color( 1, 1, 1, 0 ) ]
+}
+
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 615.523, 10 )
 
@@ -128,6 +168,11 @@ extents = Vector2( 13.6643, 449.39 )
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 11.4198, 444.568 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 120
+outline_size = 10
+font_data = ExtResource( 11 )
 
 [sub_resource type="InputEventAction" id=8]
 action = "ui_cancel"
@@ -141,6 +186,7 @@ bg_color = Color( 1, 0, 0, 0.588235 )
 [node name="Game" type="Node2D"]
 position = Vector2( 1, -1 )
 script = ExtResource( 3 )
+env_change_interval = 5
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 104.043, 353.207 )
@@ -171,6 +217,7 @@ position = Vector2( 281.508, 32.165 )
 autoplay = "init"
 anims/death = SubResource( 1 )
 anims/init = SubResource( 2 )
+anims/speedup = SubResource( 10 )
 
 [node name="DeathBorder" type="StaticBody2D" parent="Camera" groups=[
 "insta-kill",
@@ -203,6 +250,27 @@ position = Vector2( 514.126, 86.639 )
 [node name="HeartDisplay" parent="CanvasLayer" instance=ExtResource( 9 )]
 max_hearts = 2
 
+[node name="SpeedUpLabel" type="Label" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -224.787
+margin_top = -65.918
+margin_right = 243.213
+margin_bottom = 50.082
+rect_rotation = 30.0
+rect_scale = Vector2( 0.2, 0.2 )
+rect_pivot_offset = Vector2( 232, 52 )
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 1, 0.345098, 0.415686, 1 )
+text = "Speed up!"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="PauseButton" type="TextureButton" parent="CanvasLayer"]
 margin_left = 969.01
 margin_top = 17.2421
@@ -230,3 +298,5 @@ custom_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="SpeedUpAudioPlayer" type="AudioStreamPlayer" parent="."]
