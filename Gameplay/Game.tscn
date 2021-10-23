@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Gameplay/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Gameplay/Ground/Ground.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://UI/Fade/Fade.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/Fonts/FRUIT-PUNCH.ttf" type="DynamicFontData" id=11]
 [ext_resource path="res://Gameplay/Interface/ScoreDisplay.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Gameplay/Powerups/HealthPickup.tscn" type="PackedScene" id=13]
 
 [sub_resource type="Animation" id=1]
 resource_name = "death"
@@ -295,3 +296,6 @@ custom_styles/panel = SubResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="HealthPickup" parent="." instance=ExtResource( 13 )]
+position = Vector2( 449, 200 )
