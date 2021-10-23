@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spider.svg-4f61638aae364356a80de2ad95f1ec4b.stex"
+path="res://.import/spider.svg-c4b52fda9743e856d638a4629665a23f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Vectors/environments/desert/spider.svg"
-dest_files=[ "res://.import/spider.svg-4f61638aae364356a80de2ad95f1ec4b.stex" ]
+source_file="res://Assets/Vectors/Environments/desert/spider.svg"
+dest_files=[ "res://.import/spider.svg-c4b52fda9743e856d638a4629665a23f.stex" ]
 
 [params]
 
