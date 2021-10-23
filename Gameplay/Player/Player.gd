@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+
 signal death
 
 onready var animation_player = $AnimationPlayer
@@ -84,6 +85,8 @@ func check_collisions():
 			if not knocked_back:
 				knocked_back = true
 				velocity = initial_knock_back_velocity
+		elif collision_info.collider.is_in_group("insta-kill"):
+			lives = 0
 
 
 func update_status_effects(delta):
