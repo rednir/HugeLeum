@@ -1,9 +1,9 @@
 extends KinematicBody2D
 
-
 signal death
 
 onready var animated_sprite = $AnimatedSprite
+onready var shield = $Shield
 
 onready var animation_player = $AnimationPlayer
 onready var life_lost_audio = $LifeLostAudio
@@ -73,7 +73,7 @@ func death():
 
 func check_collisions():
 	if collision_info:
-		if "HealthPickup" in collision_info.collider.name: # weird jank where sometimes the health pickup is called "@6HealthPickup@6"
+		if "HealthPickup" in collision_info.collider.name:  # weird jank where sometimes the health pickup is called "@6HealthPickup@6"
 			pickup_audio.play()
 			collision_info.collider.on_pickup()
 			num_of_powerups_collected += 1
@@ -83,6 +83,7 @@ func check_collisions():
 			pickup_audio.play()
 			collision_info.collider.on_pickup()
 			shielded = true
+			shield.visible = true
 			time_shielded_for = 0
 			num_of_powerups_collected += 1
 		elif collision_info.collider.is_in_group("damaging"):
@@ -103,6 +104,7 @@ func update_status_effects(delta):
 
 	if time_shielded_for > 3:
 		shielded = false
+		shield.visible = false
 		time_shielded_for = 0
 
 	if knocked_back:
@@ -125,7 +127,11 @@ func update_movement_x(delta):
 			velocity.x = 0
 		else:
 			# Gradually slowdown player velocity.
-			velocity.x += -slowdown_speed * 6 * delta if velocity.x > 0 else slowdown_speed * 6 * delta
+			velocity.x += (
+				-slowdown_speed * 6 * delta
+				if velocity.x > 0
+				else slowdown_speed * 6 * delta
+			)
 
 
 func update_movement_y(delta):
@@ -138,7 +144,7 @@ func update_movement_y(delta):
 	if collision_info and collision_info.collider.is_in_group("collidable"):
 		time_airborne = 0
 		if Input.is_action_pressed("jump") and not already_jumped_this_key_press:
-			velocity.y = max((velocity.y - jump_height), -jump_height) * delta
+			velocity.y = max(velocity.y - jump_height, -jump_height) * delta
 			already_jumped_this_key_press = true
 			total_times_jumped += 1
 		else:
