@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+
 signal death
 
 onready var animation_player = $AnimationPlayer
@@ -33,6 +34,9 @@ var already_jumped_this_key_press = false
 var time_airborne = 0
 var collision_info = null
 
+var total_times_jumped = 0
+var num_of_powerups_collected = 0
+
 
 func _ready():
 	pass
@@ -65,14 +69,14 @@ func check_collisions():
 	if collision_info:
 		if "HealthPickup" in collision_info.collider.name: # weird jank where sometimes the health pickup is called "@6HealthPickup@6"
 			collision_info.collider.on_pickup()
+			num_of_powerups_collected += 1
 			if not lives >= max_lives:
 				lives += 1
-			print("life added")
 		elif "ShieldPowerup" in collision_info.collider.name:
 			collision_info.collider.on_pickup()
 			shielded = true
 			time_shielded_for = 0
-			print("shield picked up")
+			num_of_powerups_collected += 1
 		elif collision_info.collider.is_in_group("damaging"):
 			if not shielded and not knocked_back:
 				animation_player.play("life-lost")
@@ -81,6 +85,8 @@ func check_collisions():
 			if not knocked_back:
 				knocked_back = true
 				velocity = initial_knock_back_velocity
+		elif collision_info.collider.is_in_group("insta-kill"):
+			lives = 0
 
 
 func update_status_effects(delta):
@@ -127,6 +133,7 @@ func update_movement_y(delta):
 		if Input.is_action_pressed("jump") and not already_jumped_this_key_press:
 			velocity.y = max((velocity.y - jump_height), -jump_height)
 			already_jumped_this_key_press = true
+			total_times_jumped += 1
 		else:
 			velocity.y = 0
 	else:

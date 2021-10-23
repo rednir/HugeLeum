@@ -42,6 +42,8 @@ export var scroll_speed = 120
 export var scroll_speed_change = 75
 export var max_scroll_speed = 500
 
+export var pixels_per_metre = 300
+
 var elapsed_time = 0
 var total_distance_travelled = 0
 var distance_travelled_since_pattern_instance = 0
@@ -106,8 +108,8 @@ func _process(delta):
 						powerup.position = Vector2(child.position.x, child.position.y - 120)
 		distance_travelled_since_pattern_instance = 0
 
-	score_display.score = int(round(total_distance_travelled / 300))
 	heart_display.set_hearts(player.lives)
+	score_display.score = int(round(total_distance_travelled / pixels_per_metre))
 
 	if env_change_timer > env_change_interval:
 		next_environment()
@@ -145,6 +147,7 @@ func on_player_death():
 	var results = results_scene.instance()
 	results.connect("main_menu_pressed", self, "on_main_menu_button_pressed")
 	results.connect("play_again_pressed", self, "on_play_again_button_pressed")
+	results.set_display_stats(total_distance_travelled / pixels_per_metre, player.total_times_jumped, player.num_of_powerups_collected)
 	canvas_layer.add_child(results)
 
 
