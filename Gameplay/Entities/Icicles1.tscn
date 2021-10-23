@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/icicles1.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 47.292, 276.836 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 24.4927, 252.207 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 35.5356, 268.771 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 115.044, 127.421 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 94.0623, 231.225 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 59.8292, 158.341 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 104.001, 57.8503 )
+
+[node name="Icicles1" type="StaticBody2D" groups=[
+"damaging",
+]]
+scale = Vector2( 0.201689, 0.201689 )
+collision_mask = 17
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -81.7179, -11.0429 )
+scale = Vector2( -0.579573, 1.21021 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( -288.221, 152.393 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2( 227.485, 205.399 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2( 231.902, 331.289 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2( -68.4664, 117.055 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2( -291.534, 246.258 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+position = Vector2( -287.117, 331.288 )
+shape = SubResource( 7 )
