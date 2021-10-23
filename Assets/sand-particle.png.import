@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icicles.svg-75d1a91968614bc4c86833809d62397d.stex"
+path="res://.import/sand-particle.png-a01706d3a81393327db210ca7b41f6db.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Vectors/Environments/ice/icicles.svg"
-dest_files=[ "res://.import/icicles.svg-75d1a91968614bc4c86833809d62397d.stex" ]
+source_file="res://Assets/sand-particle.png"
+dest_files=[ "res://.import/sand-particle.png-a01706d3a81393327db210ca7b41f6db.stex" ]
 
 [params]
 
