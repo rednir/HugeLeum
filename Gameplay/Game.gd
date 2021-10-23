@@ -106,7 +106,7 @@ func _process(delta):
 		add_child(scene_instance)
 		for child in scene_instance.get_children():
 			child.position.x += total_distance_travelled + 1024
-			if child.is_in_group("can_spawn_powerups"): # randi() % 10 == 1 and 
+			if randi() % 10 == 1 and child.is_in_group("can_spawn_powerups"):
 				var powerup = powerups[randi() % powerups.size()].instance()
 				add_child(powerup)
 				match child.name:
