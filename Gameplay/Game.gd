@@ -14,11 +14,15 @@ const powerups = [
 
 const results_scene = preload("res://Gameplay/Interface/Results.tscn")
 
-onready var fade = $Camera/Fade/AnimationPlayer
+onready var canvas_layer = $CanvasLayer
+onready var fade = $CanvasLayer/Fade/AnimationPlayer
+onready var score_display = $CanvasLayer/ScoreDisplay
+
 onready var camera = $Camera
-onready var player = $Player
+onready var camera_animation_player = $Camera/AnimationPlayer
 onready var ground = $Camera/Ground
-onready var score_display = $Camera/ScoreDisplay
+
+onready var player = $Player
 onready var background = $Background
 onready var music_player = $MusicPlayer
 
@@ -105,13 +109,14 @@ func next_environment():
 
 func on_player_death():
 	music_player.stop()
+	camera_animation_player.play("death")
 	camera.set_scroll_speed(0)
 	set_process(false)
 
 	var results = results_scene.instance()
 	results.connect("main_menu_pressed", self, "on_main_menu_button_pressed")
 	results.connect("play_again_pressed", self, "on_play_again_button_pressed")
-	camera.add_child(results)
+	canvas_layer.add_child(results)
 
 
 func on_main_menu_button_pressed():

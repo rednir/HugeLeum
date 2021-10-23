@@ -124,6 +124,7 @@ anims/in = SubResource( 1 )
 anims/out = SubResource( 2 )
 
 [node name="Blur" type="TextureRect" parent="AnimationPlayer"]
+modulate = Color( 0, 0, 0, 0 )
 material = SubResource( 3 )
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -138,6 +139,7 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="AnimationPlayer"]
+modulate = Color( 1, 1, 1, 0 )
 margin_right = 1024.0
 margin_bottom = 600.0
 custom_styles/panel = SubResource( 4 )

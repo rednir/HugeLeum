@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Gameplay/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Gameplay/Ground/Ground.tscn" type="PackedScene" id=2]
@@ -9,12 +9,69 @@
 [ext_resource path="res://UI/Fade/Fade.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Gameplay/Interface/ScoreDisplay.tscn" type="PackedScene" id=12]
 
+[sub_resource type="Animation" id=1]
+resource_name = "death"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 0.2, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.7, 0.7 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 0.2, 1 ),
+"update": 0,
+"values": [ 0.0, -20.0 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "init"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
 [node name="Game" type="Node2D"]
 position = Vector2( 1, -1 )
 script = ExtResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 104.043, 353.207 )
+z_index = 1
 
 [node name="Background" parent="." instance=ExtResource( 8 )]
 speed = 20
@@ -34,7 +91,14 @@ script = ExtResource( 4 )
 ] instance=ExtResource( 2 )]
 position = Vector2( 281.508, 32.165 )
 
-[node name="ScoreDisplay" parent="Camera" instance=ExtResource( 12 )]
-position = Vector2( -19.8659, -210.123 )
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera"]
+anims/death = SubResource( 1 )
+anims/init = SubResource( 2 )
 
-[node name="Fade" parent="Camera" instance=ExtResource( 10 )]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="ScoreDisplay" parent="CanvasLayer" instance=ExtResource( 12 )]
+position = Vector2( 514.126, 86.639 )
+
+[node name="Fade" parent="CanvasLayer" instance=ExtResource( 10 )]
