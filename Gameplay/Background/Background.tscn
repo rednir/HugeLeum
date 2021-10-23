@@ -109,6 +109,7 @@ anims/switch = SubResource( 1 )
 [node name="Sand" type="CPUParticles2D" parent="CanvasLayer"]
 position = Vector2( 1087.59, 30.0918 )
 z_index = 2
+emitting = false
 amount = 100
 lifetime = 2.4
 texture = ExtResource( 5 )

@@ -137,6 +137,8 @@ func next_environment():
 
 	player.horizontal_move_speed *= 1.07
 
+	music_player.pitch_scale = min((music_player.pitch_scale + 0.04), 1.5)
+
 
 func on_player_death():
 	heart_display.set_hearts(0)
