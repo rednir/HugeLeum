@@ -15,13 +15,12 @@ onready var bg2_main_sprite = $ParallaxBackground/Bg2Layer/MainSprite2
 onready var bg2_other_sprite = $ParallaxBackground/Bg2Layer/OtherSprite2
 
 onready var snow = $CanvasLayer/Snow
+onready var sand = $CanvasLayer/Sand
 
 onready var animation_player = $AnimationPlayer
 
 
 func change_environment(env: int):
-	snow.emitting = false
-
 	bg_other_sprite.texture = bg_main_sprite.texture
 	bg2_other_sprite.texture = bg2_main_sprite.texture
 	
@@ -37,6 +36,8 @@ func change_environment(env: int):
 		GameEnvironment.ICE:
 			bg_main_sprite.texture = icebg_texture
 			bg2_main_sprite.texture = icebg2_texture
-			snow.emitting = true
+			
+	snow.emitting = env == GameEnvironment.ICE
+	sand.emitting = env == GameEnvironment.DESERT
 
 	animation_player.play("switch")
