@@ -95,7 +95,9 @@ func check_collisions():
 				lives -= 1
 			if not knocked_back:
 				knocked_back = true
-				velocity = initial_knock_back_velocity
+				velocity = initial_knock_back_velocity \
+					if collision_info.normal.x <= 0 \
+					else Vector2(-initial_knock_back_velocity.x, initial_knock_back_velocity.y)
 		elif collision_info.collider.is_in_group("insta-kill"):
 			lives = 0
 
