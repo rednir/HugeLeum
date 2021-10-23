@@ -9,6 +9,7 @@ height = 56.108
 [node name="Spider" type="StaticBody2D" groups=[
 "damaging",
 ]]
+collision_mask = 17
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.584135, 0.584135 )

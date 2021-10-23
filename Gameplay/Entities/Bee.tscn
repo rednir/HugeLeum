@@ -26,12 +26,14 @@ height = 27.6888
 "can_spawn_powerups",
 "collidable",
 ]]
+collision_mask = 17
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -0.914703, -0.840908 )
 scale = Vector2( 0.608438, 0.608438 )
 frames = SubResource( 1 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
