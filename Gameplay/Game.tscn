@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Gameplay/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Gameplay/Ground/Ground.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Assets/pause-button.png" type="Texture" id=6]
 [ext_resource path="res://Assets/pause-button-pressed.png" type="Texture" id=7]
 [ext_resource path="res://Gameplay/Background/Background.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Gameplay/Interface/HeartDisplay.tscn" type="PackedScene" id=9]
 [ext_resource path="res://UI/Fade/Fade.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Gameplay/Interface/ScoreDisplay.tscn" type="PackedScene" id=12]
 
@@ -126,6 +127,7 @@ script = ExtResource( 3 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 104.043, 353.207 )
 z_index = 1
+max_lives = 2
 
 [node name="Background" parent="." instance=ExtResource( 8 )]
 speed = 20
@@ -156,6 +158,9 @@ layer = 5
 
 [node name="ScoreDisplay" parent="CanvasLayer" instance=ExtResource( 12 )]
 position = Vector2( 514.126, 86.639 )
+
+[node name="HeartDisplay" parent="CanvasLayer" instance=ExtResource( 9 )]
+max_hearts = 2
 
 [node name="PauseButton" type="TextureButton" parent="CanvasLayer"]
 margin_left = 969.01

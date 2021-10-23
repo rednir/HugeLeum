@@ -6,8 +6,6 @@ onready var animation_player = $AnimationPlayer
 onready var life_lost_audio = $LifeLostAudio
 onready var death_audio = $DeathAudio
 
-export var starting_lives = 2
-
 export var horizontal_move_speed = 570
 export var slowdown_speed = 25
 
@@ -18,7 +16,8 @@ export var max_time_airborne = 0.2
 export var initial_knock_back_velocity = Vector2(-800, -300)
 export var max_knock_back_time = 0.3
 
-var lives = starting_lives
+export var max_lives = 3
+export var lives = 2
 
 var shielded = false
 var time_shielded_for = 0
@@ -66,7 +65,8 @@ func check_collisions():
 	if collision_info:
 		if "HealthPickup" in collision_info.collider.name: # weird jank where sometimes the health pickup is called "@6HealthPickup@6"
 			collision_info.collider.on_pickup()
-			lives += 1
+			if not lives >= max_lives:
+				lives += 1
 			print("life added")
 		elif "ShieldPowerup" in collision_info.collider.name:
 			collision_info.collider.on_pickup()
