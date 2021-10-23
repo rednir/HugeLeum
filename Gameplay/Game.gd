@@ -31,6 +31,7 @@ const pause_menu_scene = preload("res://Gameplay/Interface/PauseMenu.tscn")
 onready var canvas_layer = $CanvasLayer
 onready var fade = $CanvasLayer/Fade/AnimationPlayer
 onready var score_display = $CanvasLayer/ScoreDisplay
+onready var heart_display = $CanvasLayer/HeartDisplay
 onready var pause_button = $CanvasLayer/PauseButton
 
 onready var camera = $Camera
@@ -113,6 +114,7 @@ func _process(delta):
 						powerup.position = Vector2(child.position.x, child.position.y - 120)
 		distance_travelled_since_pattern_instance = 0
 
+	heart_display.set_hearts(player.lives)
 	score_display.score = int(round(total_distance_travelled / pixels_per_metre))
 
 	if env_change_timer > env_change_interval:
@@ -131,8 +133,12 @@ func next_environment():
 	env_change_timer = 0
 	env_change_interval += env_change_time_increment
 
+	player.horizontal_move_speed *= 1.07
+
 
 func on_player_death():
+	heart_display.set_hearts(0)
+
 	music_player.stop()
 	camera_animation_player.play("death")
 	camera.set_scroll_speed(0)
