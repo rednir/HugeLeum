@@ -1,3 +1,16 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Gameplay/Entities/Eagle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Gameplay/Entities/Spider.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Gameplay/Entities/Tumbleweed.tscn" type="PackedScene" id=4]
 
 [node name="Pattern2" type="Node2D"]
+
+[node name="Tumbleweed" parent="." instance=ExtResource( 4 )]
+position = Vector2( 629.321, 221.428 )
+
+[node name="Eagle" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1167.53, 184.347 )
+
+[node name="Spider" parent="." instance=ExtResource( 2 )]
+position = Vector2( 676.997, 418.488 )
