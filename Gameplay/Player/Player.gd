@@ -3,6 +3,8 @@ extends KinematicBody2D
 
 signal death
 
+onready var animated_sprite = $AnimatedSprite
+
 onready var animation_player = $AnimationPlayer
 onready var life_lost_audio = $LifeLostAudio
 onready var pickup_audio = $PickupAudio
@@ -57,11 +59,14 @@ func _physics_process(delta):
 	update_movement_y(delta)
 	update_movement_x(delta)
 
+	update_animation()
+
 	collision_info = null
 
 
 func death():
 	emit_signal("death")
+	animated_sprite.play("dying")
 	animation_player.play("death")
 	death_audio.play()
 
@@ -115,7 +120,7 @@ func update_movement_x(delta):
 	elif not knocked_back and Input.is_action_pressed("move_right"):
 		velocity.x = min(velocity.x + slowdown_speed, horizontal_move_speed * delta)
 	elif velocity.x != 0:
-		if abs(velocity.x) - slowdown_speed * delta < 0:
+		if abs(velocity.x) - slowdown_speed * 6 * delta < 0:
 			# Player is almost at a complete halt, so just set to 0.
 			velocity.x = 0
 		else:
@@ -145,3 +150,18 @@ func update_movement_y(delta):
 			if Input.is_action_pressed("jump")
 			else max_time_airborne
 		)
+
+
+func update_animation():
+	print(velocity.y)
+	if velocity.y > 77:
+		animated_sprite.play("falling")
+		animated_sprite.flip_h = false if velocity.x >= 0 else true
+	elif velocity.x > 0:
+		animated_sprite.play("moving")
+		animated_sprite.flip_h = false
+	elif velocity.x < 0:
+		animated_sprite.play("moving")
+		animated_sprite.flip_h = true
+	else:
+		animated_sprite.play("still")
