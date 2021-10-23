@@ -6,11 +6,12 @@
 
 [node name="Pattern4" type="Node2D"]
 
+[node name="Icicles2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 627.322, 432.043 )
+scale = Vector2( 0.7, 0.7 )
+
 [node name="Icicles1" parent="." instance=ExtResource( 4 )]
 position = Vector2( 481.085, 390.214 )
 
 [node name="Snowman" parent="." instance=ExtResource( 3 )]
 position = Vector2( 311.815, 331.414 )
-
-[node name="Icicles2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 672.628, 416.941 )

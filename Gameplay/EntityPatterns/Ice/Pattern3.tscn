@@ -7,7 +7,7 @@
 [node name="Pattern3" type="Node2D"]
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 299.342, 408.032 )
+position = Vector2( 223.832, 406.144 )
 
 [node name="Beetle" parent="." instance=ExtResource( 1 )]
 position = Vector2( 674.41, 411.595 )

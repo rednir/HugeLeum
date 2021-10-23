@@ -11,7 +11,7 @@ func _ready():
 
 
 func _process(delta):
-	if elapsed_time < 3:
+	if elapsed_time < 1:
 		elapsed_time += delta
 		return
 	
