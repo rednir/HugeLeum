@@ -11,7 +11,7 @@
 position = Vector2( 728.922, 425.921 )
 
 [node name="Bee" parent="." instance=ExtResource( 2 )]
-position = Vector2( 762.152, 239.084 )
+position = Vector2( 1156.27, 215.776 )
 
 [node name="LargeSunflower" parent="." instance=ExtResource( 3 )]
 position = Vector2( 500.618, 347.963 )

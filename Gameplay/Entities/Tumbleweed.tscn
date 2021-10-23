@@ -1,18 +1,37 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Assets/tumbleweed.png" type="Texture" id=1]
+[ext_resource path="res://Assets/tumbleweed3.png" type="Texture" id=1]
+[ext_resource path="res://Gameplay/Entities/Tumbleweed.gd" type="Script" id=2]
+[ext_resource path="res://Assets/tumbleweed4.png" type="Texture" id=3]
+[ext_resource path="res://Assets/tumbleweed5.png" type="Texture" id=4]
+[ext_resource path="res://Assets/tumbleweed7.png" type="Texture" id=5]
+[ext_resource path="res://Assets/tumbleweed8.png" type="Texture" id=6]
+[ext_resource path="res://Assets/tumbleweed2.png" type="Texture" id=7]
+[ext_resource path="res://Assets/tumbleweed1.png" type="Texture" id=8]
+[ext_resource path="res://Assets/tumbleweed6.png" type="Texture" id=9]
 
-[sub_resource type="CircleShape2D" id=1]
-radius = 96.1541
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 72.3296, 68.0183 )
 
-[node name="Tumbleweed" type="RigidBody2D" groups=[
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Tumbleweed" type="KinematicBody2D" groups=[
 "collidable",
 ]]
-
-[node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.691914, 0.691914 )
-texture = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2( 0.712245, 0.712245 )
 shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.571084, 0.571084 )
+frames = SubResource( 2 )
+frame = 1
+playing = true

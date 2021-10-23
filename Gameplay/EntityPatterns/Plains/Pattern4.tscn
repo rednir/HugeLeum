@@ -7,7 +7,7 @@
 [node name="Pattern4" type="Node2D"]
 
 [node name="Bee" parent="." instance=ExtResource( 3 )]
-position = Vector2( 497.251, 241.329 )
+position = Vector2( 1375.55, 234.972 )
 
 [node name="SmallSunflower" parent="." instance=ExtResource( 2 )]
 position = Vector2( 231.227, 370.412 )

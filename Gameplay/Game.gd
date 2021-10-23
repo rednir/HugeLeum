@@ -7,6 +7,13 @@ const plains_entity_patterns = [
 	preload("res://Gameplay/EntityPatterns/Plains/Pattern4.tscn")
 ]
 
+const desert_entity_patterns = [
+	preload("res://Gameplay/EntityPatterns/Desert/Pattern1.tscn"),
+	preload("res://Gameplay/EntityPatterns/Desert/Pattern2.tscn"),
+	preload("res://Gameplay/EntityPatterns/Desert/Pattern3.tscn"),
+	preload("res://Gameplay/EntityPatterns/Desert/Pattern4.tscn")
+]
+
 const powerups = [
 	preload("res://Gameplay/Powerups/HealthPickup.tscn"),
 	preload("res://Gameplay/Powerups/ShieldPowerup.tscn")
@@ -77,7 +84,14 @@ func _process(delta):
 		distance_travelled_since_pattern_instance += scroll_speed * delta
 
 	if distance_travelled_since_pattern_instance > 1024:
-		var scene_instance = plains_entity_patterns[randi() % plains_entity_patterns.size()].instance()
+		var scene_instance
+		match current_environment_index:
+			0:
+				scene_instance = plains_entity_patterns[randi() % plains_entity_patterns.size()].instance()
+			1:
+				scene_instance = desert_entity_patterns[randi() % plains_entity_patterns.size()].instance()
+			2:
+				scene_instance = plains_entity_patterns[randi() % plains_entity_patterns.size()].instance()
 		add_child(scene_instance)
 		for child in scene_instance.get_children():
 			child.position.x += total_distance_travelled + 1024
