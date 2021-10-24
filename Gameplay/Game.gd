@@ -28,6 +28,8 @@ const powerups = [
 const results_scene = preload("res://Gameplay/Interface/Results.tscn")
 const pause_menu_scene = preload("res://Gameplay/Interface/PauseMenu.tscn")
 
+const FIRST_PATTERN_OFFSET = 185
+
 onready var canvas_layer = $CanvasLayer
 onready var fade = $CanvasLayer/Fade/AnimationPlayer
 onready var score_display = $CanvasLayer/ScoreDisplay
@@ -62,6 +64,7 @@ var env_change_timer = 0
 
 
 func _ready():
+
 	player.connect("death", self, "on_player_death")
 	pause_button.connect("pressed", self, "on_pause_button_pressed")
 
@@ -70,12 +73,14 @@ func _ready():
 	randomize()
 
 	var starting_scene = plains_entity_patterns[randi() % plains_entity_patterns.size()].instance()
+	for child in starting_scene.get_children():
+		child.position.x += FIRST_PATTERN_OFFSET
 	add_child(starting_scene)
 
 	var next_scene = plains_entity_patterns[randi() % plains_entity_patterns.size()].instance()
 	add_child(next_scene)
 	for child in next_scene.get_children():
-		child.position.x += 1024
+		child.position.x += 1024 + (FIRST_PATTERN_OFFSET / 2)
 		if randi() % 10 == 1 and child.is_in_group("can_spawn_powerups"):
 			var powerup = powerups[randi() % powerups.size()].instance()
 			add_child(powerup)
