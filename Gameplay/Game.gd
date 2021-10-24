@@ -265,7 +265,10 @@ func on_play_again_button_pressed():
 
 
 func on_main_menu_animation_finished(_a, _b):
-	get_tree().change_scene("res://UI/MainMenu.tscn")
+	if queue_free_on_death:
+		queue_free()
+	else:
+		get_tree().change_scene("res://UI/MainMenu.tscn")
 
 
 func on_play_again_animation_finished(_a, _b):
