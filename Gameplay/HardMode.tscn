@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Gameplay/Game.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Gameplay/HardMode.gd" type="Script" id=2]
@@ -10,6 +10,9 @@ outline_size = 2
 outline_color = Color( 1, 0.270588, 0.270588, 1 )
 font_data = ExtResource( 3 )
 
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 0.203922, 0.203922, 1 )
+
 [node name="HardMode" type="Node2D"]
 script = ExtResource( 2 )
 
@@ -20,6 +23,7 @@ max_scroll_speed = 650
 player_horizontal_movement_rate_increase = 1.1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 30
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
 margin_top = 531.0
@@ -37,6 +41,47 @@ margin_bottom = 53.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.341176, 0, 0, 1 )
 text = "HARD MODE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RedBorder" type="Container" parent="CanvasLayer"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="CanvasLayer/RedBorder"]
+margin_right = 4.0
+margin_bottom = 600.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/RedBorder"]
+margin_left = 1020.0
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel3" type="Panel" parent="CanvasLayer/RedBorder"]
+margin_right = 1024.0
+margin_bottom = 4.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel4" type="Panel" parent="CanvasLayer/RedBorder"]
+margin_top = 596.0
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_styles/panel = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

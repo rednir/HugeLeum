@@ -116,7 +116,7 @@ shader = ExtResource( 1 )
 bg_color = Color( 0, 0, 0, 1 )
 
 [node name="Fade" type="CanvasLayer"]
-layer = 10
+layer = 100
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "out"
