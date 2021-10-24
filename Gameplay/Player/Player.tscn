@@ -13,14 +13,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 8 ) ],
-"loop": true,
-"name": "still",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "falling",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "dying",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
@@ -28,9 +28,9 @@ animations = [ {
 "name": "moving",
 "speed": 4.0
 }, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 8 ) ],
 "loop": true,
-"name": "dying",
+"name": "still",
 "speed": 5.0
 } ]
 
@@ -46,10 +46,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.7 ),
-"transitions": PoolRealArray( 0.5, 3, 0.2 ),
+"times": PoolRealArray( 0, 0.2, 0.8 ),
+"transitions": PoolRealArray( 0.4, 2.5, 0.2 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( -140, -600 ), Vector2( -1000, 2000 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( -280, -1000 ), Vector2( -1800, 2400 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("AnimatedSprite:rotation_degrees")
@@ -70,8 +70,8 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3, 0.7 ),
-"transitions": PoolRealArray( 1.5, 1, 1.5 ),
+"times": PoolRealArray( 0, 0.2, 0.8 ),
+"transitions": PoolRealArray( 1.5, 2, 1.5 ),
 "update": 0,
 "values": [ Color( 1, 0.0980392, 0.0980392, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
@@ -127,9 +127,9 @@ tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 1 ),
-"transitions": PoolRealArray( 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5 ),
+"transitions": PoolRealArray( 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 2, 1.5 ),
 "update": 0,
-"values": [ Color( 0.392157, 0.392157, 0.392157, 0.156863 ), Color( 1, 1, 1, 0.627451 ), Color( 0.392157, 0.392157, 0.392157, 0.27451 ), Color( 1, 1, 1, 0.745098 ), Color( 0.392157, 0.392157, 0.392157, 0.392157 ), Color( 1, 1, 1, 1 ), Color( 0.392157, 0.392157, 0.392157, 0.54902 ), Color( 1, 1, 1, 1 ), Color( 0.392157, 0.392157, 0.392157, 0.705882 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 0.368627, 0, 0, 0.0392157 ), Color( 1, 0.0352941, 0.0352941, 0.627451 ), Color( 0.345098, 0.345098, 0.345098, 0.0627451 ), Color( 0.560784, 0, 0, 0.745098 ), Color( 0.415686, 0.415686, 0.415686, 0.266667 ), Color( 1, 0.623529, 0.623529, 1 ), Color( 0.392157, 0.392157, 0.392157, 0.54902 ), Color( 1, 1, 1, 1 ), Color( 0.392157, 0.392157, 0.392157, 0.705882 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("AnimatedSprite:offset")
@@ -141,7 +141,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45 ),
 "transitions": PoolRealArray( 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1 ),
 "update": 0,
-"values": [ Vector2( -20, 0 ), Vector2( 20, 0 ), Vector2( -20, 0 ), Vector2( 20, 0 ), Vector2( -20, 0 ), Vector2( 20, 0 ), Vector2( -20, 0 ), Vector2( 20, 0 ), Vector2( -20, 0 ), Vector2( 0, 0 ) ]
+"values": [ Vector2( -50, 0 ), Vector2( 50, 0 ), Vector2( -50, 0 ), Vector2( 50, 0 ), Vector2( -50, 0 ), Vector2( 50, 0 ), Vector2( -25, 0 ), Vector2( 25, 0 ), Vector2( -25, 0 ), Vector2( 0, 0 ) ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -171,7 +171,7 @@ rotation = -0.20944
 scale = Vector2( 0.0700039, 0.0700039 )
 frames = SubResource( 1 )
 animation = "still"
-offset = Vector2( -1000, 2000 )
+offset = Vector2( -1800, 2400 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 13.4002, 29.2972 )

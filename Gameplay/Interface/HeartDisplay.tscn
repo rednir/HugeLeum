@@ -4,7 +4,7 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "loss"
-length = 0.3
+length = 0.85
 step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("HBoxContainer:rect_position")
@@ -16,7 +16,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 24, 24 ), Vector2( 45, 24 ), Vector2( 24, 24 ), Vector2( 40, 24 ), Vector2( 24, 24 ), Vector2( 35, 24 ), Vector2( 24, 24 ) ]
+"values": [ Vector2( 24, 24 ), Vector2( 55, 24 ), Vector2( 24, 24 ), Vector2( 55, 24 ), Vector2( 24, 24 ), Vector2( 40, 24 ), Vector2( 24, 24 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("HBoxContainer:modulate")
@@ -26,9 +26,21 @@ tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 0.4, 1 ),
+"transitions": PoolRealArray( 1.5, 1 ),
 "update": 0,
 "values": [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HBoxContainer:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.05, 0.35, 0.85 ),
+"transitions": PoolRealArray( 0.5, 1, -2, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.4, 1.4 ), Vector2( 1.4, 1.4 ), Vector2( 1, 1 ) ]
 }
 
 [node name="HeartDisplay" type="Control"]
