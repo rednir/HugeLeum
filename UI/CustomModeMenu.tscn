@@ -123,7 +123,6 @@ __meta__ = {
 }
 
 [node name="Scroll Speed" type="VBoxContainer" parent="Panel/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 25.0
@@ -160,7 +159,8 @@ size_flags_horizontal = 10
 size_flags_vertical = 1
 min_value = 100.0
 max_value = 1000.0
-value = 100.0
+step = 100.0
+value = 200.0
 
 [node name="Max" type="HBoxContainer" parent="Panel/TabContainer/Scroll Speed"]
 margin_top = 32.0
@@ -188,7 +188,8 @@ size_flags_horizontal = 10
 size_flags_vertical = 1
 min_value = 100.0
 max_value = 1000.0
-value = 100.0
+step = 100.0
+value = 700.0
 
 [node name="IncreaseInterval" type="HBoxContainer" parent="Panel/TabContainer/Scroll Speed"]
 margin_top = 64.0
@@ -214,11 +215,12 @@ margin_bottom = 22.0
 rect_min_size = Vector2( 110, 0 )
 size_flags_horizontal = 10
 size_flags_vertical = 1
-min_value = 100.0
-max_value = 1000.0
-value = 100.0
+max_value = 400.0
+step = 40.0
+value = 80.0
 
 [node name="Player" type="VBoxContainer" parent="Panel/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 25.0
@@ -253,9 +255,10 @@ margin_bottom = 22.0
 rect_min_size = Vector2( 110, 0 )
 size_flags_horizontal = 10
 size_flags_vertical = 1
-min_value = 100.0
-max_value = 1000.0
-value = 100.0
+min_value = 10000.0
+max_value = 100000.0
+step = 10000.0
+value = 40000.0
 
 [node name="Max Speed" type="HBoxContainer" parent="Panel/TabContainer/Player"]
 margin_top = 32.0
@@ -281,9 +284,10 @@ margin_bottom = 22.0
 rect_min_size = Vector2( 110, 0 )
 size_flags_horizontal = 10
 size_flags_vertical = 1
-min_value = 100.0
-max_value = 1000.0
-value = 100.0
+min_value = 10000.0
+max_value = 100000.0
+step = 10000.0
+value = 55000.0
 
 [node name="IncreaseRate" type="HBoxContainer" parent="Panel/TabContainer/Player"]
 margin_top = 64.0
@@ -309,9 +313,10 @@ margin_bottom = 22.0
 rect_min_size = Vector2( 110, 0 )
 size_flags_horizontal = 10
 size_flags_vertical = 1
-min_value = 100.0
-max_value = 1000.0
-value = 100.0
+min_value = 1.0
+max_value = 2.0
+step = 0.1
+value = 1.1
 
 [node name="JumpHeight" type="HBoxContainer" parent="Panel/TabContainer/Player"]
 margin_top = 96.0
@@ -337,9 +342,10 @@ margin_bottom = 22.0
 rect_min_size = Vector2( 110, 0 )
 size_flags_horizontal = 10
 size_flags_vertical = 1
-min_value = 100.0
-max_value = 1000.0
-value = 100.0
+min_value = 10000.0
+max_value = 100000.0
+step = 10000.0
+value = 40000.0
 
 [node name="Weight" type="HBoxContainer" parent="Panel/TabContainer/Player"]
 margin_top = 128.0
@@ -365,9 +371,10 @@ margin_bottom = 22.0
 rect_min_size = Vector2( 110, 0 )
 size_flags_horizontal = 10
 size_flags_vertical = 1
-min_value = 100.0
-max_value = 1000.0
-value = 100.0
+min_value = 1000.0
+max_value = 10000.0
+step = 1000.0
+value = 5000.0
 
 [node name="InitialLives" type="HBoxContainer" parent="Panel/TabContainer/Player"]
 margin_top = 160.0
@@ -391,7 +398,9 @@ margin_left = 387.0
 margin_right = 473.0
 margin_bottom = 32.0
 size_flags_horizontal = 10
+min_value = 1.0
 max_value = 12.0
+value = 2.0
 
 [node name="MaxLives" type="HBoxContainer" parent="Panel/TabContainer/Player"]
 margin_top = 202.0
@@ -415,7 +424,9 @@ margin_left = 387.0
 margin_right = 473.0
 margin_bottom = 32.0
 size_flags_horizontal = 10
+min_value = 1.0
 max_value = 12.0
+value = 2.0
 
 [node name="ButtonsContainer" type="HBoxContainer" parent="Panel"]
 margin_left = 22.1224
