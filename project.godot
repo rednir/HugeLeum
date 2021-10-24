@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="KajamGame"
+config/name="Huge Leum"
 run/main_scene="res://UI/Splash/Splash.tscn"
 boot_splash/image="res://splash.png"
 config/icon="res://icon.png"
