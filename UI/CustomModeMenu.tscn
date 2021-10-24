@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
+[ext_resource path="res://UI/Fade.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/blur.gdshader" type="Shader" id=2]
 [ext_resource path="res://Assets/white.png" type="Texture" id=3]
 [ext_resource path="res://UI/MainTheme.tres" type="Theme" id=4]
@@ -460,3 +461,5 @@ text = "Cancel"
 autoplay = "in"
 anims/in = SubResource( 3 )
 anims/out = SubResource( 4 )
+
+[node name="Fade" parent="." instance=ExtResource( 1 )]

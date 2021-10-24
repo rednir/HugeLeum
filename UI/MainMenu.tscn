@@ -12,19 +12,18 @@
 [ext_resource path="res://Assets/worm1.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Fonts/Inter-Regular.ttf" type="DynamicFontData" id=11]
 
-[sub_resource type="InputEventAction" id=6]
+[sub_resource type="InputEventAction" id=1]
 action = "ui_accept"
 
-[sub_resource type="ShortCut" id=7]
-shortcut = SubResource( 6 )
+[sub_resource type="ShortCut" id=2]
+shortcut = SubResource( 1 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=3]
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 11 )
 
-[sub_resource type="Animation" id=2]
-resource_name = "in"
+[sub_resource type="Animation" id=4]
 length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Title:modulate")
@@ -51,7 +50,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=5]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -67,7 +66,7 @@ tracks/0/keys = {
 "values": [ -10.0, 10.0, -10.0 ]
 }
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=6]
 animations = [ {
 "frames": [ ExtResource( 10 ), ExtResource( 9 ) ],
 "loop": true,
@@ -75,7 +74,7 @@ animations = [ {
 "speed": 4.0
 } ]
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=7]
 length = 3.2
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -110,7 +109,7 @@ margin_right = 607.0
 margin_bottom = 421.0
 rect_scale = Vector2( 1.00521, 0.972 )
 hint_tooltip = ""
-shortcut = SubResource( 7 )
+shortcut = SubResource( 2 )
 text = "Play"
 
 [node name="HardModeButton" type="CheckBox" parent="."]
@@ -119,7 +118,7 @@ margin_top = 562.735
 margin_right = 1017.9
 margin_bottom = 593.735
 hint_tooltip = "You only have one life, and everything seems a lot faster..."
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Hard mode"
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -134,7 +133,7 @@ autoplay = true
 
 [node name="FadeAnimPlayer" type="AnimationPlayer" parent="."]
 autoplay = "in"
-anims/in = SubResource( 2 )
+anims/in = SubResource( 4 )
 
 [node name="Title" type="Sprite" parent="."]
 position = Vector2( 509.602, 192.239 )
@@ -143,7 +142,7 @@ texture = ExtResource( 7 )
 
 [node name="RotateAnimPlayer" type="AnimationPlayer" parent="Title"]
 autoplay = "main"
-anims/main = SubResource( 3 )
+anims/main = SubResource( 5 )
 
 [node name="Info" type="Sprite" parent="."]
 position = Vector2( 514.545, 552.003 )
@@ -153,9 +152,9 @@ texture = ExtResource( 8 )
 [node name="Worm" type="AnimatedSprite" parent="."]
 position = Vector2( -65, 414.431 )
 scale = Vector2( 0.07, 0.07 )
-frames = SubResource( 4 )
+frames = SubResource( 6 )
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Worm"]
 autoplay = "in"
-anims/in = SubResource( 5 )
+anims/in = SubResource( 7 )
