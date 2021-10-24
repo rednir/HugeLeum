@@ -104,8 +104,7 @@ func check_collisions():
 
 
 func update_status_effects(delta):
-	if shielded:
-		time_shielded_for += delta
+	time_shielded_for += delta if shielded else 0
 
 	if time_shielded_for > 7:
 		shielded = false
