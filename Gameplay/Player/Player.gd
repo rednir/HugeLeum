@@ -53,8 +53,8 @@ func _physics_process(delta):
 	check_collisions()
 
 	if lives < 1:
-		set_physics_process(false)
 		death()
+		return
 
 	update_status_effects(delta)
 
@@ -67,10 +67,11 @@ func _physics_process(delta):
 
 
 func death():
-	emit_signal("death")
+	set_physics_process(false)
 	animated_sprite.play("dying")
 	animation_player.play("death")
 	death_audio.play()
+	emit_signal("death")
 
 
 func check_collisions():
