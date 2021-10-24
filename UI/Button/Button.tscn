@@ -1,14 +1,48 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://UI/MainTheme.tres" type="Theme" id=1]
 [ext_resource path="res://Assets/Audio/button-click.ogg" type="AudioStream" id=2]
 [ext_resource path="res://UI/Button/Button.gd" type="Script" id=3]
 
+[sub_resource type="Animation" id=1]
+resource_name = "down"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 0.2, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.7, 0.7 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "up"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 0.09, 1 ),
+"update": 0,
+"values": [ Vector2( 0.7, 0.7 ), Vector2( 1, 1 ) ]
+}
+
 [node name="Button" type="Button"]
-margin_left = -76.9478
-margin_top = -34.4314
-margin_right = 74.0522
-margin_bottom = 34.5686
+margin_left = -77.0
+margin_top = -34.0
+margin_right = 74.0
+margin_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( 76, 34 )
 hint_tooltip = "Button"
 mouse_default_cursor_shape = 2
 theme = ExtResource( 1 )
@@ -20,3 +54,8 @@ __meta__ = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "up"
+anims/down = SubResource( 1 )
+anims/up = SubResource( 2 )
