@@ -41,6 +41,7 @@ onready var ground = $Camera/Ground
 onready var player = $Player
 onready var background = $Background
 onready var music_player = $MusicPlayer
+onready var speed_up_audio = $SpeedUpAudio
 
 export var hard_mode = false
 export var env_change_interval = 20
@@ -156,6 +157,7 @@ func next_environment():
 	background.change_environment(GameEnvironment.list[current_environment_index])
 
 	camera_animation_player.play("speedup")
+	speed_up_audio.play()
 
 	scroll_speed += scroll_speed_change
 	camera.set_scroll_speed(min(scroll_speed, max_scroll_speed))
