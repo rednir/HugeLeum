@@ -9,7 +9,7 @@
    id="svg5"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
    sodipodi:docname="desert-bg.svg"
-   inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/plains-bg.png"
+   inkscape:export-filename="D:\Art\kajamGame\desert-bg.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -31,12 +31,12 @@
      width="200px"
      inkscape:lockguides="false"
      inkscape:zoom="0.70710678"
-     inkscape:cx="534.57273"
-     inkscape:cy="254.55844"
+     inkscape:cx="381.13056"
+     inkscape:cy="314.66252"
      inkscape:window-width="1920"
-     inkscape:window-height="1052"
-     inkscape:window-x="0"
-     inkscape:window-y="28"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer2" />
   <defs
@@ -61,7 +61,8 @@
        y1="155.65778"
        x2="-130.21371"
        y2="0.37417734"
-       gradientUnits="userSpaceOnUse" />
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.0060197,1)" />
     <filter
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
@@ -94,11 +95,11 @@
      id="layer2"
      inkscape:label="fg">
     <rect
-       style="fill:url(#linearGradient1236);stroke-width:1.376;stroke-linejoin:round;fill-opacity:1"
+       style="fill:url(#linearGradient1236);fill-opacity:1;stroke-width:1.38014;stroke-linejoin:round"
        id="rect969"
-       width="270.93332"
+       width="272.56427"
        height="158.75"
-       x="-270.93332"
+       x="-272.56427"
        y="2.220446e-16"
        transform="scale(-1,1)"
        inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/desert-bg.png"
@@ -106,7 +107,8 @@
        inkscape:export-ydpi="96" />
     <g
        id="g4627"
-       style="filter:url(#filter4629)">
+       style="filter:url(#filter4629)"
+       transform="scale(1.0060197,1)">
       <ellipse
          style="opacity:1;fill:#ffffff;stroke:none;stroke-width:0.509969;stroke-linejoin:round"
          id="path2477-56"
@@ -248,7 +250,7 @@
        cy="31.514444"
        rx="24.912096"
        ry="15.081918"
-       transform="matrix(-1,0,0,1,273.46382,73.622567)" />
+       transform="matrix(-1.0060197,0,0,1,275.10999,73.622567)" />
     <ellipse
        style="fill:#ffffff;stroke:none;stroke-width:0.25479;stroke-linejoin:round;filter:url(#filter4629-7)"
        id="path2477-56-0-2-2"
@@ -256,7 +258,7 @@
        cy="20.114613"
        rx="12.446519"
        ry="7.5351901"
-       transform="matrix(-1,0,0,1,273.46382,73.622567)" />
+       transform="matrix(-1.0060197,0,0,1,275.10999,73.622567)" />
     <ellipse
        style="fill:#ffffff;stroke:none;stroke-width:0.176511;stroke-linejoin:round;filter:url(#filter4629-7)"
        id="path2477-56-0-9-9"
@@ -264,7 +266,7 @@
        cy="34.895226"
        rx="8.6225758"
        ry="5.2201543"
-       transform="matrix(-1,0,0,1,273.46382,73.622567)" />
+       transform="matrix(-1.0060197,0,0,1,275.10999,73.622567)" />
     <ellipse
        style="fill:#ffffff;stroke:none;stroke-width:0.296929;stroke-linejoin:round;filter:url(#filter4629-7)"
        id="path2477-56-0-9-37-3"
@@ -272,7 +274,7 @@
        cy="39.101532"
        rx="14.515869"
        ry="8.7748394"
-       transform="matrix(-1,0,0,1,273.46382,73.622567)" />
+       transform="matrix(-1.0060197,0,0,1,275.10999,73.622567)" />
     <ellipse
        style="fill:#ffffff;stroke:none;stroke-width:0.176511;stroke-linejoin:round;filter:url(#filter4629-7)"
        id="path2477-56-0-9-02-1"
@@ -280,7 +282,7 @@
        cy="44.33345"
        rx="8.6225758"
        ry="5.2201543"
-       transform="matrix(-1,0,0,1,273.46382,73.622567)" />
+       transform="matrix(-1.0060197,0,0,1,275.10999,73.622567)" />
     <ellipse
        style="fill:#ffffff;stroke:none;stroke-width:0.262252;stroke-linejoin:round;filter:url(#filter4629-7)"
        id="path2477-56-0-9-0-9"
@@ -288,7 +290,7 @@
        cy="23.555706"
        rx="12.811063"
        ry="7.7558875"
-       transform="matrix(-1,0,0,1,273.46382,73.622567)" />
+       transform="matrix(-1.0060197,0,0,1,275.10999,73.622567)" />
     <ellipse
        style="fill:#ffffff;stroke:none;stroke-width:0.176511;stroke-linejoin:round;filter:url(#filter4629-7)"
        id="path2477-56-0-9-0-7-4"
@@ -296,7 +298,7 @@
        cy="22.607727"
        rx="8.6225758"
        ry="5.2201543"
-       transform="matrix(-1,0,0,1,273.46382,73.622567)" />
+       transform="matrix(-1.0060197,0,0,1,275.10999,73.622567)" />
     <ellipse
        style="fill:#ffffff;stroke:none;stroke-width:0.196573;stroke-linejoin:round;filter:url(#filter4629-7)"
        id="path2477-56-0-9-0-7-9-7"
@@ -304,7 +306,7 @@
        cy="28.484358"
        rx="10.341362"
        ry="5.3982339"
-       transform="matrix(-1,0,0,1,273.46382,73.622567)" />
+       transform="matrix(-1.0060197,0,0,1,275.10999,73.622567)" />
     <ellipse
        style="fill:#ffffff;stroke:none;stroke-width:0.137002;stroke-linejoin:round;filter:url(#filter4629-7)"
        id="path2477-56-0-9-0-2-8"
@@ -312,7 +314,7 @@
        cy="40.5331"
        rx="6.692574"
        ry="4.0517206"
-       transform="matrix(-1,0,0,1,273.46382,73.622567)" />
+       transform="matrix(-1.0060197,0,0,1,275.10999,73.622567)" />
     <ellipse
        style="fill:#ffffff;stroke:none;stroke-width:0.484317;stroke-linejoin:round;filter:url(#filter4629-7)"
        id="path2477-56-0-9-0-6-4"
@@ -320,7 +322,7 @@
        cy="31.275822"
        rx="23.658979"
        ry="14.323276"
-       transform="matrix(-1,0,0,1,273.46382,73.622567)" />
+       transform="matrix(-1.0060197,0,0,1,275.10999,73.622567)" />
     <ellipse
        style="fill:#ffffff;stroke:none;stroke-width:0.231274;stroke-linejoin:round;filter:url(#filter4629-7)"
        id="path2477-56-0-9-0-6-5-5"
@@ -328,7 +330,7 @@
        cy="44.901283"
        rx="11.297765"
        ry="6.8397288"
-       transform="matrix(-1,0,0,1,273.46382,73.622567)" />
+       transform="matrix(-1.0060197,0,0,1,275.10999,73.622567)" />
     <ellipse
        style="fill:#ffffff;stroke:none;stroke-width:0.231274;stroke-linejoin:round;filter:url(#filter4629-7)"
        id="path2477-56-0-9-0-6-5-2-0"
@@ -336,7 +338,7 @@
        cy="24.695705"
        rx="11.297765"
        ry="6.8397288"
-       transform="matrix(-1,0,0,1,273.46382,73.622567)" />
+       transform="matrix(-1.0060197,0,0,1,275.10999,73.622567)" />
     <ellipse
        style="fill:#ffffff;stroke:none;stroke-width:0.231274;stroke-linejoin:round;filter:url(#filter4629-7)"
        id="path2477-56-0-9-0-6-5-9-3"
@@ -344,7 +346,7 @@
        cy="18.708868"
        rx="11.297765"
        ry="6.8397288"
-       transform="matrix(-1,0,0,1,273.46382,73.622567)" />
+       transform="matrix(-1.0060197,0,0,1,275.10999,73.622567)" />
     <ellipse
        style="fill:#ffffff;stroke:none;stroke-width:0.176511;stroke-linejoin:round;filter:url(#filter4629-7)"
        id="path2477-56-0-9-3-61"
@@ -352,7 +354,7 @@
        cy="36.854099"
        rx="8.6225758"
        ry="5.2201543"
-       transform="matrix(-1,0,0,1,273.46382,73.622567)" />
+       transform="matrix(-1.0060197,0,0,1,275.10999,73.622567)" />
     <ellipse
        style="fill:#ffffff;stroke:none;stroke-width:0.213506;stroke-linejoin:round;filter:url(#filter4629-7)"
        id="path2477-56-0-9-3-6-0"
@@ -360,7 +362,7 @@
        cy="60.574574"
        rx="10.429812"
        ry="6.3142657"
-       transform="matrix(-1,0,0,1,272.71547,75.119276)" />
+       transform="matrix(-1.0060197,0,0,1,274.35714,75.119276)" />
     <ellipse
        style="fill:#ffffff;stroke:none;stroke-width:0.213506;stroke-linejoin:round;filter:url(#filter4629-7)"
        id="path2477-56-0-9-3-6-2-6"
@@ -368,7 +370,7 @@
        cy="21.70229"
        rx="10.429812"
        ry="6.3142657"
-       transform="matrix(-1,0,0,1,295.91446,63.145602)" />
+       transform="matrix(-1.0060197,0,0,1,297.69578,63.145602)" />
     <ellipse
        style="fill:#ffffff;stroke:none;stroke-width:0.360663;stroke-linejoin:round;filter:url(#filter4629-7)"
        id="path2477-56-0-9-0-61-3"
@@ -376,7 +378,7 @@
        cy="47.147678"
        rx="17.618446"
        ry="10.666305"
-       transform="matrix(-1,0,0,1,273.46382,73.622567)" />
+       transform="matrix(-1.0060197,0,0,1,275.10999,73.622567)" />
     <ellipse
        style="fill:#ffffff;stroke:none;stroke-width:0.145576;stroke-linejoin:round;filter:url(#filter4629-7)"
        id="path2477-56-0-9-0-61-89-2"
@@ -384,7 +386,7 @@
        cy="57.24913"
        rx="7.1114149"
        ry="4.3052897"
-       transform="matrix(-1,0,0,1,273.46382,73.622567)" />
+       transform="matrix(-1.0060197,0,0,1,275.10999,73.622567)" />
     <ellipse
        style="fill:#ffffff;stroke:none;stroke-width:0.226466;stroke-linejoin:round;filter:url(#filter4629-7)"
        id="path2477-56-0-9-0-61-8-0"
@@ -392,7 +394,7 @@
        cy="59.318512"
        rx="11.062923"
        ry="6.6975546"
-       transform="matrix(-1,0,0,1,273.46382,73.622567)" />
+       transform="matrix(-1.0060197,0,0,1,275.10999,73.622567)" />
   </g>
   <g
      inkscape:groupmode="layer"
