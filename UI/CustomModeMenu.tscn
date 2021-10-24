@@ -124,6 +124,7 @@ __meta__ = {
 }
 
 [node name="Scroll Speed" type="VBoxContainer" parent="Panel/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 25.0
@@ -221,7 +222,6 @@ step = 40.0
 value = 80.0
 
 [node name="Player" type="VBoxContainer" parent="Panel/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 25.0
