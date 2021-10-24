@@ -34,6 +34,8 @@ var knocked_back = false
 var knock_back_velocity = Vector2(0, 0)
 var time_knocked_back_for = 0
 
+var iframe_time_left = 0
+
 var already_jumped_this_key_press = false
 
 var time_airborne = 0
@@ -90,10 +92,11 @@ func check_collisions():
 			time_shielded_for = 0
 			num_of_powerups_collected += 1
 		elif collision_info.collider.is_in_group("damaging"):
-			if not shielded and not knocked_back:
+			if not (shielded or knocked_back or iframe_time_left > 0):
 				animation_player.play("life-lost")
 				life_lost_audio.play()
 				lives -= 1
+				iframe_time_left = 0.8
 			if not knocked_back:
 				knocked_back = true
 				velocity = initial_knock_back_velocity \
@@ -105,6 +108,7 @@ func check_collisions():
 
 func update_status_effects(delta):
 	time_shielded_for += delta if shielded else 0
+	iframe_time_left = iframe_time_left - delta if iframe_time_left > 0 else 0
 
 	if time_shielded_for > 7:
 		shielded = false
