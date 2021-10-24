@@ -10,6 +10,7 @@ height = 56.108
 [node name="Spider" type="StaticBody2D" groups=[
 "can_spawn_powerups",
 "damaging",
+"desert",
 "entity",
 ]]
 collision_mask = 17

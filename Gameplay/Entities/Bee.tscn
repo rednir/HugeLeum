@@ -28,6 +28,7 @@ radius = 38.2126
 "can_spawn_powerups",
 "collidable",
 "entity",
+"plains",
 ]]
 collision_mask = 17
 script = ExtResource( 3 )
@@ -36,7 +37,6 @@ script = ExtResource( 3 )
 position = Vector2( -0.914703, -0.840908 )
 scale = Vector2( 0.608438, 0.608438 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

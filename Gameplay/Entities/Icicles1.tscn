@@ -28,6 +28,7 @@ extents = Vector2( 104.001, 57.8503 )
 "can_spawn_powerups",
 "damaging",
 "entity",
+"ice",
 ]]
 scale = Vector2( 0.201689, 0.201689 )
 collision_mask = 17

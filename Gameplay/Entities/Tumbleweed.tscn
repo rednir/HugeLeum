@@ -40,6 +40,7 @@ tracks/0/keys = {
 
 [node name="Tumbleweed" type="KinematicBody2D" groups=[
 "collidable",
+"desert",
 "entity",
 ]]
 collision_layer = 2

@@ -4,12 +4,12 @@
 [ext_resource path="res://Gameplay/Entities/Beetle.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 19.4882
-height = 56.4283
+radius = 15.5738
+height = 45.9946
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 47.2214
-height = 53.1931
+radius = 21.2434
+height = 72.4529
 
 [sub_resource type="CapsuleShape2D" id=3]
 radius = 28.8029
@@ -22,11 +22,12 @@ extents = Vector2( 12.6341, 10 )
 extents = Vector2( 0.733434, 23.1178 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 10.2646, 1.26712 )
+extents = Vector2( 16.7429, 1.26712 )
 
 [node name="Beetle" type="StaticBody2D" groups=[
 "collidable",
 "entity",
+"ice",
 ]]
 collision_mask = 17
 script = ExtResource( 2 )
