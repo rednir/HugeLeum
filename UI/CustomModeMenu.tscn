@@ -124,7 +124,6 @@ __meta__ = {
 }
 
 [node name="Scroll Speed" type="VBoxContainer" parent="Panel/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 25.0
@@ -222,6 +221,7 @@ step = 40.0
 value = 80.0
 
 [node name="Player" type="VBoxContainer" parent="Panel/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 25.0
@@ -288,7 +288,7 @@ size_flags_vertical = 1
 min_value = 10000.0
 max_value = 100000.0
 step = 10000.0
-value = 55000.0
+value = 60000.0
 
 [node name="IncreaseRate" type="HBoxContainer" parent="Panel/TabContainer/Player"]
 margin_top = 64.0
