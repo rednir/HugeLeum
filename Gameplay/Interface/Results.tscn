@@ -189,7 +189,7 @@ margin_top = 319.429
 margin_right = 338.513
 margin_bottom = 388.429
 rect_pivot_offset = Vector2( -150.582, -308.97 )
-hint_tooltip = "Play Again"
+hint_tooltip = ""
 shortcut = SubResource( 9 )
 text = "Play Again"
 
@@ -199,7 +199,7 @@ margin_top = 318.775
 margin_right = 517.919
 margin_bottom = 387.775
 rect_pivot_offset = Vector2( -150.582, -308.97 )
-hint_tooltip = "Main Menu"
+hint_tooltip = ""
 shortcut = SubResource( 11 )
 text = "Main Menu"
 
