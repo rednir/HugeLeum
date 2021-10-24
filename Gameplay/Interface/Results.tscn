@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Assets/Fonts/FRUIT-PUNCH.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/Button/Button.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Gameplay/Interface/Results.gd" type="Script" id=5]
 [ext_resource path="res://Assets/white.png" type="Texture" id=6]
 [ext_resource path="res://UI/blur.gdshader" type="Shader" id=7]
+[ext_resource path="res://Assets/worm-dead.png" type="Texture" id=8]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 7 )
@@ -39,19 +40,35 @@ font_data = SubResource( 4 )
 [sub_resource type="DynamicFont" id=6]
 font_data = ExtResource( 3 )
 
-[sub_resource type="InputEventAction" id=7]
+[sub_resource type="Animation" id=7]
+resource_name = "pulse"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1.5, 0.5, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0.482353, 0.482353, 0.54902 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="InputEventAction" id=8]
 action = "ui_accept"
 
-[sub_resource type="ShortCut" id=8]
-shortcut = SubResource( 7 )
+[sub_resource type="ShortCut" id=9]
+shortcut = SubResource( 8 )
 
-[sub_resource type="InputEventAction" id=9]
+[sub_resource type="InputEventAction" id=10]
 action = "ui_cancel"
 
-[sub_resource type="ShortCut" id=10]
-shortcut = SubResource( 9 )
+[sub_resource type="ShortCut" id=11]
+shortcut = SubResource( 10 )
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=12]
 length = 2.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
@@ -136,19 +153,35 @@ __meta__ = {
 }
 
 [node name="InfoLabel" type="Label" parent="Panel"]
-margin_left = 21.0
-margin_top = 224.0
+margin_left = 190.0
+margin_top = 209.941
 margin_right = 679.0
-margin_bottom = 290.0
+margin_bottom = 275.941
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 1, 1, 1, 0.54902 )
 text = "Total jumps: 0
 Powerups Collected: 0
 "
-align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+modulate = Color( 1, 0.5932, 0.5932, 0.645591 )
+margin_left = 392.474
+margin_top = 205.26
+margin_right = 1967.47
+margin_bottom = 1189.26
+rect_rotation = -15.6
+rect_scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/TextureRect"]
+autoplay = "pulse"
+anims/pulse = SubResource( 7 )
 
 [node name="PlayAgainButton" parent="Panel" instance=ExtResource( 2 )]
 margin_left = 187.513
@@ -157,7 +190,7 @@ margin_right = 338.513
 margin_bottom = 388.429
 rect_pivot_offset = Vector2( -150.582, -308.97 )
 hint_tooltip = "Play Again"
-shortcut = SubResource( 8 )
+shortcut = SubResource( 9 )
 text = "Play Again"
 
 [node name="MainMenuButton" parent="Panel" instance=ExtResource( 2 )]
@@ -167,12 +200,12 @@ margin_right = 517.919
 margin_bottom = 387.775
 rect_pivot_offset = Vector2( -150.582, -308.97 )
 hint_tooltip = "Main Menu"
-shortcut = SubResource( 10 )
+shortcut = SubResource( 11 )
 text = "Main Menu"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "in"
-anims/in = SubResource( 11 )
+anims/in = SubResource( 12 )
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
