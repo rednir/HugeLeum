@@ -119,7 +119,7 @@ func update_status_effects(delta):
 
 
 func update_movement_x(delta):
-	horizontal_move_speed = min(50000, horizontal_move_speed)
+	horizontal_move_speed = min(55000, horizontal_move_speed)
 
 	if not knocked_back and collision_info and collision_info.normal.y != -1:
 		velocity.x = 0

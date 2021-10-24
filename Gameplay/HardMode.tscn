@@ -18,9 +18,9 @@ script = ExtResource( 2 )
 
 [node name="Game" parent="." instance=ExtResource( 1 )]
 hard_mode = true
-scroll_speed = 310
-max_scroll_speed = 650
-player_horizontal_movement_rate_increase = 1.1
+scroll_speed = 320
+max_scroll_speed = 710
+player_horizontal_movement_rate_increase = 1.12
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 30
