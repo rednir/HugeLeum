@@ -57,6 +57,7 @@ var elapsed_time = 0
 var total_distance_travelled = 0
 var distance_travelled_since_pattern_instance = 0
 var current_environment_index = 0
+var entity_spawning_environment_index = 0
 var env_change_timer = 0
 
 
@@ -96,8 +97,15 @@ func _process(delta):
 		distance_travelled_since_pattern_instance += scroll_speed * delta
 
 	if distance_travelled_since_pattern_instance > 1024:
+		var distance_till_env_change = scroll_speed * (env_change_interval - env_change_timer)
+
+		# spawn entities for the next environment off screen if the env change is very close
+		if distance_till_env_change < 1024 * 0.6:
+			entity_spawning_environment_index += 1
+			entity_spawning_environment_index %= GameEnvironment.list.size()
+
 		var scene_instance
-		match current_environment_index:
+		match entity_spawning_environment_index:
 			0:
 				scene_instance = plains_entity_patterns[randi() % plains_entity_patterns.size()].instance()
 			1:
@@ -137,11 +145,16 @@ func _process(delta):
 
 
 func next_environment():
+	disable_active_hitboxes()
+
 	current_environment_index += 1
 	current_environment_index %= GameEnvironment.list.size()
+
+	if current_environment_index != entity_spawning_environment_index:
+		entity_spawning_environment_index = current_environment_index
+
 	ground.change_environment(GameEnvironment.list[current_environment_index])
 	background.change_environment(GameEnvironment.list[current_environment_index])
-	disable_active_hitboxes()
 
 	camera_animation_player.play("speedup")
 	speed_up_audio.play()
@@ -161,15 +174,27 @@ func disable_active_hitboxes():
 	for child in get_children():
 		if "Pattern" in child.name:
 			for entity in child.get_children():
-				if entity.get("disappear") == false:
-					entity.disappear = true
-				for great_grandchild in entity.get_children():
-					if great_grandchild is CollisionShape2D:
-						great_grandchild.set_deferred("disabled", true)
-					else:
-						for great_great_grandchild in great_grandchild.get_children():
-							if great_great_grandchild is CollisionShape2D:
-								great_great_grandchild.set_deferred("disabled", true)
+				# only disappear if they were part of the this environment (not the next)
+				if entity.is_in_group(env_index_to_env_name(current_environment_index)):
+					if entity.get("disappear") == false:
+						entity.disappear = true
+					for great_grandchild in entity.get_children():
+						if great_grandchild is CollisionShape2D:
+							great_grandchild.set_deferred("disabled", true)
+						else:
+							for great_great_grandchild in great_grandchild.get_children():
+								if great_great_grandchild is CollisionShape2D:
+									great_great_grandchild.set_deferred("disabled", true)
+
+
+func env_index_to_env_name(index):
+	match index:
+		0:
+			return "plains"
+		1:
+			return "desert"
+		2:
+			return "ice"
 
 
 func on_player_death():

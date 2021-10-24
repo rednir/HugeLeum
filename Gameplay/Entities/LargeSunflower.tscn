@@ -10,6 +10,7 @@ extents = Vector2( 220.24, 3.12024 )
 "can_spawn_powerups",
 "collidable",
 "entity",
+"plains",
 ]]
 collision_mask = 17
 script = ExtResource( 2 )

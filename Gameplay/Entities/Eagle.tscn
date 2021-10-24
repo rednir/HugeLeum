@@ -20,6 +20,7 @@ extents = Vector2( 86.8727, 5.80756 )
 
 [node name="Eagle" type="KinematicBody2D" groups=[
 "collidable",
+"desert",
 "entity",
 ]]
 collision_mask = 17
@@ -30,6 +31,7 @@ position = Vector2( -153.276, -63.0917 )
 scale = Vector2( 0.332053, 0.332053 )
 frames = SubResource( 1 )
 animation = "flap wings"
+frame = 2
 playing = true
 centered = false
 

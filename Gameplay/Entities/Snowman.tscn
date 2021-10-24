@@ -4,7 +4,7 @@
 [ext_resource path="res://Gameplay/Entities/Snowman.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 17.4923, 66.5048 )
+extents = Vector2( 14.5317, 61.7694 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 64.5592, 9.90949 )
@@ -13,6 +13,7 @@ extents = Vector2( 64.5592, 9.90949 )
 "can_spawn_powerups",
 "collidable",
 "entity",
+"ice",
 ]]
 collision_mask = 17
 script = ExtResource( 2 )

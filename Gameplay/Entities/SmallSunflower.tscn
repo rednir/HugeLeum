@@ -9,6 +9,7 @@ extents = Vector2( 130.996, 3.30898 )
 [node name="SmallSunflower" type="StaticBody2D" groups=[
 "collidable",
 "entity",
+"plains",
 ]]
 collision_mask = 17
 script = ExtResource( 2 )

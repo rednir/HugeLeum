@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/eagle.svg-a759960818ebb76693d5d5d575e67e47.stex"
+path="res://.import/eagle.svg-40c992be0a07255b982064728e387c11.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Vectors/Environments/desert/eagle.svg"
-dest_files=[ "res://.import/eagle.svg-a759960818ebb76693d5d5d575e67e47.stex" ]
+source_file="res://Assets/Vectors/environments/desert/eagle.svg"
+dest_files=[ "res://.import/eagle.svg-40c992be0a07255b982064728e387c11.stex" ]
 
 [params]
 
