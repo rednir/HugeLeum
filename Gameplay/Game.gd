@@ -46,7 +46,7 @@ onready var music_player = $MusicPlayer
 onready var speed_up_audio = $SpeedUpAudio
 
 export var hard_mode = false
-export var powerup_appear_chance = 10
+export var powerup_appear_chance = 8
 export var env_change_interval = 20
 export var env_change_time_increment = 3
 export var scroll_speed = 120
