@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/bee1.png" type="Texture" id=1]
 [ext_resource path="res://Assets/bee2.png" type="Texture" id=2]
@@ -24,6 +24,24 @@ extents = Vector2( 37.9367, 35.11 )
 [sub_resource type="CircleShape2D" id=5]
 radius = 38.2126
 
+[sub_resource type="Animation" id=6]
+resource_name = "idle"
+length = 3.0
+loop = true
+step = 0.75
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.75, 1.5, 2.25, 3 ),
+"transitions": PoolRealArray( 0.5, 1.5, 0.5, 1.5, 0.5 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 22 ), Vector2( 0, 0 ), Vector2( 0, -22 ), Vector2( 0, 0 ) ]
+}
+
 [node name="Bee" type="StaticBody2D" groups=[
 "can_spawn_powerups",
 "collidable",
@@ -37,7 +55,9 @@ script = ExtResource( 3 )
 position = Vector2( -0.914703, -0.840908 )
 scale = Vector2( 0.608438, 0.608438 )
 frames = SubResource( 1 )
+frame = 1
 playing = true
+offset = Vector2( 0, -22 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 34.7236, -14.3876 )
@@ -54,3 +74,7 @@ shape = SubResource( 4 )
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
 position = Vector2( 31.498, 10.0794 )
 shape = SubResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "idle"
+anims/idle = SubResource( 6 )

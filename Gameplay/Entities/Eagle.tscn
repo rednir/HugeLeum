@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/eagle1.png" type="Texture" id=1]
 [ext_resource path="res://Assets/eagle2.png" type="Texture" id=2]
@@ -18,6 +18,24 @@ extents = Vector2( 62.2254, 5.80757 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 86.8727, 5.80756 )
 
+[sub_resource type="Animation" id=4]
+resource_name = "idle"
+length = 3.0
+loop = true
+step = 0.75
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.75, 1.5, 2.25, 3 ),
+"transitions": PoolRealArray( 0.5, 1.5, 0.5, 1.5, 0.5 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 22 ), Vector2( 0, 0 ), Vector2( 0, -22 ), Vector2( 0, 0 ) ]
+}
+
 [node name="Eagle" type="KinematicBody2D" groups=[
 "collidable",
 "desert",
@@ -31,9 +49,10 @@ position = Vector2( -153.276, -63.0917 )
 scale = Vector2( 0.332053, 0.332053 )
 frames = SubResource( 1 )
 animation = "flap wings"
-frame = 2
+frame = 1
 playing = true
 centered = false
+offset = Vector2( 0, -21.449 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -2.92318, 9.28887 )
@@ -43,3 +62,7 @@ shape = SubResource( 2 )
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2( 84.6273, 33.0407 )
 shape = SubResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "idle"
+anims/idle = SubResource( 4 )
