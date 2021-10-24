@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Gameplay/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Gameplay/Ground/Ground.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Assets/Fonts/FRUIT-PUNCH.ttf" type="DynamicFontData" id=11]
 [ext_resource path="res://Gameplay/Interface/ScoreDisplay.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Assets/Audio/speed-up.ogg" type="AudioStream" id=13]
+[ext_resource path="res://Assets/start-sign.png" type="Texture" id=14]
 
 [sub_resource type="Animation" id=1]
 resource_name = "death"
@@ -189,7 +190,7 @@ position = Vector2( 1, -1 )
 script = ExtResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 104.043, 353.207 )
+position = Vector2( 120, -100 )
 z_index = 1
 collision_layer = 16
 collision_mask = 9
@@ -203,10 +204,14 @@ stream = ExtResource( 13 )
 stream = ExtResource( 5 )
 volume_db = -2.0
 
+[node name="StartSign" type="Sprite" parent="."]
+position = Vector2( 197.59, 512.965 )
+scale = Vector2( 0.183571, 0.183571 )
+texture = ExtResource( 14 )
+
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2( 511.992, 297.762 )
 z_index = 1
-offset = Vector2( -30, 0 )
 current = true
 script = ExtResource( 4 )
 
@@ -290,7 +295,8 @@ __meta__ = {
 [node name="Fade" parent="CanvasLayer" instance=ExtResource( 10 )]
 
 [node name="Red" type="Panel" parent="CanvasLayer"]
-modulate = Color( 1, 0, 0, 0.721569 )
+visible = false
+modulate = Color( 1, 0, 0, 0 )
 margin_left = 1.992
 margin_top = -3.23801
 margin_right = 1025.99
