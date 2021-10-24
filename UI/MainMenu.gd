@@ -14,6 +14,7 @@ onready var bg_parallax = $Background/ParallaxBackground
 func _ready():
 	play_button.connect("pressed", self, "on_play_button_pressed")
 	hard_mode_button.connect("toggled", self, "on_hard_mode_toggled")
+	custom_mode_button.connect("toggled", self, "on_custom_mode_toggled")
 
 	randomize()
 	var env = randi() % GameEnvironment.list.size()
@@ -32,13 +33,13 @@ func _process(delta):
 
 
 func on_hard_mode_toggled(button_pressed: bool):
-	custom_mode_button.pressed = false
 	play_button.text = "Hard Mode" if button_pressed else "Play"
+	custom_mode_button.disabled = button_pressed
 
 
 func on_custom_mode_toggled(button_pressed: bool):
-	hard_mode_button.pressed = false
 	play_button.text = "Custom Mode" if button_pressed else "Play"
+	hard_mode_button.disabled = button_pressed
 
 
 func play(_a, _b):
