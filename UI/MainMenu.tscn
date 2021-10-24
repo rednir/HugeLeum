@@ -118,10 +118,12 @@ margin_left = 895.898
 margin_top = 562.735
 margin_right = 1017.9
 margin_bottom = 593.735
+hint_tooltip = "You only have one life, and everything seems a lot faster..."
 custom_fonts/font = SubResource( 1 )
 text = "Hard mode"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": false,
+"_editor_description_": ""
 }
 
 [node name="Fade" parent="." instance=ExtResource( 5 )]
