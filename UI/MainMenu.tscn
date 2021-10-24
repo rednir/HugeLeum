@@ -4,7 +4,7 @@
 [ext_resource path="res://Gameplay/Background/Background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://UI/MainMenu.gd" type="Script" id=3]
 [ext_resource path="res://UI/Button/Button.tscn" type="PackedScene" id=4]
-[ext_resource path="res://UI/Fade/Fade.tscn" type="PackedScene" id=5]
+[ext_resource path="res://UI/Fade.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/Audio/menu.mp3" type="AudioStream" id=6]
 [ext_resource path="res://Assets/title.png" type="Texture" id=7]
 [ext_resource path="res://Assets/menu-info.png" type="Texture" id=8]
@@ -17,7 +17,7 @@ outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 11 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "in"
 length = 3.0
 tracks/0/type = "value"
@@ -45,7 +45,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=3]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -126,7 +126,7 @@ autoplay = true
 
 [node name="FadeAnimPlayer" type="AnimationPlayer" parent="."]
 autoplay = "in"
-anims/in = SubResource( 3 )
+anims/in = SubResource( 2 )
 
 [node name="Title" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.133333 )
@@ -136,7 +136,7 @@ texture = ExtResource( 7 )
 
 [node name="RotateAnimPlayer" type="AnimationPlayer" parent="Title"]
 autoplay = "main"
-anims/main = SubResource( 2 )
+anims/main = SubResource( 3 )
 
 [node name="Info" type="Sprite" parent="."]
 position = Vector2( 514.545, 552.003 )
