@@ -168,7 +168,6 @@ texture = ExtResource( 8 )
 position = Vector2( -65, 414.431 )
 scale = Vector2( 0.07, 0.07 )
 frames = SubResource( 6 )
-frame = 1
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Worm"]
