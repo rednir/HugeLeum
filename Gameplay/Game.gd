@@ -55,6 +55,8 @@ export var max_scroll_speed = 650
 export var player_horizontal_movement_rate_increase = 1.07
 export var pixels_per_metre = 300
 
+var queue_free_on_death = false
+
 var dead = false
 var elapsed_time = 0
 var total_distance_travelled = 0
@@ -220,6 +222,11 @@ func on_player_death():
 	yield(timer, "timeout")
 	timer.queue_free()
 
+	if queue_free_on_death:
+		fade.play("in")
+		fade.connect("animation_finished", self, "on_queue_free_animation_finished", ["in"])
+		return
+
 	var results = results_scene.instance()
 	results.connect("main_menu_pressed", self, "on_main_menu_button_pressed")
 	results.connect("play_again_pressed", self, "on_play_again_button_pressed")
@@ -265,3 +272,7 @@ func on_play_again_animation_finished(_a, _b):
 	get_tree().change_scene(
 		"res://Gameplay/HardMode.tscn" if hard_mode else "res://Gameplay/Game.tscn"
 	)
+
+
+func on_queue_free_animation_finished(_a, _b):
+	queue_free()
