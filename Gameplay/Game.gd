@@ -46,6 +46,7 @@ onready var music_player = $MusicPlayer
 onready var speed_up_audio = $SpeedUpAudio
 
 export var hard_mode = false
+export var powerup_appear_chance = 10
 export var env_change_interval = 20
 export var env_change_time_increment = 3
 export var scroll_speed = 120
@@ -81,7 +82,7 @@ func _ready():
 	add_child(next_scene)
 	for child in next_scene.get_children():
 		child.position.x += 1024 + (FIRST_PATTERN_OFFSET / 2)
-		if randi() % 10 == 1 and child.is_in_group("can_spawn_powerups"):
+		if randi() % powerup_appear_chance == 1 and child.is_in_group("can_spawn_powerups"):
 			var powerup = powerups[randi() % powerups.size()].instance()
 			add_child(powerup)
 			match child.name:
@@ -121,7 +122,7 @@ func _process(delta):
 
 		for child in scene_instance.get_children():
 			child.position.x += total_distance_travelled + 1024
-			if randi() % 1 == 1 and child.is_in_group("can_spawn_powerups"):
+			if randi() % powerup_appear_chance == 1 and child.is_in_group("can_spawn_powerups"):
 				var powerup = powerups[randi() % powerups.size()].instance()
 
 				# No point of spawning health pickups if max lives is 1.
