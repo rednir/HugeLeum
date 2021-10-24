@@ -64,6 +64,8 @@ var distance_travelled_since_pattern_instance = 0
 var current_environment_index = 0
 var entity_spawning_environment_index = 0
 var env_change_timer = 0
+var last_entity_pattern_index
+var next_entity_pattern_index
 
 
 func _ready():
@@ -75,12 +77,17 @@ func _ready():
 
 	randomize()
 
-	var starting_scene = plains_entity_patterns[randi() % plains_entity_patterns.size()].instance()
+	last_entity_pattern_index = randi() % plains_entity_patterns.size()
+	var starting_scene = plains_entity_patterns[last_entity_pattern_index].instance()
 	for child in starting_scene.get_children():
 		child.position.x += FIRST_PATTERN_OFFSET
 	add_child(starting_scene)
 
-	var next_scene = plains_entity_patterns[randi() % plains_entity_patterns.size()].instance()
+	next_entity_pattern_index = randi() % plains_entity_patterns.size()
+	while next_entity_pattern_index == last_entity_pattern_index:
+		next_entity_pattern_index = randi() % plains_entity_patterns.size()
+	last_entity_pattern_index = next_entity_pattern_index
+	var next_scene = plains_entity_patterns[last_entity_pattern_index].instance()
 	add_child(next_scene)
 	for child in next_scene.get_children():
 		child.position.x += 1024 + (FIRST_PATTERN_OFFSET / 2)
@@ -115,11 +122,11 @@ func _process(delta):
 		var scene_instance
 		match entity_spawning_environment_index:
 			0:
-				scene_instance = plains_entity_patterns[randi() % plains_entity_patterns.size()].instance()
+				scene_instance = randomise_entity_pattern(plains_entity_patterns)
 			1:
-				scene_instance = desert_entity_patterns[randi() % desert_entity_patterns.size()].instance()
+				scene_instance = randomise_entity_pattern(desert_entity_patterns)
 			2:
-				scene_instance = ice_entity_patterns[randi() % ice_entity_patterns.size()].instance()
+				scene_instance = randomise_entity_pattern(ice_entity_patterns)
 		add_child(scene_instance)
 
 		for child in scene_instance.get_children():
@@ -150,6 +157,16 @@ func _process(delta):
 
 	if env_change_timer > env_change_interval:
 		next_environment()
+
+
+func randomise_entity_pattern(entity_patterns_list):
+	next_entity_pattern_index = randi() % entity_patterns_list.size()
+	# this pattern cannot be the same as last pattern
+	while next_entity_pattern_index == last_entity_pattern_index:
+		next_entity_pattern_index = randi() % entity_patterns_list.size()
+	last_entity_pattern_index = next_entity_pattern_index
+	var scene_instance = entity_patterns_list[last_entity_pattern_index].instance()
+	return scene_instance
 
 
 func next_environment():
