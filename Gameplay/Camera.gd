@@ -1,6 +1,6 @@
 extends Camera2D
 
-export var initial_delay = 1
+export var initial_delay = 1.5
 
 var scroll_speed = 0
 var elapsed_time = 0
