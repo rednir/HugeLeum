@@ -6,6 +6,7 @@ onready var ground = $Ground
 onready var bg = $Background
 onready var play_button = $PlayButton
 onready var hard_mode_button = $HardModeButton
+onready var custom_mode_button = $CustomModeButton
 onready var ground_parallax = $Ground/ParallaxBackground
 onready var bg_parallax = $Background/ParallaxBackground
 
@@ -31,8 +32,21 @@ func _process(delta):
 
 
 func on_hard_mode_toggled(button_pressed: bool):
+	custom_mode_button.pressed = false
 	play_button.text = "Hard Mode" if button_pressed else "Play"
 
 
+func on_custom_mode_toggled(button_pressed: bool):
+	hard_mode_button.pressed = false
+	play_button.text = "Custom Mode" if button_pressed else "Play"
+
+
 func play(_a, _b):
-	get_tree().change_scene("res://Gameplay/HardMode.tscn" if hard_mode_button.pressed else "res://Gameplay/Game.tscn")
+	if custom_mode_button.pressed:
+		get_tree().change_scene("res://UI/CustomModeMenu.tscn")
+	elif hard_mode_button.pressed:
+		get_tree().change_scene("res://Gameplay/HardMode.tscn")
+	else:
+		get_tree().change_scene("res://Gameplay/Game.tscn")
+	
+		

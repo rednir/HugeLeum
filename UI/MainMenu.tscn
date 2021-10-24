@@ -103,6 +103,7 @@ position = Vector2( -1.18921, 0 )
 [node name="Ground" parent="." instance=ExtResource( 1 )]
 
 [node name="PlayButton" parent="." instance=ExtResource( 4 )]
+modulate = Color( 1, 1, 1, 0 )
 margin_left = 422.0
 margin_top = 332.0
 margin_right = 607.0
@@ -113,13 +114,26 @@ shortcut = SubResource( 2 )
 text = "Play"
 
 [node name="HardModeButton" type="CheckBox" parent="."]
-margin_left = 895.898
-margin_top = 562.735
-margin_right = 1017.9
-margin_bottom = 593.735
+margin_left = 871.0
+margin_top = 531.735
+margin_right = 993.002
+margin_bottom = 562.735
 hint_tooltip = "You only have one life, and everything seems a lot faster..."
 custom_fonts/font = SubResource( 3 )
 text = "Hard mode"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="CustomModeButton" type="CheckBox" parent="."]
+margin_left = 870.898
+margin_top = 559.735
+margin_right = 1005.9
+margin_bottom = 590.735
+hint_tooltip = "Configure the game to how you wish!"
+custom_fonts/font = SubResource( 3 )
+text = "Custom mode"
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
@@ -136,6 +150,7 @@ autoplay = "in"
 anims/in = SubResource( 4 )
 
 [node name="Title" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 509.602, 192.239 )
 rotation = -0.174533
 texture = ExtResource( 7 )
