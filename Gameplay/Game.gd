@@ -155,7 +155,7 @@ func _process(delta):
 	heart_display.set_hearts(player.lives)
 	score_display.score = int(round(total_distance_travelled / pixels_per_metre))
 
-	if env_change_timer > env_change_interval:
+	if env_change_timer > env_change_interval or (OS.is_debug_build() and Input.is_action_just_pressed("debug_next_env")):
 		next_environment()
 
 
