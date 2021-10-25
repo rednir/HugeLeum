@@ -7,16 +7,17 @@ onready var panel = $Interface/Panel
 onready var fade = $Interface/Fade/AnimationPlayer
 onready var fade_node = $Interface/Fade
 onready var play_button = $Interface/Panel/ButtonsContainer/PlayButton
-onready var cancel_button = $Interface/Panel/ButtonsContainer/CancelButton
+onready var reset_button = $Interface/Panel/ButtonsContainer/ResetButton
+onready var main_menu_button = $Interface/Panel/ButtonsContainer/MainMenuButton
 
-# TODO: own scene for custom game.
 var game_scene = preload("res://Gameplay/Game.tscn")
 var game: Node2D
 
 
 func _ready():
 	play_button.connect("pressed", self, "on_play_button_pressed")
-	cancel_button.connect("pressed", self, "on_cancel_button_pressed")
+	reset_button.connect("pressed", self, "on_reset_button_pressed")
+	main_menu_button.connect("pressed", self, "on_main_menu_button_pressed")
 	new_game_instance()
 
 
@@ -32,9 +33,14 @@ func on_play_button_pressed():
 	fade.connect("animation_finished", self, "on_play_animation_finished", ["in"])
 
 
-func on_cancel_button_pressed():
+func on_reset_button_pressed():
 	fade.play("in")
-	fade.connect("animation_finished", self, "on_cancel_animation_finished", ["in"])
+	fade.connect("animation_finished", self, "on_reset_animation_finished", ["in"])
+
+
+func on_main_menu_button_pressed():
+	fade.play("in")
+	fade.connect("animation_finished", self, "on_main_menu_animation_finished", ["in"])
 
 
 func on_game_exit():
@@ -54,6 +60,14 @@ func on_play_animation_finished(name, _b):
 		interface.visible = false
 		fade_node.scale = Vector2(0, 0)
 		music.stream_paused = true
+
+
+func on_reset_animation_finished(_a, _b):
+	get_tree().reload_current_scene()
+
+
+func on_main_menu_animation_finished(_a, _b):
+	get_tree().change_scene("res://UI/MainMenu.tscn")
 
 
 func on_game_ready():
@@ -76,7 +90,3 @@ func on_game_ready():
 	game.player.max_lives = $"Interface/Panel/TabContainer/Player/MaxLives/SpinBox".value
 	game.heart_display.max_hearts = game.player.max_lives
 	game.heart_display.heart_count = game.player.lives
-
-
-func on_cancel_animation_finished(_a, _b):
-	get_tree().change_scene("res://UI/MainMenu.tscn")

@@ -548,22 +548,31 @@ __meta__ = {
 }
 
 [node name="PlayButton" parent="Interface/Panel/ButtonsContainer" instance=ExtResource( 5 )]
-margin_left = 264.0
+margin_left = 136.0
 margin_top = 0.0
-margin_right = 377.0
+margin_right = 249.0
 margin_bottom = 69.0
 rect_min_size = Vector2( 113, 69 )
 size_flags_horizontal = 0
 text = "Play"
 
-[node name="CancelButton" parent="Interface/Panel/ButtonsContainer" instance=ExtResource( 5 )]
-margin_left = 381.0
+[node name="ResetButton" parent="Interface/Panel/ButtonsContainer" instance=ExtResource( 5 )]
+margin_left = 253.0
 margin_top = 0.0
-margin_right = 494.0
+margin_right = 453.0
 margin_bottom = 69.0
-rect_min_size = Vector2( 113, 69 )
+rect_min_size = Vector2( 200, 69 )
 size_flags_horizontal = 0
-text = "Cancel"
+text = "Reset Settings"
+
+[node name="MainMenuButton" parent="Interface/Panel/ButtonsContainer" instance=ExtResource( 5 )]
+margin_left = 457.0
+margin_top = 0.0
+margin_right = 622.0
+margin_bottom = 69.0
+rect_min_size = Vector2( 165, 69 )
+size_flags_horizontal = 0
+text = "Main Menu"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Interface"]
 autoplay = "in"
