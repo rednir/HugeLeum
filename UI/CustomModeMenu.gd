@@ -1,10 +1,11 @@
-extends CenterContainer
+extends Node2D
 
-onready var panel = $Panel
-onready var fade_node = $Fade
-onready var fade = $Fade/AnimationPlayer
-onready var play_button = $Panel/ButtonsContainer/PlayButton
-onready var cancel_button = $Panel/ButtonsContainer/CancelButton
+onready var interface = $Interface
+onready var panel = $Interface/Panel
+onready var fade = $Interface/Fade/AnimationPlayer
+onready var fade_node = $Interface/Fade
+onready var play_button = $Interface/Panel/ButtonsContainer/PlayButton
+onready var cancel_button = $Interface/Panel/ButtonsContainer/CancelButton
 
 # TODO: own scene for custom game.
 var game_scene = preload("res://Gameplay/Game.tscn")
@@ -36,8 +37,8 @@ func on_cancel_button_pressed():
 
 func on_game_exit():
 	new_game_instance()
-	panel.visible = true
-	fade_node.offset = Vector2(0, 0)
+	interface.visible = true
+	fade_node.scale = Vector2(1, 1)
 	fade.play("out")
 
 
@@ -45,28 +46,28 @@ func on_play_animation_finished(name, _b):
 	fade.disconnect("animation_finished", self, "on_play_animation_finished")
 	if name == "in":
 		add_child(game)
-		panel.visible = false
-		fade_node.offset = Vector2(10000, 0)
+		interface.visible = false
+		fade_node.scale = Vector2(0, 0)
 
 
 func on_game_ready():
 	# Scroll Speed
-	game.scroll_speed = $"Panel/TabContainer/Scroll Speed/Initial/Slider".value
+	game.scroll_speed = $"Interface/Panel/TabContainer/Scroll Speed/Initial/Slider".value
 	game.camera.set_scroll_speed(game.scroll_speed)
-	game.max_scroll_speed = $"Panel/TabContainer/Scroll Speed/Max/Slider".value
-	game.scroll_speed_change = $"Panel/TabContainer/Scroll Speed/ChangeAmount/Slider".value
-	game.env_change_interval = $"Panel/TabContainer/Scroll Speed/TimeBetweenChanges/Slider".value
-	game.env_change_time_increment = $"Panel/TabContainer/Scroll Speed/TimeChangeIncrement/Slider".value
+	game.max_scroll_speed = $"Interface/Panel/TabContainer/Scroll Speed/Max/Slider".value
+	game.scroll_speed_change = $"Interface/Panel/TabContainer/Scroll Speed/ChangeAmount/Slider".value
+	game.env_change_interval = $"Interface/Panel/TabContainer/Scroll Speed/TimeBetweenChanges/Slider".value
+	game.env_change_time_increment = $"Interface/Panel/TabContainer/Scroll Speed/TimeChangeIncrement/Slider".value
 
 	# Player
-	game.player.horizontal_move_speed = $"Panel/TabContainer/Player/InitialSpeed/Slider".value
-	game.player.max_horizontal_move_speed = $"Panel/TabContainer/Player/MaxSpeed/Slider".value
-	game.player_horizontal_movement_rate_increase = $"Panel/TabContainer/Player/SpeedIncreaseRate/Slider".value
-	game.player.jump_power = $"Panel/TabContainer/Player/JumpPower/Slider".value
-	game.player.weight = $"Panel/TabContainer/Player/Weight/Slider".value
+	game.player.horizontal_move_speed = $"Interface/Panel/TabContainer/Player/InitialSpeed/Slider".value
+	game.player.max_horizontal_move_speed = $"Interface/Panel/TabContainer/Player/MaxSpeed/Slider".value
+	game.player_horizontal_movement_rate_increase = $"Interface/Panel/TabContainer/Player/SpeedIncreaseRate/Slider".value
+	game.player.jump_power = $"Interface/Panel/TabContainer/Player/JumpPower/Slider".value
+	game.player.weight = $"Interface/Panel/TabContainer/Player/Weight/Slider".value
 
-	game.player.lives = $"Panel/TabContainer/Player/InitialLives/SpinBox".value
-	game.player.max_lives = $"Panel/TabContainer/Player/MaxLives/SpinBox".value
+	game.player.lives = $"Interface/Panel/TabContainer/Player/InitialLives/SpinBox".value
+	game.player.max_lives = $"Interface/Panel/TabContainer/Player/MaxLives/SpinBox".value
 	game.heart_display.max_hearts = game.player.max_lives
 	game.heart_display.heart_count = game.player.lives
 
