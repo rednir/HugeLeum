@@ -1,5 +1,6 @@
 extends Node2D
 
+onready var game_overlay_content = $GameOverlay/Content
 onready var interface = $Interface
 onready var panel = $Interface/Panel
 onready var fade = $Interface/Fade/AnimationPlayer
@@ -37,6 +38,7 @@ func on_cancel_button_pressed():
 
 func on_game_exit():
 	new_game_instance()
+	game_overlay_content.visible = false
 	interface.visible = true
 	fade_node.scale = Vector2(1, 1)
 	fade.play("out")
@@ -46,6 +48,7 @@ func on_play_animation_finished(name, _b):
 	fade.disconnect("animation_finished", self, "on_play_animation_finished")
 	if name == "in":
 		add_child(game)
+		game_overlay_content.visible = true
 		interface.visible = false
 		fade_node.scale = Vector2(0, 0)
 
