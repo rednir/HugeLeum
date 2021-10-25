@@ -114,7 +114,7 @@ func _process(delta):
 		var distance_till_env_change = scroll_speed * (env_change_interval - env_change_timer)
 
 		# spawn entities for the next environment off screen if the env change is very close
-		if distance_till_env_change < 1024 * 0.53:
+		if distance_till_env_change < 1024 * 0.51:
 			entity_spawning_environment_index += 1
 			entity_spawning_environment_index %= GameEnvironment.list.size()
 
