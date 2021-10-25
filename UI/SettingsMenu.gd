@@ -8,7 +8,9 @@ onready var master_volume_slider = $CenterContainer/Panel/MasterVolume/Slider
 
 func _ready():
 	done_button.connect("pressed", self, "on_done_button_pressed")
+
 	master_volume_slider.connect("value_changed", self, "on_master_volume_changed")
+	master_volume_slider.value = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master"))
 
 
 func on_done_button_pressed():
