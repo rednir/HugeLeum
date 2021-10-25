@@ -64,8 +64,11 @@ func on_game_ready():
 	game.player_horizontal_movement_rate_increase = $"Panel/TabContainer/Player/SpeedIncreaseRate/Slider".value
 	game.player.jump_power = $"Panel/TabContainer/Player/JumpPower/Slider".value
 	game.player.weight = $"Panel/TabContainer/Player/Weight/Slider".value
+
 	game.player.lives = $"Panel/TabContainer/Player/InitialLives/SpinBox".value
 	game.player.max_lives = $"Panel/TabContainer/Player/MaxLives/SpinBox".value
+	game.heart_display.max_hearts = game.player.max_lives
+	game.heart_display.heart_count = game.player.lives
 
 
 func on_cancel_animation_finished(_a, _b):

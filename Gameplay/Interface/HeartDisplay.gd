@@ -6,7 +6,7 @@ const heart_empty_texture = preload("res://Assets/heart-disp-empty.png")
 onready var container = $HBoxContainer
 onready var animation_player = $AnimationPlayer
 
-export var max_hearts = 3
+export var max_hearts = 2
 export var heart_count = 2
 
 
