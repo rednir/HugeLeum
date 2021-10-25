@@ -1,9 +1,9 @@
-extends CenterContainer
+extends CanvasLayer
 
 
-onready var animation_player = $AnimationPlayer
-onready var done_button = $Panel/DoneButton
-onready var master_volume_slider = $Panel/MasterVolume/Slider
+onready var animation_player = $CenterContainer/AnimationPlayer
+onready var done_button = $CenterContainer/Panel/DoneButton
+onready var master_volume_slider = $CenterContainer/Panel/MasterVolume/Slider
 
 
 func _ready():

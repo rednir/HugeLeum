@@ -84,12 +84,12 @@ tracks/1/keys = {
 
 [node name="SettingsMenu" type="CanvasLayer"]
 layer = 28
+script = ExtResource( 6 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 margin_right = 1024.0
 margin_bottom = 600.0
 theme = ExtResource( 5 )
-script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
