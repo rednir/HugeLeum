@@ -10,11 +10,25 @@ func _ready():
 	$Panel/PlayAgainButton.connect("pressed", self, "on_play_again_button_pressed")
 
 
-func set_display_stats(score=0, jump_count=0, powerup_count=0):
-	var score_label = $Panel/Score
-	var info_label = $Panel/InfoLabel
-	score_label.text = str(int(round(score))) + "m"
-	info_label.text = "Total jumps: " + str(jump_count) + "\nPowerups collected: " + str(powerup_count)
+func set_display_stats(score, jump_count, powerup_count):
+	print(score)
+	var remark
+	if score > 210:
+		remark = "It's too good to be true...?"
+	elif score > 160:
+		remark = "YUou may be small but the giants fear you."
+	elif score > 110:
+		remark = "Incredible! Don't judge a worm by its size!"
+	elif score > 70:
+		remark = "Not bad... but you can do better."
+	elif score > 40:
+		remark = "A mediocre performance, even for a worm's standards."
+	else:
+		remark = "It seems you were no match against the giants..."
+
+	# luca what is the point of this ˅˅
+	$Panel/Score.text = str(int(round(score))) + "m"
+	$Panel/InfoLabel.text = remark + "\n\n • Total jumps: " + str(jump_count) + "\n • Powerups collected: " + str(powerup_count)
 
 
 func on_main_menu_button_pressed():

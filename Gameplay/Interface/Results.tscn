@@ -153,27 +153,30 @@ __meta__ = {
 }
 
 [node name="InfoLabel" type="Label" parent="Panel"]
-margin_left = 190.0
-margin_top = 209.941
-margin_right = 679.0
-margin_bottom = 275.941
+margin_left = 186.0
+margin_top = 184.0
+margin_right = 554.0
+margin_bottom = 319.0
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 1, 1, 1, 0.54902 )
-text = "Total jumps: 0
-Powerups Collected: 0
+text = "A mediocre performance, even for a worm's standards.
+
+ • Total jumps: 0
+ • Powerups Collected: 0
 "
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect" type="TextureRect" parent="Panel"]
 modulate = Color( 1, 0.5932, 0.5932, 0.645591 )
-margin_left = 392.474
-margin_top = 205.26
-margin_right = 1967.47
-margin_bottom = 1189.26
+margin_left = 386.862
+margin_top = 250.158
+margin_right = 1961.86
+margin_bottom = 1234.16
 rect_rotation = -15.6
-rect_scale = Vector2( 0.08, 0.08 )
+rect_scale = Vector2( 0.06, 0.06 )
 texture = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -184,18 +187,18 @@ autoplay = "pulse"
 anims/pulse = SubResource( 7 )
 
 [node name="PlayAgainButton" parent="Panel" instance=ExtResource( 2 )]
-margin_left = 187.513
+margin_left = 183.513
 margin_top = 319.429
-margin_right = 338.513
+margin_right = 334.513
 margin_bottom = 388.429
 rect_pivot_offset = Vector2( -150.582, -308.97 )
 shortcut = SubResource( 9 )
 text = "Play Again"
 
 [node name="MainMenuButton" parent="Panel" instance=ExtResource( 2 )]
-margin_left = 366.919
+margin_left = 370.919
 margin_top = 318.775
-margin_right = 517.919
+margin_right = 521.919
 margin_bottom = 387.775
 rect_pivot_offset = Vector2( -150.582, -308.97 )
 shortcut = SubResource( 11 )
