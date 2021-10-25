@@ -20,8 +20,8 @@ export var jump_power = 40000
 export var max_y_vel = 1000
 export var max_time_airborne = 0.2
 
-export var initial_knock_back_velocity = Vector2(-800, -300)
-export var max_knock_back_time = 0.4
+export var initial_knock_back_velocity = Vector2(-400, -1300)
+export var max_knock_back_time = 0.18
 
 export var max_lives = 2
 export var lives = 2
