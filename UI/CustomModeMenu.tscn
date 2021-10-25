@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://UI/Fade.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/blur.gdshader" type="Shader" id=2]
@@ -8,8 +8,9 @@
 [ext_resource path="res://UI/CustomModeMenu.gd" type="Script" id=6]
 [ext_resource path="res://Assets/plains-bg.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Fonts/FRUIT-PUNCH.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Assets/Audio/custom.mp3" type="AudioStream" id=9]
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.862745 )
 border_width_left = 20
 border_width_top = 20
@@ -21,10 +22,10 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="ShaderMaterial" id=8]
+[sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 2 )
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=3]
 length = 2.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Panel/Blur:modulate")
@@ -51,7 +52,7 @@ tracks/1/keys = {
 "values": [ Vector2( 112, 550 ), Vector2( 112, 50 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=4]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Panel:rect_position")
@@ -78,10 +79,10 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.054902, 0.356863, 0.87451, 1 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=6]
 size = 40
 outline_size = 2
 outline_color = Color( 0.270588, 0.572549, 1, 1 )
@@ -98,8 +99,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Music" type="AudioStreamPlayer" parent="Interface"]
+stream = ExtResource( 9 )
+autoplay = true
+
 [node name="Background" type="Sprite" parent="Interface"]
-modulate = Color( 0.823529, 0.823529, 0.823529, 1 )
+modulate = Color( 0.545098, 0.105882, 0.105882, 1 )
 position = Vector2( 512, 300 )
 z_index = -2
 texture = ExtResource( 7 )
@@ -111,14 +116,14 @@ margin_right = 912.0
 margin_bottom = 550.0
 rect_min_size = Vector2( 800, 500 )
 rect_pivot_offset = Vector2( -974.735, -592.24 )
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Blur" type="TextureRect" parent="Interface/Panel"]
 show_behind_parent = true
-material = SubResource( 8 )
+material = SubResource( 2 )
 margin_left = -112.0
 margin_top = -876.891
 margin_right = 912.0
@@ -562,8 +567,8 @@ text = "Cancel"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Interface"]
 autoplay = "in"
-anims/in = SubResource( 9 )
-anims/out = SubResource( 10 )
+anims/in = SubResource( 3 )
+anims/out = SubResource( 4 )
 
 [node name="Fade" parent="Interface" instance=ExtResource( 1 )]
 
@@ -588,7 +593,7 @@ __meta__ = {
 [node name="Panel" type="Panel" parent="GameOverlay/Content/BlueBorder"]
 margin_right = 4.0
 margin_bottom = 600.0
-custom_styles/panel = SubResource( 6 )
+custom_styles/panel = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -597,7 +602,7 @@ __meta__ = {
 margin_left = 1020.0
 margin_right = 1024.0
 margin_bottom = 600.0
-custom_styles/panel = SubResource( 6 )
+custom_styles/panel = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -605,7 +610,7 @@ __meta__ = {
 [node name="Panel3" type="Panel" parent="GameOverlay/Content/BlueBorder"]
 margin_right = 1024.0
 margin_bottom = 4.0
-custom_styles/panel = SubResource( 6 )
+custom_styles/panel = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -614,7 +619,7 @@ __meta__ = {
 margin_top = 596.0
 margin_right = 1024.0
 margin_bottom = 600.0
-custom_styles/panel = SubResource( 6 )
+custom_styles/panel = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -632,7 +637,7 @@ margin_left = 397.0
 margin_top = 14.0
 margin_right = 627.0
 margin_bottom = 53.0
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0.211765, 0.341176, 1 )
 text = "CUSTOM MODE"
 __meta__ = {

@@ -2,6 +2,7 @@ extends Node2D
 
 onready var game_overlay_content = $GameOverlay/Content
 onready var interface = $Interface
+onready var music = $Interface/Music
 onready var panel = $Interface/Panel
 onready var fade = $Interface/Fade/AnimationPlayer
 onready var fade_node = $Interface/Fade
@@ -42,6 +43,7 @@ func on_game_exit():
 	interface.visible = true
 	fade_node.scale = Vector2(1, 1)
 	fade.play("out")
+	music.stream_paused = false
 
 
 func on_play_animation_finished(name, _b):
@@ -51,6 +53,7 @@ func on_play_animation_finished(name, _b):
 		game_overlay_content.visible = true
 		interface.visible = false
 		fade_node.scale = Vector2(0, 0)
+		music.stream_paused = true
 
 
 func on_game_ready():
