@@ -122,6 +122,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Tip" type="Label" parent="CenterContainer/Panel"]
+modulate = Color( 1, 1, 1, 0.745098 )
+margin_left = -195.0
+margin_top = 438.0
+margin_right = 826.0
+margin_bottom = 460.0
+theme = ExtResource( 5 )
+text = "TIP: press \"Ctrl+O\" to bring up the settings menu too!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Title" type="Label" parent="CenterContainer/Panel"]
 margin_left = 22.0
 margin_top = 59.0
