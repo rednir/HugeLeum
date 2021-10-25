@@ -440,7 +440,7 @@ rect_min_size = Vector2( 110, 0 )
 size_flags_horizontal = 10
 size_flags_vertical = 1
 min_value = 1000.0
-max_value = 10000.0
+max_value = 12000.0
 step = 1000.0
 value = 5000.0
 
