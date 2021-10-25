@@ -166,10 +166,10 @@ extents = Vector2( 615.523, 10 )
 extents = Vector2( 618.324, 11.5314 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 13.6643, 449.39 )
+extents = Vector2( 13.6643, 541.831 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 11.4198, 444.568 )
+extents = Vector2( 11.4198, 550.793 )
 
 [sub_resource type="DynamicFont" id=8]
 size = 120
@@ -233,7 +233,7 @@ collision_layer = 8
 collision_mask = 17
 
 [node name="Top" type="CollisionShape2D" parent="Camera/DeathBorder"]
-position = Vector2( -2.40271, -517.004 )
+position = Vector2( -0.024292, -602.627 )
 shape = SubResource( 4 )
 
 [node name="Bottom" type="CollisionShape2D" parent="Camera/DeathBorder"]
@@ -241,11 +241,11 @@ position = Vector2( -3.42218, 352.905 )
 shape = SubResource( 5 )
 
 [node name="Left" type="CollisionShape2D" parent="Camera/DeathBorder"]
-position = Vector2( -606.751, -82.7008 )
+position = Vector2( -630.535, -82.7008 )
 shape = SubResource( 6 )
 
 [node name="Right" type="CollisionShape2D" parent="Camera/DeathBorder"]
-position = Vector2( 602.728, -84.8393 )
+position = Vector2( 619.377, -84.8393 )
 shape = SubResource( 7 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
