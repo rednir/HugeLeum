@@ -229,7 +229,8 @@ value = 700.0
 margin_top = 64.0
 margin_right = 473.0
 margin_bottom = 86.0
-hint_tooltip = "The amount the scroll speed of the camera will change on every \"speed up\""
+hint_tooltip = "The amount the scroll speed of the camera will
+change on every \"speed up\""
 custom_constants/separation = 100
 alignment = 1
 __meta__ = {
@@ -290,7 +291,8 @@ margin_top = 128.0
 margin_right = 473.0
 margin_bottom = 150.0
 rect_pivot_offset = Vector2( -404.364, 22 )
-hint_tooltip = "The amount of time that will be added on top of the intial \"speed up\" time on every \"speed up\""
+hint_tooltip = "The amount of time that will be added on top of the
+intial \"speed up\" time on every \"speed up\""
 custom_constants/separation = 100
 alignment = 1
 __meta__ = {
