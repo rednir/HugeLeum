@@ -9,7 +9,7 @@ bg_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "show"
-length = 1.8
+length = 2.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("HBoxContainer:rect_position")
 tracks/0/interp = 1
@@ -17,10 +17,34 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.5, 1.5, 1.8 ),
+"times": PoolRealArray( 0, 0.5, 0.8, 2, 2.3 ),
 "transitions": PoolRealArray( 0.3, 0.3, 1, 0.3, 0.3 ),
 "update": 0,
 "values": [ Vector2( 321.52, -80 ), Vector2( 321.52, -80 ), Vector2( 321.51, 295 ), Vector2( 321.51, 295 ), Vector2( 321.52, 700 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HBoxContainer/KajamSprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 1.4, 1.8 ),
+"transitions": PoolRealArray( 1, -2, -2, 1 ),
+"update": 0,
+"values": [ Vector2( 0.25, 0.25 ), Vector2( 0.25, 0.25 ), Vector2( 0.35, 0.35 ), Vector2( 0.25, 0.25 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HBoxContainer/KajamSprite:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 1.4, 1.8 ),
+"transitions": PoolRealArray( 1, -2, -2, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, -10.0, 0.0 ]
 }
 
 [node name="Splash" type="Control"]
@@ -41,10 +65,11 @@ __meta__ = {
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_left = 321.52
-margin_top = -80.0
-margin_right = 665.751
-margin_bottom = -57.9999
+margin_top = 700.0
+margin_right = 665.752
+margin_bottom = 722.0
 rect_min_size = Vector2( 344.231, 0 )
+rect_pivot_offset = Vector2( 185.681, 11.184 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -61,7 +86,7 @@ __meta__ = {
 
 [node name="KajamSprite" type="Sprite" parent="HBoxContainer"]
 position = Vector2( 186.369, 12.5264 )
-scale = Vector2( 0.25253, 0.25253 )
+scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 2 )
 
 [node name="Label2" type="Label" parent="HBoxContainer"]
