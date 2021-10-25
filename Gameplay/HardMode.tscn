@@ -17,7 +17,6 @@ bg_color = Color( 1, 0.203922, 0.203922, 1 )
 script = ExtResource( 2 )
 
 [node name="Game" parent="." instance=ExtResource( 1 )]
-hard_mode = true
 scroll_speed = 330
 max_scroll_speed = 750
 player_horizontal_movement_rate_increase = 1.12

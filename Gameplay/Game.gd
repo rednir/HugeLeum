@@ -45,7 +45,6 @@ onready var background = $Background
 onready var music_player = $MusicPlayer
 onready var speed_up_audio = $SpeedUpAudio
 
-export var hard_mode = false
 export var powerup_appear_chance = 8
 export var env_change_interval = 20
 export var env_change_time_increment = 3
@@ -288,9 +287,7 @@ func on_main_menu_animation_finished(_a, _b):
 
 
 func on_play_again_animation_finished(_a, _b):
-	get_tree().change_scene(
-		"res://Gameplay/HardMode.tscn" if hard_mode else "res://Gameplay/Game.tscn"
-	)
+	get_tree().reload_current_scene()
 
 
 func on_queue_free_animation_finished(_a, _b):
