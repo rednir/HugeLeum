@@ -69,7 +69,6 @@ var next_entity_pattern_index
 
 
 func _ready():
-
 	player.connect("death", self, "on_player_death")
 	pause_button.connect("pressed", self, "on_pause_button_pressed")
 

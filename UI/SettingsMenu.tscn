@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Assets/Fonts/FRUIT-PUNCH.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://UI/blur.gdshader" type="Shader" id=2]
+[ext_resource path="res://UI/blur.gdshader" type="Shader" id=1]
+[ext_resource path="res://Assets/Fonts/FRUIT-PUNCH.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://UI/Button/Button.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/white.png" type="Texture" id=4]
-[ext_resource path="res://Gameplay/Interface/PauseMenu.gd" type="Script" id=5]
+[ext_resource path="res://UI/MainTheme.tres" type="Theme" id=5]
+[ext_resource path="res://UI/SettingsMenu.gd" type="Script" id=6]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.862745 )
@@ -19,21 +20,15 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="ShaderMaterial" id=2]
-shader = ExtResource( 2 )
+shader = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 70
 outline_size = 5
 outline_color = Color( 0.505882, 0.505882, 0.505882, 1 )
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 
-[sub_resource type="InputEventAction" id=4]
-action = "ui_cancel"
-
-[sub_resource type="ShortCut" id=5]
-shortcut = SubResource( 4 )
-
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=4]
 length = 2.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Panel/Blur:modulate")
@@ -60,7 +55,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 600 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=5]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
@@ -87,35 +82,37 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="PauseMenu" type="CenterContainer"]
-pause_mode = 2
+[node name="SettingsMenu" type="CanvasLayer"]
+layer = 28
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
 margin_right = 1024.0
 margin_bottom = 600.0
-script = ExtResource( 5 )
+theme = ExtResource( 5 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Panel" type="Panel" parent="."]
-margin_left = 212.0
-margin_top = 150.0
-margin_right = 812.0
-margin_bottom = 450.0
-rect_min_size = Vector2( 600, 300 )
+[node name="Panel" type="Panel" parent="CenterContainer"]
+margin_left = 197.0
+margin_top = 100.0
+margin_right = 827.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 630, 400 )
 rect_pivot_offset = Vector2( -974.735, -592.24 )
 custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Blur" type="TextureRect" parent="Panel"]
-modulate = Color( 1, 1, 1, 0.474167 )
+[node name="Blur" type="TextureRect" parent="CenterContainer/Panel"]
 show_behind_parent = true
 material = SubResource( 2 )
-margin_left = -212.0
-margin_top = -950.794
-margin_right = 812.0
-margin_bottom = 449.206
+margin_left = -195.0
+margin_top = -900.0
+margin_right = 829.0
+margin_bottom = 500.0
 rect_min_size = Vector2( 1024, 600 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -125,36 +122,58 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PausedLabel" type="Label" parent="Panel"]
+[node name="Title" type="Label" parent="CenterContainer/Panel"]
 margin_left = 22.0
 margin_top = 59.0
-margin_right = 580.0
+margin_right = 609.0
 margin_bottom = 127.0
 custom_fonts/font = SubResource( 3 )
-text = "Paused..."
+text = "Settings"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ResumeButton" parent="Panel" instance=ExtResource( 3 )]
-margin_left = 126.11
-margin_top = 165.478
-margin_right = 277.11
-margin_bottom = 234.478
+[node name="DoneButton" parent="CenterContainer/Panel" instance=ExtResource( 3 )]
+margin_left = 237.241
+margin_top = 268.874
+margin_right = 388.241
+margin_bottom = 337.874
 rect_pivot_offset = Vector2( -150.582, -308.97 )
-shortcut = SubResource( 5 )
-text = "Resume"
+text = "Done"
 
-[node name="MainMenuButton" parent="Panel" instance=ExtResource( 3 )]
-margin_left = 304.182
-margin_top = 165.269
-margin_right = 455.182
-margin_bottom = 234.269
-rect_pivot_offset = Vector2( -150.582, -308.97 )
-text = "Main Menu"
+[node name="MasterVolume" type="HBoxContainer" parent="CenterContainer/Panel"]
+margin_left = 129.0
+margin_top = 148.0
+margin_right = 485.0
+margin_bottom = 170.0
+hint_tooltip = "The scroll speed of the camera at the start of the game"
+custom_constants/separation = 100
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="Label" type="Label" parent="CenterContainer/Panel/MasterVolume"]
+margin_right = 119.0
+margin_bottom = 22.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Master volume"
+
+[node name="Slider" type="HSlider" parent="CenterContainer/Panel/MasterVolume"]
+margin_left = 246.0
+margin_right = 356.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 110, 0 )
+size_flags_horizontal = 10
+size_flags_vertical = 1
+min_value = -45.0
+max_value = 0.0
+step = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CenterContainer"]
 autoplay = "in"
-anims/in = SubResource( 6 )
-anims/out = SubResource( 7 )
+anims/in = SubResource( 4 )
+anims/out = SubResource( 5 )
