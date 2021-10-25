@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:export-filename="/home/davran/bitmap.png"
+   inkscape:export-xdpi="48"
+   inkscape:export-ydpi="48"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="menu-arrow.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="343.6539"
+     inkscape:cy="445.12372"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     inkscape:window-x="0"
+     inkscape:window-y="28"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter2349"
+       x="-0.18327011"
+       y="-0.13985323"
+       width="1.4353997"
+       height="1.3193327">
+      <feFlood
+         flood-opacity="1"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood2339" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite2341" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="0.7"
+         result="blur"
+         id="feGaussianBlur2343" />
+      <feOffset
+         dx="0.7"
+         dy="0.5"
+         result="offset"
+         id="feOffset2345" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite2347" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g1901"
+       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/menu-arrow.png"
+       inkscape:export-xdpi="69.259041"
+       inkscape:export-ydpi="69.259041"
+       style="filter:url(#filter2349)">
+      <path
+         sodipodi:type="star"
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.27748;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path1555"
+         inkscape:flatsided="false"
+         sodipodi:sides="3"
+         sodipodi:cx="363.875"
+         sodipodi:cy="439.25"
+         sodipodi:r1="7.3961563"
+         sodipodi:r2="3.6980782"
+         sodipodi:arg1="0.53172407"
+         sodipodi:arg2="1.5789216"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 370.25,443 -6.40505,-0.052 -6.40505,-0.0521 3.2476,-5.52091 3.2476,-5.52091 3.15745,5.57295 z"
+         transform="matrix(0.30430363,-0.11967885,0.11967885,0.30430363,-67.376061,27.747361)"
+         inkscape:transform-center-x="-0.43341974"
+         inkscape:transform-center-y="-0.1890927"
+         inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/menu-arrow.png"
+         inkscape:export-xdpi="78.054062"
+         inkscape:export-ydpi="78.054062" />
+      <path
+         style="color:#000000;fill:#ffffff;stroke:#ffffff;stroke-width:0.338;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 94.479575,117.03682 c 0,0 -2.133622,-0.32929 -4.437499,1.18644 -2.303877,1.51573 -4.775512,4.83505 -5.771995,11.8482 l 1.028252,0.14603 c 0.969499,-6.82326 3.303121,-9.80347 5.313641,-11.12619 2.010521,-1.32274 3.701296,-1.03029 3.701296,-1.03029 z"
+         id="path982"
+         inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/menu-arrow.png"
+         inkscape:export-xdpi="78.054062"
+         inkscape:export-ydpi="78.054062" />
+    </g>
+  </g>
+</svg>
