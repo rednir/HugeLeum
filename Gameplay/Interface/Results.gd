@@ -11,7 +11,6 @@ func _ready():
 
 
 func set_display_stats(score, jump_count, powerup_count):
-	print(score)
 	var remark
 	if score > 210:
 		remark = "It's too good to be true...?"
