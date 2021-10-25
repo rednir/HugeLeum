@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://UI/Fade.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/blur.gdshader" type="Shader" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Assets/plains-bg.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Fonts/FRUIT-PUNCH.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://Assets/Audio/custom.mp3" type="AudioStream" id=9]
+[ext_resource path="res://UI/SettingsButton.tscn" type="PackedScene" id=10]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.862745 )
@@ -90,6 +91,13 @@ font_data = ExtResource( 8 )
 
 [node name="CustomModeMenu" type="Node2D"]
 script = ExtResource( 6 )
+
+[node name="SettingsButton" parent="." instance=ExtResource( 10 )]
+margin_left = -320.469
+margin_top = -97.9493
+margin_right = -320.469
+margin_bottom = -97.9493
+rect_scale = Vector2( 1e-05, 1e-05 )
 
 [node name="Interface" type="CenterContainer" parent="."]
 margin_right = 1024.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Assets/Fonts/FRUIT-PUNCH.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/Button/Button.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Assets/white.png" type="Texture" id=6]
 [ext_resource path="res://UI/blur.gdshader" type="Shader" id=7]
 [ext_resource path="res://Assets/worm-dead.png" type="Texture" id=8]
+[ext_resource path="res://UI/SettingsButton.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 7 )
@@ -102,6 +103,15 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="SettingsButton" parent="." instance=ExtResource( 9 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 512.0
+margin_top = 300.0
+margin_right = 512.0
+margin_bottom = 300.0
+rect_scale = Vector2( 1e-05, 1e-05 )
 
 [node name="Blur" type="TextureRect" parent="."]
 material = SubResource( 1 )
