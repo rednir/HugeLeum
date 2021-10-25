@@ -8,7 +8,7 @@
 [ext_resource path="res://UI/CustomModeMenu.gd" type="Script" id=6]
 [ext_resource path="res://Assets/plains-bg.png" type="Texture" id=7]
 
-[sub_resource type="StyleBoxFlat" id=1]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0, 0, 0, 0.862745 )
 border_width_left = 20
 border_width_top = 20
@@ -23,7 +23,7 @@ corner_radius_bottom_left = 10
 [sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 2 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=4]
 length = 2.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Panel/Blur:modulate")
@@ -50,7 +50,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 600 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
@@ -93,7 +93,7 @@ margin_right = 912.0
 margin_bottom = 550.0
 rect_min_size = Vector2( 800, 500 )
 rect_pivot_offset = Vector2( -974.735, -592.24 )
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -138,6 +138,7 @@ __meta__ = {
 }
 
 [node name="Scroll Speed" type="VBoxContainer" parent="Panel/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 25.0
@@ -235,7 +236,6 @@ step = 40.0
 value = 80.0
 
 [node name="Player" type="VBoxContainer" parent="Panel/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 25.0
@@ -402,14 +402,14 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Panel/TabContainer/Player/InitialLives"]
+margin_top = 5.0
 margin_right = 83.0
-margin_bottom = 32.0
+margin_bottom = 27.0
 size_flags_horizontal = 0
-size_flags_vertical = 5
 text = "Initial lives"
 
 [node name="SpinBox" type="SpinBox" parent="Panel/TabContainer/Player/InitialLives"]
-margin_left = 387.0
+margin_left = 403.0
 margin_right = 473.0
 margin_bottom = 32.0
 size_flags_horizontal = 10
@@ -428,14 +428,14 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Panel/TabContainer/Player/MaxLives"]
+margin_top = 5.0
 margin_right = 75.0
-margin_bottom = 32.0
+margin_bottom = 27.0
 size_flags_horizontal = 0
-size_flags_vertical = 5
 text = "Max lives"
 
 [node name="SpinBox" type="SpinBox" parent="Panel/TabContainer/Player/MaxLives"]
-margin_left = 387.0
+margin_left = 403.0
 margin_right = 473.0
 margin_bottom = 32.0
 size_flags_horizontal = 10
@@ -473,7 +473,7 @@ text = "Cancel"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "in"
-anims/in = SubResource( 3 )
-anims/out = SubResource( 4 )
+anims/in = SubResource( 4 )
+anims/out = SubResource( 5 )
 
 [node name="Fade" parent="." instance=ExtResource( 1 )]
