@@ -12,10 +12,11 @@ onready var jump_audio = $JumpAudio
 onready var death_audio = $DeathAudio
 
 export var horizontal_move_speed = 31000
+export var max_horizontal_move_speed = 55000
 export var slowdown_speed = 300
 
 export var weight = 4500
-export var jump_height = 40000
+export var jump_power = 40000
 export var max_y_vel = 1000
 export var max_time_airborne = 0.2
 
@@ -63,7 +64,7 @@ func _physics_process(delta):
 	update_movement_y(delta)
 	update_movement_x(delta)
 
-	update_animation()
+	update_animation(delta)
 
 	collision_info = null
 
@@ -123,7 +124,7 @@ func update_status_effects(delta):
 
 
 func update_movement_x(delta):
-	horizontal_move_speed = min(55000, horizontal_move_speed)
+	horizontal_move_speed = min(max_horizontal_move_speed, horizontal_move_speed)
 
 	if not knocked_back and collision_info and collision_info.normal.y != -1:
 		velocity.x = 0
@@ -154,7 +155,7 @@ func update_movement_y(delta):
 	if collision_info and collision_info.collider.is_in_group("collidable"):
 		time_airborne = 0
 		if Input.is_action_pressed("jump") and not already_jumped_this_key_press:
-			velocity.y = max(velocity.y - jump_height, -jump_height) * delta
+			velocity.y = max(velocity.y - jump_power, -jump_power) * delta
 			already_jumped_this_key_press = true
 			total_times_jumped += 1
 			jump_audio.play()
@@ -171,8 +172,8 @@ func update_movement_y(delta):
 		)
 
 
-func update_animation():
-	if velocity.y > 77:
+func update_animation(delta):
+	if velocity.y > weight * (delta * 2):
 		animated_sprite.play("falling")
 		animated_sprite.flip_h = false if velocity.x >= 0 else true
 	elif velocity.x > 0:

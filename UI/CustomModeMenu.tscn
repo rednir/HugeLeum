@@ -138,7 +138,6 @@ __meta__ = {
 }
 
 [node name="Scroll Speed" type="VBoxContainer" parent="Panel/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 25.0
@@ -207,7 +206,7 @@ max_value = 1000.0
 step = 100.0
 value = 700.0
 
-[node name="IncreaseInterval" type="HBoxContainer" parent="Panel/TabContainer/Scroll Speed"]
+[node name="ChangeAmount" type="HBoxContainer" parent="Panel/TabContainer/Scroll Speed"]
 margin_top = 64.0
 margin_right = 473.0
 margin_bottom = 86.0
@@ -217,14 +216,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Panel/TabContainer/Scroll Speed/IncreaseInterval"]
-margin_right = 132.0
+[node name="Label" type="Label" parent="Panel/TabContainer/Scroll Speed/ChangeAmount"]
+margin_right = 128.0
 margin_bottom = 22.0
 size_flags_horizontal = 0
 size_flags_vertical = 5
-text = "Increase interval"
+text = "Change amount"
 
-[node name="Slider" type="HSlider" parent="Panel/TabContainer/Scroll Speed/IncreaseInterval"]
+[node name="Slider" type="HSlider" parent="Panel/TabContainer/Scroll Speed/ChangeAmount"]
 margin_left = 363.0
 margin_right = 473.0
 margin_bottom = 22.0
@@ -235,7 +234,66 @@ max_value = 400.0
 step = 40.0
 value = 80.0
 
+[node name="TimeBetweenChanges" type="HBoxContainer" parent="Panel/TabContainer/Scroll Speed"]
+margin_top = 96.0
+margin_right = 473.0
+margin_bottom = 118.0
+rect_pivot_offset = Vector2( -404.364, 22 )
+custom_constants/separation = 100
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel/TabContainer/Scroll Speed/TimeBetweenChanges"]
+margin_right = 189.0
+margin_bottom = 22.0
+size_flags_horizontal = 0
+size_flags_vertical = 5
+text = "Time between changes"
+
+[node name="Slider" type="HSlider" parent="Panel/TabContainer/Scroll Speed/TimeBetweenChanges"]
+margin_left = 363.0
+margin_right = 473.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 110, 0 )
+size_flags_horizontal = 10
+size_flags_vertical = 1
+min_value = 5.0
+max_value = 50.0
+step = 5.0
+value = 20.0
+
+[node name="TimeChangeIncrement" type="HBoxContainer" parent="Panel/TabContainer/Scroll Speed"]
+margin_top = 128.0
+margin_right = 473.0
+margin_bottom = 150.0
+rect_pivot_offset = Vector2( -404.364, 22 )
+custom_constants/separation = 100
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel/TabContainer/Scroll Speed/TimeChangeIncrement"]
+margin_right = 189.0
+margin_bottom = 22.0
+size_flags_horizontal = 0
+size_flags_vertical = 5
+text = "Time change increment"
+
+[node name="Slider" type="HSlider" parent="Panel/TabContainer/Scroll Speed/TimeChangeIncrement"]
+margin_left = 363.0
+margin_right = 473.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 110, 0 )
+size_flags_horizontal = 10
+size_flags_vertical = 1
+max_value = 12.0
+value = 3.0
+
 [node name="Player" type="VBoxContainer" parent="Panel/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 25.0
@@ -275,7 +333,7 @@ max_value = 100000.0
 step = 10000.0
 value = 40000.0
 
-[node name="Max Speed" type="HBoxContainer" parent="Panel/TabContainer/Player"]
+[node name="MaxSpeed" type="HBoxContainer" parent="Panel/TabContainer/Player"]
 margin_top = 32.0
 margin_right = 473.0
 margin_bottom = 54.0
@@ -285,14 +343,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Panel/TabContainer/Player/Max Speed"]
+[node name="Label" type="Label" parent="Panel/TabContainer/Player/MaxSpeed"]
 margin_right = 89.0
 margin_bottom = 22.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 text = "Max speed"
 
-[node name="Slider" type="HSlider" parent="Panel/TabContainer/Player/Max Speed"]
+[node name="Slider" type="HSlider" parent="Panel/TabContainer/Player/MaxSpeed"]
 margin_left = 363.0
 margin_right = 473.0
 margin_bottom = 22.0
@@ -304,7 +362,7 @@ max_value = 100000.0
 step = 10000.0
 value = 60000.0
 
-[node name="IncreaseRate" type="HBoxContainer" parent="Panel/TabContainer/Player"]
+[node name="SpeedIncreaseRate" type="HBoxContainer" parent="Panel/TabContainer/Player"]
 margin_top = 64.0
 margin_right = 473.0
 margin_bottom = 86.0
@@ -314,14 +372,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Panel/TabContainer/Player/IncreaseRate"]
+[node name="Label" type="Label" parent="Panel/TabContainer/Player/SpeedIncreaseRate"]
 margin_right = 167.0
 margin_bottom = 22.0
 size_flags_horizontal = 0
 size_flags_vertical = 5
 text = "Speed increase Rate"
 
-[node name="Slider" type="HSlider" parent="Panel/TabContainer/Player/IncreaseRate"]
+[node name="Slider" type="HSlider" parent="Panel/TabContainer/Player/SpeedIncreaseRate"]
 margin_left = 363.0
 margin_right = 473.0
 margin_bottom = 22.0
@@ -333,7 +391,7 @@ max_value = 2.0
 step = 0.1
 value = 1.1
 
-[node name="JumpHeight" type="HBoxContainer" parent="Panel/TabContainer/Player"]
+[node name="JumpPower" type="HBoxContainer" parent="Panel/TabContainer/Player"]
 margin_top = 96.0
 margin_right = 473.0
 margin_bottom = 118.0
@@ -343,14 +401,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Panel/TabContainer/Player/JumpHeight"]
+[node name="Label" type="Label" parent="Panel/TabContainer/Player/JumpPower"]
 margin_right = 99.0
 margin_bottom = 22.0
 size_flags_horizontal = 0
 size_flags_vertical = 5
 text = "Jump power"
 
-[node name="Slider" type="HSlider" parent="Panel/TabContainer/Player/JumpHeight"]
+[node name="Slider" type="HSlider" parent="Panel/TabContainer/Player/JumpPower"]
 margin_left = 363.0
 margin_right = 473.0
 margin_bottom = 22.0

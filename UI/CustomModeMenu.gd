@@ -21,6 +21,7 @@ func new_game_instance():
 	game = game_scene.instance()
 	game.queue_free_on_death = true
 	game.connect("tree_exited", self, "on_game_exit")
+	game.connect("ready", self, "on_game_ready")
 
 
 func on_play_button_pressed():
@@ -46,6 +47,25 @@ func on_play_animation_finished(name, _b):
 		add_child(game)
 		panel.visible = false
 		fade_node.offset = Vector2(10000, 0)
+
+
+func on_game_ready():
+	# Scroll Speed
+	game.scroll_speed = $"Panel/TabContainer/Scroll Speed/Initial/Slider".value
+	game.camera.set_scroll_speed(game.scroll_speed)
+	game.max_scroll_speed = $"Panel/TabContainer/Scroll Speed/Max/Slider".value
+	game.scroll_speed_change = $"Panel/TabContainer/Scroll Speed/ChangeAmount/Slider".value
+	game.env_change_interval = $"Panel/TabContainer/Scroll Speed/TimeBetweenChanges/Slider".value
+	game.env_change_time_increment = $"Panel/TabContainer/Scroll Speed/TimeChangeIncrement/Slider".value
+
+	# Player
+	game.player.horizontal_move_speed = $"Panel/TabContainer/Player/InitialSpeed/Slider".value
+	game.player.max_horizontal_move_speed = $"Panel/TabContainer/Player/MaxSpeed/Slider".value
+	game.player_horizontal_movement_rate_increase = $"Panel/TabContainer/Player/SpeedIncreaseRate/Slider".value
+	game.player.jump_power = $"Panel/TabContainer/Player/JumpPower/Slider".value
+	game.player.weight = $"Panel/TabContainer/Player/Weight/Slider".value
+	game.player.lives = $"Panel/TabContainer/Player/InitialLives/SpinBox".value
+	game.player.max_lives = $"Panel/TabContainer/Player/MaxLives/SpinBox".value
 
 
 func on_cancel_animation_finished(_a, _b):
