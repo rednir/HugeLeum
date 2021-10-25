@@ -89,6 +89,7 @@ tracks/4/keys = {
 script = ExtResource( 2 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2( 350, 0 )
 
 [node name="BgLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.3, 1 )
@@ -113,7 +114,7 @@ motion_mirroring = Vector2( 1024, 0 )
 [node name="MainSprite2" type="Sprite" parent="ParallaxBackground/Bg2Layer"]
 position = Vector2( 512, 300 )
 texture = ExtResource( 3 )
-offset = Vector2( 0, -25 )
+offset = Vector2( 0, -7.5 )
 
 [node name="OtherSprite2" type="Sprite" parent="ParallaxBackground/Bg2Layer"]
 visible = false
