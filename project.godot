@@ -15,6 +15,10 @@ run/main_scene="res://UI/Splash/Splash.tscn"
 boot_splash/image="res://splash.png"
 config/icon="res://icon.png"
 
+[audio]
+
+output_latency.web=40
+
 [autoload]
 
 GameEnvironment="*res://AutoLoad/GameEnvironment.gd"
