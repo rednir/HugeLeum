@@ -15,7 +15,7 @@
 [ext_resource path="res://UI/MainTheme.tres" type="Theme" id=13]
 [ext_resource path="res://Assets/menu-arrow.png" type="Texture" id=14]
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=1]
 resource_name = "main"
 length = 11.0
 tracks/0/type = "value"
@@ -31,18 +31,18 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="InputEventAction" id=1]
+[sub_resource type="InputEventAction" id=2]
 action = "ui_accept"
 
-[sub_resource type="ShortCut" id=2]
-shortcut = SubResource( 1 )
+[sub_resource type="ShortCut" id=3]
+shortcut = SubResource( 2 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=4]
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 11 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Title:modulate")
@@ -69,7 +69,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -85,7 +85,7 @@ tracks/0/keys = {
 "values": [ -10.0, 10.0, -10.0 ]
 }
 
-[sub_resource type="SpriteFrames" id=6]
+[sub_resource type="SpriteFrames" id=7]
 animations = [ {
 "frames": [ ExtResource( 10 ), ExtResource( 9 ) ],
 "loop": true,
@@ -93,7 +93,7 @@ animations = [ {
 "speed": 4.0
 } ]
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 length = 3.2
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -143,7 +143,7 @@ texture = ExtResource( 14 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="VolumeTip"]
 autoplay = "main"
-anims/main = SubResource( 8 )
+anims/main = SubResource( 1 )
 
 [node name="PlayButton" parent="." instance=ExtResource( 4 )]
 modulate = Color( 1, 1, 1, 0 )
@@ -152,7 +152,7 @@ margin_top = 332.0
 margin_right = 607.0
 margin_bottom = 421.0
 rect_scale = Vector2( 1.00521, 0.972 )
-shortcut = SubResource( 2 )
+shortcut = SubResource( 3 )
 text = "Play"
 
 [node name="HardModeButton" type="CheckBox" parent="."]
@@ -162,7 +162,7 @@ margin_right = 969.002
 margin_bottom = 549.735
 rect_scale = Vector2( 1.2, 1.2 )
 hint_tooltip = "You only have one life, and everything seems a lot faster..."
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 text = "Hard mode"
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -176,7 +176,7 @@ margin_right = 981.9
 margin_bottom = 584.735
 rect_scale = Vector2( 1.2, 1.2 )
 hint_tooltip = "Configure the game to how you wish!"
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 text = "Custom mode"
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -191,7 +191,7 @@ autoplay = true
 
 [node name="FadeAnimPlayer" type="AnimationPlayer" parent="."]
 autoplay = "in"
-anims/in = SubResource( 4 )
+anims/in = SubResource( 5 )
 
 [node name="Title" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0 )
@@ -201,7 +201,7 @@ texture = ExtResource( 7 )
 
 [node name="RotateAnimPlayer" type="AnimationPlayer" parent="Title"]
 autoplay = "main"
-anims/main = SubResource( 5 )
+anims/main = SubResource( 6 )
 
 [node name="Info" type="Sprite" parent="."]
 position = Vector2( 514.545, 552.003 )
@@ -211,12 +211,13 @@ texture = ExtResource( 8 )
 [node name="Worm" type="AnimatedSprite" parent="."]
 position = Vector2( -65, 414.431 )
 scale = Vector2( 0.07, 0.07 )
-frames = SubResource( 6 )
+frames = SubResource( 7 )
+frame = 1
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Worm"]
 autoplay = "in"
-anims/in = SubResource( 7 )
+anims/in = SubResource( 8 )
 
 [node name="SettingsButton" parent="." instance=ExtResource( 12 )]
 margin_top = -4.0
