@@ -255,7 +255,6 @@ layer = 5
 position = Vector2( 514.126, 86.639 )
 
 [node name="HeartDisplay" parent="CanvasLayer" instance=ExtResource( 9 )]
-max_hearts = 2
 
 [node name="SpeedUpLabel" type="Label" parent="CanvasLayer"]
 modulate = Color( 1, 1, 1, 0 )

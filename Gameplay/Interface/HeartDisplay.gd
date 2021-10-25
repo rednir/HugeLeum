@@ -11,6 +11,11 @@ export var heart_count = 2
 
 
 func initialize():
+	heart_count = min(max_hearts, heart_count)
+	
+	var scale = min(1 - ((max_hearts - 4) / 15), 1)
+	rect_scale = Vector2(scale, scale)
+	
 	for _i in range(heart_count):
 		var heart = TextureRect.new()
 		heart.texture = heart_full_texture
@@ -43,4 +48,3 @@ func set_hearts(new_heart_count: int):
 		animation_player.play("loss")
 
 	heart_count = new_heart_count
-

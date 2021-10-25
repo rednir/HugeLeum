@@ -472,7 +472,7 @@ margin_right = 473.0
 margin_bottom = 32.0
 size_flags_horizontal = 10
 min_value = 1.0
-max_value = 12.0
+max_value = 10.0
 value = 2.0
 
 [node name="MaxLives" type="HBoxContainer" parent="Panel/TabContainer/Player"]
@@ -498,7 +498,7 @@ margin_right = 473.0
 margin_bottom = 32.0
 size_flags_horizontal = 10
 min_value = 1.0
-max_value = 12.0
+max_value = 10.0
 value = 2.0
 
 [node name="ButtonsContainer" type="HBoxContainer" parent="Panel"]
