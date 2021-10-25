@@ -59,8 +59,8 @@ func on_game_ready():
 	game.camera.set_scroll_speed(game.scroll_speed)
 	game.max_scroll_speed = $"Interface/Panel/TabContainer/Scroll Speed/Max/Slider".value
 	game.scroll_speed_change = $"Interface/Panel/TabContainer/Scroll Speed/ChangeAmount/Slider".value
-	game.env_change_interval = $"Interface/Panel/TabContainer/Scroll Speed/TimeBetweenChanges/Slider".value
-	game.env_change_time_increment = $"Interface/Panel/TabContainer/Scroll Speed/TimeChangeIncrement/Slider".value
+	game.env_change_interval = $"Interface/Panel/TabContainer/Scroll Speed/InitialTimeBeforeSpeedup/Slider".value
+	game.env_change_time_increment = $"Interface/Panel/TabContainer/Scroll Speed/SpeedupIncrement/Slider".value
 
 	# Player
 	game.player.horizontal_move_speed = $"Interface/Panel/TabContainer/Player/InitialSpeed/Slider".value
