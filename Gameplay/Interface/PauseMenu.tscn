@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Assets/Fonts/FRUIT-PUNCH.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/blur.gdshader" type="Shader" id=2]
 [ext_resource path="res://UI/Button/Button.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/white.png" type="Texture" id=4]
 [ext_resource path="res://Gameplay/Interface/PauseMenu.gd" type="Script" id=5]
+[ext_resource path="res://UI/SettingsButton.tscn" type="PackedScene" id=6]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.862745 )
@@ -153,6 +154,12 @@ margin_right = 455.182
 margin_bottom = 234.269
 rect_pivot_offset = Vector2( -150.582, -308.97 )
 text = "Main Menu"
+
+[node name="SettingsButton" parent="Panel" instance=ExtResource( 6 )]
+margin_left = -215.513
+margin_top = -148.984
+margin_right = -815.513
+margin_bottom = -448.984
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "in"

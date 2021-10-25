@@ -178,3 +178,5 @@ autoplay = "in"
 anims/in = SubResource( 7 )
 
 [node name="SettingsButton" parent="." instance=ExtResource( 12 )]
+margin_top = -4.0
+margin_bottom = -604.0
