@@ -13,11 +13,15 @@
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.756863, 0.756863, 0.756863, 1 )
 corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.756863, 0.756863, 0.756863, 1 )
 corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
 [sub_resource type="StyleBoxFlat" id=5]
