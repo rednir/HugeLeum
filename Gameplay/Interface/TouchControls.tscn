@@ -6,6 +6,7 @@
 [ext_resource path="res://Gameplay/Interface/TouchControls.gd" type="Script" id=4]
 
 [node name="Content" type="Node2D"]
+pause_mode = 2
 script = ExtResource( 4 )
 
 [node name="Movement" type="HBoxContainer" parent="."]
