@@ -47,10 +47,16 @@
        x="14.257123"
        y="113.82497"
        rx="0"
-       ry="6.4140606" />
+       ry="6.4140606"
+       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/touch-control-left.png"
+       inkscape:export-xdpi="99.29969"
+       inkscape:export-ydpi="99.29969" />
     <g
        id="g5511"
-       transform="matrix(-0.84300697,0,0,0.84300697,55.178396,20.21813)">
+       transform="matrix(-0.84300697,0,0,0.84300697,55.178396,20.21813)"
+       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/touch-control-left.png"
+       inkscape:export-xdpi="99.29969"
+       inkscape:export-ydpi="99.29969">
       <rect
          style="opacity:1;fill:#cccccc;stroke:#cccccc;stroke-width:0.269532;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.264901"
          id="rect1682"
@@ -87,10 +93,16 @@
        y="113.82497"
        rx="0"
        ry="6.4140606"
-       transform="scale(-1,1)" />
+       transform="scale(-1,1)"
+       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/touch-control-right.png"
+       inkscape:export-xdpi="99.299675"
+       inkscape:export-ydpi="99.299675" />
     <g
        id="g5519"
-       transform="matrix(0.84300697,0,0,0.84300697,47.988732,20.218129)">
+       transform="matrix(0.84300697,0,0,0.84300697,47.988732,20.218129)"
+       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/touch-control-right.png"
+       inkscape:export-xdpi="99.299675"
+       inkscape:export-ydpi="99.299675">
       <rect
          style="opacity:1;fill:#cccccc;stroke:#cccccc;stroke-width:0.269532;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.264901"
          id="rect5515"
@@ -127,10 +139,16 @@
        y="113.82497"
        rx="0"
        ry="6.4140606"
-       transform="scale(-1,1)" />
+       transform="scale(-1,1)"
+       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/touch-control-jump.png"
+       inkscape:export-xdpi="99.29966"
+       inkscape:export-ydpi="99.29966" />
     <g
        id="g5711"
-       transform="matrix(0,-0.84300697,0.84300697,0,130.20036,155.16799)">
+       transform="matrix(0,-0.84300697,0.84300697,0,130.20036,155.16799)"
+       inkscape:export-filename="/home/davran/Documents/Code/godot/KajamGame/Assets/touch-control-jump.png"
+       inkscape:export-xdpi="99.29966"
+       inkscape:export-ydpi="99.29966">
       <rect
          style="opacity:1;fill:#cccccc;stroke:#cccccc;stroke-width:0.269532;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.264901"
          id="rect5707"

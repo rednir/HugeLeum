@@ -137,9 +137,9 @@ __meta__ = {
 
 [node name="Title" type="Label" parent="CenterContainer/Panel"]
 margin_left = 22.0
-margin_top = 59.0
+margin_top = 53.0
 margin_right = 609.0
-margin_bottom = 127.0
+margin_bottom = 121.0
 custom_fonts/font = SubResource( 3 )
 text = "Settings"
 align = 1
@@ -149,17 +149,24 @@ __meta__ = {
 
 [node name="DoneButton" parent="CenterContainer/Panel" instance=ExtResource( 3 )]
 margin_left = 237.241
-margin_top = 268.874
+margin_top = 274.874
 margin_right = 388.241
-margin_bottom = 337.874
+margin_bottom = 343.874
 rect_pivot_offset = Vector2( -150.582, -308.97 )
 text = "Done"
 
-[node name="MasterVolume" type="HBoxContainer" parent="CenterContainer/Panel"]
-margin_left = 129.0
-margin_top = 148.0
-margin_right = 485.0
-margin_bottom = 170.0
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/Panel"]
+margin_left = 150.495
+margin_top = 144.413
+margin_right = 479.495
+margin_bottom = 202.413
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MasterVolume" type="HBoxContainer" parent="CenterContainer/Panel/VBoxContainer"]
+margin_right = 329.0
+margin_bottom = 22.0
 hint_tooltip = "The scroll speed of the camera at the start of the game"
 custom_constants/separation = 100
 alignment = 1
@@ -168,16 +175,16 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Label" type="Label" parent="CenterContainer/Panel/MasterVolume"]
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBoxContainer/MasterVolume"]
 margin_right = 119.0
 margin_bottom = 22.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 text = "Master volume"
 
-[node name="Slider" type="HSlider" parent="CenterContainer/Panel/MasterVolume"]
-margin_left = 246.0
-margin_right = 356.0
+[node name="Slider" type="HSlider" parent="CenterContainer/Panel/VBoxContainer/MasterVolume"]
+margin_left = 219.0
+margin_right = 329.0
 margin_bottom = 22.0
 rect_min_size = Vector2( 110, 0 )
 size_flags_horizontal = 10
@@ -186,11 +193,10 @@ min_value = -45.0
 max_value = 0.0
 step = 2.0
 
-[node name="TouchControls" type="HBoxContainer" parent="CenterContainer/Panel"]
-margin_left = 129.0
-margin_top = 180.0
-margin_right = 485.0
-margin_bottom = 202.0
+[node name="TouchControls" type="HBoxContainer" parent="CenterContainer/Panel/VBoxContainer"]
+margin_top = 26.0
+margin_right = 329.0
+margin_bottom = 58.0
 hint_tooltip = "The scroll speed of the camera at the start of the game"
 custom_constants/separation = 100
 alignment = 1
@@ -199,16 +205,17 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Label" type="Label" parent="CenterContainer/Panel/TouchControls"]
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBoxContainer/TouchControls"]
 margin_right = 119.0
-margin_bottom = 22.0
+margin_bottom = 32.0
 size_flags_horizontal = 0
-size_flags_vertical = 0
+size_flags_vertical = 1
 text = "Touch controls"
+valign = 1
 
-[node name="CheckButton" type="CheckButton" parent="CenterContainer/Panel/TouchControls"]
-margin_left = 292.0
-margin_right = 356.0
+[node name="CheckButton" type="CheckButton" parent="CenterContainer/Panel/VBoxContainer/TouchControls"]
+margin_left = 265.0
+margin_right = 329.0
 margin_bottom = 32.0
 size_flags_horizontal = 10
 

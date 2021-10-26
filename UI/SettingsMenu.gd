@@ -4,8 +4,8 @@ extends CanvasLayer
 onready var animation_player = $CenterContainer/AnimationPlayer
 onready var done_button = $CenterContainer/Panel/DoneButton
 
-onready var master_volume_slider = $CenterContainer/Panel/MasterVolume/Slider
-onready var touch_controls_button = $CenterContainer/Panel/TouchControls/CheckButton
+onready var master_volume_slider = $CenterContainer/Panel/VBoxContainer/MasterVolume/Slider
+onready var touch_controls_button = $CenterContainer/Panel/VBoxContainer/TouchControls/CheckButton
 
 
 func _ready():

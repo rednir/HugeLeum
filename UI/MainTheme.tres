@@ -1,10 +1,22 @@
-[gd_resource type="Theme" load_steps=20 format=2]
+[gd_resource type="Theme" load_steps=26 format=2]
 
 [ext_resource path="res://UI/Button/ButtonPressed.tres" type="StyleBox" id=1]
 [ext_resource path="res://UI/Button/ButtonFont.tres" type="DynamicFont" id=2]
 [ext_resource path="res://UI/Button/ButtonNormal.tres" type="StyleBox" id=3]
 [ext_resource path="res://Assets/Fonts/Inter-Regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Assets/Fonts/FRUIT-PUNCH.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=17]
+
+[sub_resource type="StyleBoxEmpty" id=18]
+
+[sub_resource type="StyleBoxEmpty" id=19]
+
+[sub_resource type="StyleBoxEmpty" id=20]
 
 [sub_resource type="ImageTexture" id=1]
 
@@ -117,6 +129,24 @@ Button/styles/focus = null
 Button/styles/hover = ExtResource( 3 )
 Button/styles/normal = ExtResource( 3 )
 Button/styles/pressed = ExtResource( 1 )
+CheckButton/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
+CheckButton/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+CheckButton/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+CheckButton/colors/font_color_hover_pressed = Color( 1, 1, 1, 1 )
+CheckButton/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+CheckButton/constants/check_vadjust = 0
+CheckButton/constants/hseparation = 4
+CheckButton/fonts/font = null
+CheckButton/icons/off = null
+CheckButton/icons/off_disabled = null
+CheckButton/icons/on = null
+CheckButton/icons/on_disabled = null
+CheckButton/styles/disabled = SubResource( 15 )
+CheckButton/styles/focus = SubResource( 16 )
+CheckButton/styles/hover = SubResource( 17 )
+CheckButton/styles/hover_pressed = SubResource( 18 )
+CheckButton/styles/normal = SubResource( 19 )
+CheckButton/styles/pressed = SubResource( 20 )
 HSlider/icons/grabber = SubResource( 1 )
 HSlider/icons/grabber_disabled = null
 HSlider/icons/grabber_highlight = SubResource( 2 )
