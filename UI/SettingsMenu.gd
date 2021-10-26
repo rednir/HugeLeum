@@ -21,7 +21,6 @@ func _ready():
 
 	touch_controls_scale_slider.connect("value_changed", self, "on_touch_controls_scale_value_changed")
 	touch_controls_scale_slider.value = Settings.touch_controls_scale
-	touch_controls_scale_slider.editable = Settings.show_touch_controls
 
 
 func on_done_button_pressed():
@@ -40,7 +39,6 @@ func on_master_volume_changed(value):
 
 func on_touch_controls_toggled(value):
 	Settings.show_touch_controls = value
-	touch_controls_scale_slider.editable = value
 
 
 func on_touch_controls_scale_value_changed(value):
