@@ -186,6 +186,32 @@ min_value = -45.0
 max_value = 0.0
 step = 2.0
 
+[node name="TouchControls" type="HBoxContainer" parent="CenterContainer/Panel"]
+margin_left = 129.0
+margin_top = 180.0
+margin_right = 485.0
+margin_bottom = 202.0
+hint_tooltip = "The scroll speed of the camera at the start of the game"
+custom_constants/separation = 100
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/TouchControls"]
+margin_right = 119.0
+margin_bottom = 22.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Touch controls"
+
+[node name="CheckButton" type="CheckButton" parent="CenterContainer/Panel/TouchControls"]
+margin_left = 292.0
+margin_right = 356.0
+margin_bottom = 32.0
+size_flags_horizontal = 10
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CenterContainer"]
 autoplay = "in"
 anims/in = SubResource( 4 )
