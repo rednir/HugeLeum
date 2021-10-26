@@ -38,4 +38,3 @@ __meta__ = {
 
 [node name="Jump" type="TouchScreenButton" parent="RightSide"]
 normal = ExtResource( 2 )
-visibility_mode = 1
