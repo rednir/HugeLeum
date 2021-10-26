@@ -1,22 +1,22 @@
 extends Node2D
 
-onready var movement_container = $Movement
-onready var jump_button = $Jump
+onready var left_side = $LeftSide
+onready var right_side = $RightSide
 
 
 func _ready():
-	$Movement/Left.connect("button_down", self, "on_left_down")
-	$Movement/Left.connect("button_up", self, "on_left_up")
-	$Movement/Right.connect("button_down", self, "on_right_down")
-	$Movement/Right.connect("button_up", self, "on_right_up")
-	$Jump.connect("button_down", self, "on_jump_down")
-	$Jump.connect("button_up", self, "on_jump_up")
+	$LeftSide/Left.connect("pressed", self, "on_left_down")
+	$LeftSide/Left.connect("released", self, "on_left_up")
+	$LeftSide/Right.connect("pressed", self, "on_right_down")
+	$LeftSide/Right.connect("released", self, "on_right_up")
+	$RightSide/Jump.connect("pressed", self, "on_jump_down")
+	$RightSide/Jump.connect("released", self, "on_jump_up")
 
 
 func _process(_delta):
 	visible = Settings.show_touch_controls
-	movement_container.rect_scale = Vector2(Settings.touch_controls_scale, Settings.touch_controls_scale)
-	jump_button.rect_scale = Vector2(Settings.touch_controls_scale, Settings.touch_controls_scale)
+	left_side.rect_scale = Vector2(Settings.touch_controls_scale, Settings.touch_controls_scale)
+	right_side.rect_scale = Vector2(Settings.touch_controls_scale, Settings.touch_controls_scale)
 
 
 func on_left_down():
