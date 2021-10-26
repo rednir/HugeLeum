@@ -22,6 +22,7 @@ output_latency.web=40
 [autoload]
 
 GameEnvironment="*res://AutoLoad/GameEnvironment.gd"
+Settings="*res://AutoLoad/Settings.gd"
 
 [display]
 

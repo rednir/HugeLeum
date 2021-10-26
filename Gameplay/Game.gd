@@ -100,6 +100,9 @@ func _ready():
 
 	music_player.playing = true
 
+	if Settings.show_touch_controls:
+		$CanvasLayer/TouchControls.visible = true
+
 
 func _process(delta):
 	env_change_timer += delta
