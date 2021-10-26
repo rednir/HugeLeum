@@ -15,6 +15,7 @@ func _ready():
 	master_volume_slider.value = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master"))
 
 	touch_controls_button.connect("toggled", self, "on_touch_controls_toggled")
+	touch_controls_button.value = Settings.show_touch_controls
 	touch_controls_button.disabled = Settings.FORCE_TOUCH_CONTROLS
 
 

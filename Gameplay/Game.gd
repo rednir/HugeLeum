@@ -31,6 +31,7 @@ const pause_menu_scene = preload("res://Gameplay/Interface/PauseMenu.tscn")
 const FIRST_PATTERN_OFFSET = 185
 
 onready var canvas_layer = $CanvasLayer
+onready var touch_controls = $CanvasLayer/TouchControls
 onready var fade = $CanvasLayer/Fade/AnimationPlayer
 onready var score_display = $CanvasLayer/ScoreDisplay
 onready var heart_display = $CanvasLayer/HeartDisplay
@@ -100,9 +101,6 @@ func _ready():
 
 	music_player.playing = true
 
-	if Settings.show_touch_controls:
-		$CanvasLayer/TouchControls.visible = true
-
 
 func _process(delta):
 	env_change_timer += delta
@@ -158,6 +156,8 @@ func _process(delta):
 
 	if env_change_timer > env_change_interval or (OS.is_debug_build() and Input.is_action_just_pressed("debug_next_env")):
 		next_environment()
+
+	touch_controls.visible = Settings.show_touch_controls
 
 
 func randomise_entity_pattern(entity_patterns_list):
