@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=23 format=2]
+[gd_resource type="Theme" load_steps=26 format=2]
 
 [ext_resource path="res://UI/Button/ButtonPressed.tres" type="StyleBox" id=1]
 [ext_resource path="res://UI/Button/ButtonFont.tres" type="DynamicFont" id=2]
@@ -6,39 +6,17 @@
 [ext_resource path="res://Assets/Fonts/Inter-Regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Assets/Fonts/FRUIT-PUNCH.ttf" type="DynamicFontData" id=5]
 
-[sub_resource type="StyleBoxFlat" id=15]
-content_margin_left = 9.0
-content_margin_right = 9.0
-content_margin_top = 9.0
-content_margin_bottom = 9.0
-bg_color = Color( 0.8, 0.8, 0.8, 0.294118 )
-border_color = Color( 0.8, 0.8, 0.8, 0 )
-corner_radius_top_left = 8
-corner_radius_top_right = 8
+[sub_resource type="StyleBoxEmpty" id=39]
 
-[sub_resource type="StyleBoxFlat" id=17]
-content_margin_left = 4.0
-content_margin_right = 4.0
-content_margin_top = 4.0
-content_margin_bottom = 4.0
-bg_color = Color( 0.309804, 0.32549, 0.384314, 1 )
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-shadow_size = 2
+[sub_resource type="StyleBoxEmpty" id=36]
 
-[sub_resource type="StyleBoxFlat" id=18]
-content_margin_left = 4.0
-content_margin_right = 4.0
-content_margin_top = 4.0
-content_margin_bottom = 4.0
-bg_color = Color( 0.309804, 0.32549, 0.384314, 1 )
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-shadow_size = 2
+[sub_resource type="StyleBoxEmpty" id=34]
+
+[sub_resource type="StyleBoxEmpty" id=37]
+
+[sub_resource type="StyleBoxEmpty" id=35]
+
+[sub_resource type="StyleBoxEmpty" id=38]
 
 [sub_resource type="ImageTexture" id=19]
 
@@ -163,12 +141,12 @@ CheckButton/icons/off = null
 CheckButton/icons/off_disabled = null
 CheckButton/icons/on = null
 CheckButton/icons/on_disabled = null
-CheckButton/styles/disabled = SubResource( 15 )
-CheckButton/styles/focus = null
-CheckButton/styles/hover = SubResource( 17 )
-CheckButton/styles/hover_pressed = null
-CheckButton/styles/normal = SubResource( 18 )
-CheckButton/styles/pressed = null
+CheckButton/styles/disabled = SubResource( 39 )
+CheckButton/styles/focus = SubResource( 36 )
+CheckButton/styles/hover = SubResource( 34 )
+CheckButton/styles/hover_pressed = SubResource( 37 )
+CheckButton/styles/normal = SubResource( 35 )
+CheckButton/styles/pressed = SubResource( 38 )
 HSlider/icons/grabber = SubResource( 19 )
 HSlider/icons/grabber_disabled = null
 HSlider/icons/grabber_highlight = SubResource( 20 )

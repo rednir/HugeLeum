@@ -218,6 +218,7 @@ margin_left = 333.0
 margin_right = 397.0
 margin_bottom = 32.0
 size_flags_horizontal = 10
+shortcut_in_tooltip = false
 
 [node name="TouchControlsScale" type="HBoxContainer" parent="CenterContainer/Panel/VBoxContainer"]
 margin_top = 62.0
